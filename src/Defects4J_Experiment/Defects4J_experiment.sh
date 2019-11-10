@@ -33,6 +33,7 @@ do
   echo "Deleting ${BUG_PROJECT}"
   rm -rf $BUG_PROJECT
   echo
+  exit 1
 done < Defects4J_oneLiner_metadata.csv
 
 echo "Deleting Defects4J_projects"

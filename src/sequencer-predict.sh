@@ -78,50 +78,51 @@ BUGGY_FILE_NAME=${BUGGY_FILE_PATH##*/}
 BUGGY_FILE_BASENAME=${BUGGY_FILE_NAME%.*}
 
 echo "Creating temporary working folder"
-mkdir -p $CURRENT_DIR/tmp
+tmp="$(cut -d'/' -f2 <<<"$OUTPUT-tmp")"
+mkdir -p $CURRENT_DIR/{$tmp}
 echo
 
 echo "Abstracting the source file"
 # the code of abstraction-1.0-SNAPSHOT-jar-with-dependencies.jar is in https://github.com/KTH/sequencer/tree/master/src/Buggy_Context_Abstraction/abstraction
-java -jar $CURRENT_DIR/lib/abstraction-1.0-SNAPSHOT-jar-with-dependencies.jar $BUGGY_FILE_PATH $BUGGY_LINE $CURRENT_DIR/tmp
+java -jar $CURRENT_DIR/lib/abstraction-1.0-SNAPSHOT-jar-with-dependencies.jar $BUGGY_FILE_PATH $BUGGY_LINE $CURRENT_DIR/${tmp}
 retval=$?
 if [ $retval -ne 0 ]; then
   echo "Cannot generate abstraction for the buggy file"
-  rm -rf $CURRENT_DIR/tmp
+  rm -rf $CURRENT_DIR/${tmp}
   exit 1
 fi
 echo
 
 echo "Tokenizing the abstraction"
-python3 $CURRENT_DIR/Buggy_Context_Abstraction/tokenize.py $CURRENT_DIR/tmp/${BUGGY_FILE_BASENAME}_abstract.java $CURRENT_DIR/tmp/${BUGGY_FILE_BASENAME}_abstract_tokenized.txt
+python3 $CURRENT_DIR/Buggy_Context_Abstraction/tokenize.py $CURRENT_DIR/${tmp}/${BUGGY_FILE_BASENAME}_abstract.java $CURRENT_DIR/${tmp}/${BUGGY_FILE_BASENAME}_abstract_tokenized.txt
 retval=$?
 if [ $retval -ne 0 ]; then
   echo "Tokenization failed"
-  rm -rf $CURRENT_DIR/tmp
+  rm -rf $CURRENT_DIR/${tmp}
   exit 1
 fi
 echo
 
 echo "Truncate the abstraction to 1000 tokens"
-perl $CURRENT_DIR/Buggy_Context_Abstraction/trimCon.pl $CURRENT_DIR/tmp/${BUGGY_FILE_BASENAME}_abstract_tokenized.txt $CURRENT_DIR/tmp/${BUGGY_FILE_BASENAME}_abstract_tokenized_truncated.txt 1000
+perl $CURRENT_DIR/Buggy_Context_Abstraction/trimCon.pl $CURRENT_DIR/${tmp}/${BUGGY_FILE_BASENAME}_abstract_tokenized.txt $CURRENT_DIR/${tmp}/${BUGGY_FILE_BASENAME}_abstract_tokenized_truncated.txt 1000
 retval=$?
 if [ $retval -ne 0 ]; then
   echo "Truncation failed"
-  rm -rf $CURRENT_DIR/tmp
+  rm -rf $CURRENT_DIR/${tmp}
   exit 1
 fi
 echo
 
 echo "Generating predictions"
-python3 $CURRENT_DIR/lib/OpenNMT-py/translate.py -model $ROOT_DIR/model/model.pt -src $CURRENT_DIR/tmp/${BUGGY_FILE_BASENAME}_abstract_tokenized_truncated.txt -output $CURRENT_DIR/tmp/predictions.txt -beam_size $BEAM_SIZE -n_best $BEAM_SIZE 1>/dev/null
+python3 $CURRENT_DIR/lib/OpenNMT-py/translate.py -model $ROOT_DIR/model/model.pt -src $CURRENT_DIR/${tmp}/${BUGGY_FILE_BASENAME}_abstract_tokenized_truncated.txt -output $CURRENT_DIR/${tmp}/predictions.txt -beam_size $BEAM_SIZE -n_best $BEAM_SIZE 1>/dev/null
 echo
 
 echo "Post process predictions"
-python3 $CURRENT_DIR/Patch_Preparation/postPrcoessPredictions.py $CURRENT_DIR/tmp/predictions.txt $CURRENT_DIR/tmp
+python3 $CURRENT_DIR/Patch_Preparation/postPrcoessPredictions.py $CURRENT_DIR/${tmp}/predictions.txt $CURRENT_DIR/${tmp}
 retval=$?
 if [ $retval -ne 0 ]; then
   echo "Post process generates none valid predictions"
-  rm -rf $CURRENT_DIR/tmp
+  rm -rf $CURRENT_DIR/${tmp}
   exit 1
 fi
 echo
@@ -131,7 +132,7 @@ mkdir -p $OUTPUT
 echo
 
 echo "Generating patches"
-python3 $CURRENT_DIR/Patch_Preparation/generatePatches.py $BUGGY_FILE_PATH $BUGGY_LINE $CURRENT_DIR/tmp/predictions_JavaSource.txt $OUTPUT
+python3 $CURRENT_DIR/Patch_Preparation/generatePatches.py $BUGGY_FILE_PATH $BUGGY_LINE $CURRENT_DIR/${tmp}/predictions_JavaSource.txt $OUTPUT
 echo
 
 echo "Generating diffs"
@@ -142,7 +143,7 @@ echo
 
 
 echo "Cleaning tmp folder"
-rm -rf $CURRENT_DIR/tmp
+rm -rf $CURRENT_DIR/${tmp}
 echo
 
 echo "Found $(ls $OUTPUT | wc -l | awk '{print $1}') patches for $BUGGY_FILE_NAME stored in $OUTPUT"

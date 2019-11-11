@@ -2,3 +2,5 @@
 src/lib/
 src/Buggy_Context_Abstraction/abstraction/target/
 __pycache__/
+src/Defects4J_experiment/Defects4J_project/*
+src/Defects4J_experiment/Defects4J_patches/*

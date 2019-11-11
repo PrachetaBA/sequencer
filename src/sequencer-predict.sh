@@ -78,8 +78,9 @@ BUGGY_FILE_NAME=${BUGGY_FILE_PATH##*/}
 BUGGY_FILE_BASENAME=${BUGGY_FILE_NAME%.*}
 
 echo "Creating temporary working folder"
-tmp="$(cut -d'/' -f2 <<<"$OUTPUT-tmp")"
-mkdir -p $CURRENT_DIR/{$tmp}
+tmp="$(cut -d'/' -f10 <<<"$OUTPUT")"
+mkdir -p $CURRENT_DIR/${tmp}
+echo "Creating tmp directory $CURRENT_DIR/${tmp}"
 echo
 
 echo "Abstracting the source file"
@@ -137,7 +138,7 @@ echo
 
 echo "Generating diffs"
 for patch in $OUTPUT/*; do
-  diff -u -w $BUGGY_FILE_PATH $patch/$BUGGY_FILE_NAME > $patch/diff
+  diff -u -w $BUGGY_FILE_PATH $patch/$BUGGY_FILE_NAME > $patch/${tmp}.patch
 done
 echo
 

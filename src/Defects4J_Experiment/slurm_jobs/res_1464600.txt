@@ -1,0 +1,95 @@
+Defects4J_oneLinerFix.sh start
+Creating directory 'Defects4J_projects'
+
+Creating directory 'Defects4J_patches'
+
+Checking out Math_58 to /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_680
+
+Generating patches for Math_58_680
+sequencer-predict.sh start
+Input parameter:
+BUGGY_FILE_PATH = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_680/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java
+BUGGY_LINE = 680
+BEAM_SIZE = 50
+OUTPUT = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680
+
+Creating temporary working folder
+Creating tmp directory /home/pboddavarama/myworkdir/cs682/sequencer/src/Math_58_680
+
+Abstracting the source file
+
+Tokenizing the abstraction
+
+Truncate the abstraction to 1000 tokens
+
+Generating predictions
+/home/pboddavarama/npr/lib/python3.7/site-packages/torchtext/data/field.py:359: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  var = torch.tensor(arr, dtype=self.dtype, device=device)
+
+Post process predictions
+
+Creating output directory /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680
+
+Generating patches
+
+Generating diffs
+
+Cleaning tmp folder
+
+Found 44 patches for LevenbergMarquardtOptimizer.java stored in /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680
+sequencer-predict.sh done
+
+
+Running test on all patches for Math_58
+/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_680 has following triggering tests:
+org.apache.commons.math.optimization.fitting.GaussianFitterTest::testMath519
+/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_680 has following failing tests:
+org.apache.commons.math.optimization.fitting.GaussianFitterTest::testMath519
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/35/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/42/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/26/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/7/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/14/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/13/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/19/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/21/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/38/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/32/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/41/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/36/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/25/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/17/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/4/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/9/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/10/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/3/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/28/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/22/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/31/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/33/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/44/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/39/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/18/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/1/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/12/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/20/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/27/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/6/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/15/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/43/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/34/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/30/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/11/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/2/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/8/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/23/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/29/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/24/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/16/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/5/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/37/LevenbergMarquardtOptimizer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/40/LevenbergMarquardtOptimizer.java
+
+Deleting /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_680
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_680’: Directory not empty
+

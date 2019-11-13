@@ -1,0 +1,85 @@
+Defects4J_oneLinerFix.sh start
+Creating directory 'Defects4J_projects'
+
+Creating directory 'Defects4J_patches'
+
+Checking out Math_57 to /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_181
+
+Generating patches for Math_57_181
+sequencer-predict.sh start
+Input parameter:
+BUGGY_FILE_PATH = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_181/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java
+BUGGY_LINE = 181
+BEAM_SIZE = 50
+OUTPUT = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181
+
+Creating temporary working folder
+Creating tmp directory /home/pboddavarama/myworkdir/cs682/sequencer/src/Math_57_181
+
+Abstracting the source file
+
+Tokenizing the abstraction
+
+Truncate the abstraction to 1000 tokens
+
+Generating predictions
+/home/pboddavarama/npr/lib/python3.7/site-packages/torchtext/data/field.py:359: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  var = torch.tensor(arr, dtype=self.dtype, device=device)
+
+Post process predictions
+
+Creating output directory /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181
+
+Generating patches
+
+Generating diffs
+
+Cleaning tmp folder
+
+Found 32 patches for KMeansPlusPlusClusterer.java stored in /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181
+sequencer-predict.sh done
+
+
+Running test on all patches for Math_57
+/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_181 has following triggering tests:
+org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest::testSmallDistances
+/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_181 has following failing tests:
+org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest::testSmallDistances
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/32/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/19/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/13/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/2/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/21/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/8/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/5/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/26/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/14/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/31/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/10/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/22/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/28/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/1/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/25/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/6/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/17/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/27/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/4/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/15/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/12/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/18/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/20/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/9/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/3/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/7/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/24/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/16/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/11/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/29/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/23/KMeansPlusPlusClusterer.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_181/30/KMeansPlusPlusClusterer.java
+
+Deleting /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_181
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_181/target’: Directory not empty
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_181/src/main/java/org/apache/commons/math/optimization/direct’: Directory not empty
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_181/src/main/java/org/apache/commons/math/ode/events’: Directory not empty
+

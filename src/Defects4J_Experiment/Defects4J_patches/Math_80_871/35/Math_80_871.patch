@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_80_871/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java	2019-11-12 19:25:56.224934198 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_80_871/35/EigenDecompositionImpl.java	2019-11-12 19:26:02.290126015 -0500
+@@ -868,7 +868,7 @@
+             i0 = 0;
+             for (int i = 4 * (n0 - 2); i >= 0; i -= 4) {
+                 if (work[i + 2] <= 0) {
+-                    i0 = 1 + i / 4;
++                    i0=1+2;
+                     break;
+                 }
+                 if (diagMin >= 4 * offDiagMax) {

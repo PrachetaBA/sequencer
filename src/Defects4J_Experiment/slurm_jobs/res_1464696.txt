@@ -1,0 +1,108 @@
+Defects4J_oneLinerFix.sh start
+Creating directory 'Defects4J_projects'
+
+Creating directory 'Defects4J_patches'
+
+Checking out Closure_86 to /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_86_762
+
+Generating patches for Closure_86_762
+sequencer-predict.sh start
+Input parameter:
+BUGGY_FILE_PATH = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_86_762/src/com/google/javascript/jscomp/NodeUtil.java
+BUGGY_LINE = 762
+BEAM_SIZE = 50
+OUTPUT = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762
+
+Creating temporary working folder
+Creating tmp directory /home/pboddavarama/myworkdir/cs682/sequencer/src/Closure_86_762
+
+Abstracting the source file
+
+Tokenizing the abstraction
+
+Truncate the abstraction to 1000 tokens
+
+Generating predictions
+/home/pboddavarama/npr/lib/python3.7/site-packages/torchtext/data/field.py:359: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  var = torch.tensor(arr, dtype=self.dtype, device=device)
+
+Post process predictions
+
+Creating output directory /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762
+
+Generating patches
+
+Generating diffs
+
+Cleaning tmp folder
+
+Found 46 patches for NodeUtil.java stored in /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762
+sequencer-predict.sh done
+
+
+Running test on all patches for Closure_86
+/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_86_762 has following triggering tests:
+com.google.javascript.jscomp.NodeUtilTest::testLocalValue1
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testLocalizedSideEffects8
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testLocalizedSideEffects9
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testAnnotationInExterns_new4
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testAnnotationInExterns_new6
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testIssue303b
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testIssue303
+/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_86_762 has following failing tests:
+com.google.javascript.jscomp.NodeUtilTest::testLocalValue1
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testLocalizedSideEffects8
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testLocalizedSideEffects9
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testAnnotationInExterns_new4
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testAnnotationInExterns_new6
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testIssue303b
+com.google.javascript.jscomp.PureFunctionIdentifierTest::testIssue303
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/33/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/44/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/39/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/20/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/18/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/4/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/12/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/9/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/3/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/15/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/27/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/43/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/34/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/30/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/23/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/29/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/11/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/7/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/16/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/24/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/37/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/40/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/35/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/42/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/14/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/2/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/8/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/26/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/21/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/13/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/5/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/19/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/38/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/45/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/32/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/41/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/36/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/1/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/17/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/25/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/28/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/22/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/6/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/10/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/31/NodeUtil.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/46/NodeUtil.java
+
+Deleting /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_86_762
+

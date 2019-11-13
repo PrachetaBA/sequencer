@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_3830/src/main/java/org/apache/commons/math/util/FastMath.java	2019-11-12 19:25:50.595347413 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_3830/24/FastMath.java	2019-11-12 19:26:02.262106365 -0500
+@@ -3827,7 +3827,7 @@
+         if (a > b) {
+             return b;
+         }
+-        if (a < b) {
++        if((a<b)||(a<b)){
+             return a;
+         }
+         /* if either arg is NaN, return NaN */

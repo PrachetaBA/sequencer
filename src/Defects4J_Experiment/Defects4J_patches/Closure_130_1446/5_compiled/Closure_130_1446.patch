@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_1446/src/com/google/javascript/rhino/Node.java	2019-11-12 19:25:39.639336153 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_1446/5/Node.java	2019-11-12 19:25:56.800950162 -0500
+@@ -1443,7 +1443,7 @@
+       }
+       res = n.checkTreeEqualsImpl(n2);
+       if (res != null) {
+-        return res;
++        return n.checkTreeEqualsImpl(n2);
+       }
+     }
+     return res;

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_4_111/src/main/java/org/joda/time/field/ZeroIsMaxDateTimeField.java	2019-11-12 12:04:07.997255183 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_4_111/27/ZeroIsMaxDateTimeField.java	2019-11-12 12:05:28.265914581 -0500
+@@ -108,7 +108,7 @@
+      * @return the minimum value of 1
+      */
+     public int getMinimumValue() {
+-        return 1;
++        return1+(getMaximumValue());
+     }
+ 
+     /**

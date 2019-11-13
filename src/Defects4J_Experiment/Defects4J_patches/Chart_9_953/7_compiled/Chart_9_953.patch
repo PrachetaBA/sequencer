@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_9_953/source/org/jfree/data/time/TimeSeries.java	2019-11-12 12:10:13.179200884 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_9_953/7/TimeSeries.java	2019-11-12 12:10:20.501197277 -0500
+@@ -950,7 +950,7 @@
+             return copy;
+         }
+         else {
+-            return createCopy(startIndex, endIndex);
++            return createCopy(startIndex,0);
+         }
+ 
+     }

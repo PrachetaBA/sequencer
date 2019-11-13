@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_80_1055/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java	2019-11-12 12:06:14.567182570 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_80_1055/29/EigenDecompositionImpl.java	2019-11-12 12:06:28.837034930 -0500
+@@ -1052,7 +1052,7 @@
+         // step 2: flip array if needed
+         if ((dMin <= 0) || (deflatedEnd < end)) {
+             if (flipIfWarranted(deflatedEnd, 1)) {
+-                dMin2 = Math.min(dMin2, work[l - 1]);
++                dMin2=Math.min(dMin2,work[(l-5)]);
+                 work[l - 1] =
+                     Math.min(work[l - 1],
+                              Math.min(work[3 + pingPong], work[7 + pingPong]));

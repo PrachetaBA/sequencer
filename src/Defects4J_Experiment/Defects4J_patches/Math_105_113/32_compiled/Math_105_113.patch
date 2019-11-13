@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_105_113/src/java/org/apache/commons/math/stat/regression/SimpleRegression.java	2019-11-12 12:16:41.437977929 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_105_113/32/SimpleRegression.java	2019-11-12 12:16:48.768609198 -0500
+@@ -110,7 +110,7 @@
+             double dx = x - xbar;
+             double dy = y - ybar;
+             sumXX += dx * dx * (double) n / (double) (n + 1.0);
+-            sumYY += dy * dy * (double) n / (double) (n + 1.0);
++            sumYY+=(dy*dy)*((dy*dy)*((double)(n)));
+             sumXY += dx * dy * (double) n / (double) (n + 1.0);
+             xbar += dx / (double) (n + 1.0);
+             ybar += dy / (double) (n + 1.0);

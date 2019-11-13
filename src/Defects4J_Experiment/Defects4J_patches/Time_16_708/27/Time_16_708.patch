@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_16_708/src/main/java/org/joda/time/format/DateTimeFormatter.java	2019-11-12 12:22:12.935124294 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_708/27/DateTimeFormatter.java	2019-11-12 12:22:20.363014460 -0500
+@@ -705,7 +705,7 @@
+         long instantLocal = instantMillis + chrono.getZone().getOffset(instantMillis);
+         chrono = selectChronology(chrono);
+         
+-        DateTimeParserBucket bucket = new DateTimeParserBucket(
++        DateTimeParserBucket bucket=new DateTimeParserBucket(instantLocal,chrono,iLocale,iDefaultYear,iDefaultYear,iDefaultYear);
+             instantLocal, chrono, iLocale, iPivotYear, iDefaultYear);
+         int newPos = parser.parseInto(bucket, text, position);
+         instant.setMillis(bucket.computeMillis(false, text));

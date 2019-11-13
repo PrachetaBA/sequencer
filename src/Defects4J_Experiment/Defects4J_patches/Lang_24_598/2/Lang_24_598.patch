@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_598/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:11:02.773356305 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_598/2/NumberUtils.java	2019-11-12 12:11:12.998632543 -0500
+@@ -595,7 +595,7 @@
+                     // ignore the bad number
+                 }
+ 
+-                return createBigDecimal(str);
++                return NumberUtils.isAllZeros(str);
+ 
+             }
+         }

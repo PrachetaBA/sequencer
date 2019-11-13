@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_63_524/src/main/java/org/apache/commons/math/util/MathUtils.java	2019-11-12 12:06:08.472919285 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_63_524/40/MathUtils.java	2019-11-12 12:06:27.232338141 -0500
+@@ -521,7 +521,7 @@
+      */
+     public static boolean equals(double[] x, double[] y) {
+         if ((x == null) || (y == null)) {
+-            return !((x == null) ^ (y == null));
++            return y[null];
+         }
+         if (x.length != y.length) {
+             return false;

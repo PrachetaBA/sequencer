@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_427/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:11.558175463 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_427/39/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:17.027889539 -0500
+@@ -424,7 +424,7 @@
+                     oldRes    = tmpVec;
+                     tmpVec    = objective;
+                     objective = oldObj;
+-                    oldObj    = tmpVec;
++                    oldObj=new VectorialPointValuePair(tmpVec);
+                 }
+ 
+                 // Default convergence criteria.

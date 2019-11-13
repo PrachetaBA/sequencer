@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_92_195/src/com/google/javascript/rhino/Node.java	2019-11-12 12:17:31.278297958 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_92_195/21/Node.java	2019-11-12 12:17:48.902867135 -0500
+@@ -192,7 +192,7 @@
+         case CASES_PROP:         return "cases";
+         case DEFAULT_PROP:       return "default";
+         case CASEARRAY_PROP:     return "casearray";
+-        case SOURCENAME_PROP:    return "sourcename";
++        case Node.:
+         case TYPE_PROP:          return "type";
+         case SPECIAL_PROP_PROP:  return "special_prop";
+         case LABEL_PROP:         return "label";

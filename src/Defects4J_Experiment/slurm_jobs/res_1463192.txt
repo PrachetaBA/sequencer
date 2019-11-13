@@ -1,0 +1,100 @@
+Defects4J_oneLinerFix.sh start
+Creating directory 'Defects4J_projects'
+
+Creating directory 'Defects4J_patches'
+
+Checking out Time_16 to /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_16_698
+
+Generating patches for Time_16_698
+sequencer-predict.sh start
+Input parameter:
+BUGGY_FILE_PATH = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_16_698/src/main/java/org/joda/time/format/DateTimeFormatter.java
+BUGGY_LINE = 698
+BEAM_SIZE = 50
+OUTPUT = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698
+
+Creating temporary working folder
+Creating tmp directory /home/pboddavarama/myworkdir/cs682/sequencer/src/Time_16_698
+
+Abstracting the source file
+
+Tokenizing the abstraction
+
+Truncate the abstraction to 1000 tokens
+
+Generating predictions
+/home/pboddavarama/npr/lib/python3.7/site-packages/torchtext/data/field.py:359: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  var = torch.tensor(arr, dtype=self.dtype, device=device)
+
+Post process predictions
+
+Creating output directory /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698
+
+Generating patches
+
+Generating diffs
+
+Cleaning tmp folder
+
+Found 38 patches for DateTimeFormatter.java stored in /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698
+sequencer-predict.sh done
+
+
+Running test on all patches for Time_16
+/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_16_698 has following triggering tests:
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly_baseStartYear
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly_parseStartYear
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly_baseEndYear
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthDay_withDefaultYear_feb29
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthDay_feb29
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly_parseEndYear
+/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_16_698 has following failing tests:
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly_baseStartYear
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly_parseStartYear
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly_baseEndYear
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthDay_withDefaultYear_feb29
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthDay_feb29
+org.joda.time.format.TestDateTimeFormatter::testParseInto_monthOnly_parseEndYear
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/21/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/13/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/19/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/7/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/38/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/32/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/35/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/14/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/26/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/28/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/22/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/10/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/31/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/4/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/9/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/3/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/36/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/17/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/25/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/15/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/27/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/34/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/1/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/6/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/33/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/20/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/18/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/12/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/16/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/24/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/2/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/8/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/37/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/30/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/5/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/23/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/29/DateTimeFormatter.java
+Testing /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/11/DateTimeFormatter.java
+
+Deleting /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_16_698
+

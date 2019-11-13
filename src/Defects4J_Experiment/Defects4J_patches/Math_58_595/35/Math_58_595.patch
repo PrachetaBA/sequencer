@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_595/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:10.540383751 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_595/35/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:20.612967078 -0500
+@@ -592,7 +592,7 @@
+             // compute the Newton correction
+             for (int j = 0; j < solvedCols; ++j) {
+                 int pj = permutation[j];
+-                work1[pj] = work3[pj] * diag[pj] / dxNorm;
++                work1[pj]=((work3)-(diag[pj]))/dxNorm;
+             }
+             for (int j = 0; j < solvedCols; ++j) {
+                 int pj = permutation[j];

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_98/src/main/java/org/apache/commons/math3/random/Well19937c.java	2019-11-12 12:21:36.765272031 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_2_98/29/Well19937c.java	2019-11-12 12:22:00.272396886 -0500
+@@ -95,7 +95,7 @@
+         final int z1 = (v0 ^ (v0 << 25))  ^ (vM1 ^ (vM1 >>> 27));
+         final int z2 = (vM2 >>> 9) ^ (vM3 ^ (vM3 >>> 1));
+         final int z3 = z1      ^ z2;
+-        int z4 = z0 ^ (z1 ^ (z1 << 9)) ^ (z2 ^ (z2 << 21)) ^ (z3 ^ (z3 >>> 21));
++        int z4=((z0^(z1<<(z1<<9)))^(z2^(z2<<> )))^(z3^(z3> > > 21));
+ 
+         v[index]     = z3;
+         v[indexRm1]  = z4;

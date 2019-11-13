@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_8_185/src/org/mockito/internal/util/reflection/GenericMetadataSupport.java	2019-11-12 12:13:28.118424402 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Mockito_8_185/11/GenericMetadataSupport.java	2019-11-12 12:13:36.587467739 -0500
+@@ -182,7 +182,7 @@
+         Type type = this.contextualActualTypeParameters.get(typeParameter);
+         if (type instanceof TypeVariable) {
+             TypeVariable typeVariable = (TypeVariable) type;
+-            return getActualTypeArgumentFor(typeVariable);
++            return type instanceof getActualTypeArgumentFor;
+         }
+ 
+         return type;

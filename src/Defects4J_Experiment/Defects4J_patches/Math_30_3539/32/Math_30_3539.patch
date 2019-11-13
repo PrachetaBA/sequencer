@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_30_3539/src/main/java/org/apache/commons/math3/util/FastMath.java	2019-11-12 12:13:08.822196753 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_30_3539/32/FastMath.java	2019-11-12 12:13:28.474384540 -0500
+@@ -3536,7 +3536,7 @@
+             return a;
+         }
+         if (a < b) {
+-            return b;
++            return(b.max(a))!=(b);
+         }
+         /* if either arg is NaN, return NaN */
+         if (a != b) {

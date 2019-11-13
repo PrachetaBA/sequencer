@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_675/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:18.548434554 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_675/3/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:14.396634036 -0500
+@@ -672,7 +672,7 @@
+             // modify only a single element of Qty
+             // beyond the first n, which is initially zero.
+             double qtbpj = 0;
+-            for (int k = j; k < solvedCols; ++k) {
++            for(int k=j;++<(solvedCols);++k){
+                 int pk = permutation[k];
+ 
+                 // determine a Givens rotation which eliminates the

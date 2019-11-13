@@ -1,0 +1,61 @@
+Defects4J_oneLinerFix.sh start
+Creating directory 'Defects4J_projects'
+
+Creating directory 'Defects4J_patches'
+
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockito/internal/creation/MockSettingsImplTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockito/internal/verification/checkers/InvocationsFinderStub.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockito/internal/verification/argumentmatching’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockito/internal/verification/DummyVerificationMode.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockito/internal/configuration/injection/SimpleArgumentResolverTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockito/internal/configuration/MockInjectionTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/basicapi/MockingMultipleInterfacesTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/annotation/DeprecatedAnnotationEngineApiTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/annotation/WrongSetOfAnnotationsTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/annotation/CaptorAnnotationBasicTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/deepstubs’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/InjectionByTypeShouldFirstLookForExactTypeThenAncestorTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/ShouldOnlyModeAllowCapturingArgumentsTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/ActualInvocationHasNullArgumentNPEBugTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/ListenersLostOnResetMockTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/Issue353InjectionMightNotHappenInCertainConfigurationTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/InjectMocksShouldTryPropertySettersFirstBeforeFieldAccessTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/NPEWhenMockingThrowablesTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/NPEWithCertainMatchersTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/SpyShouldHaveNiceNameTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/ParentTestMockInjectionTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/bugs/FinalHashCodeAndEqualsRaiseNPEInInitMocksTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/verification/VerificationInOrderWithCallsTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/verification/DescriptiveMessagesWhenTimesXVerificationFailsTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitousage/verification/VerificationOnMultipleMocksUsingMatchersTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitoutil/SimpleClassGenerator.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitoutil/TestBase.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitoutil/ClassLoadersTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitoutil/ClassLoaders.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/test/org/mockitoutil/Assertor.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/subprojects/extTest/src/test/java/org/mockitousage/plugins/switcher’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/subprojects/testng/src/test/java/org/mockitousage/testng/failuretests/FailingOnPurposeBecauseIncorrectAnnotationUsage.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/subprojects/testng/src/test/java/org/mockitousage/testng/CaptorAnnotatedFieldShouldBeClearedTest.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/subprojects/testng/src/main/java/org’: Stale file handle
+Checking out Mockito_5 to /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27
+
+Generating patches for Mockito_5_27
+sequencer-predict.sh start
+Input parameter:
+BUGGY_FILE_PATH = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/src/org/mockito/internal/stubbing/defaultanswers/Answers.java
+BUGGY_LINE = 27
+BEAM_SIZE = 50
+OUTPUT = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Mockito_5_27
+
+Creating temporary working folder
+Creating tmp directory /home/pboddavarama/myworkdir/cs682/sequencer/src/Mockito_5_27
+
+Abstracting the source file
+/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27/src/org/mockito/internal/stubbing/defaultanswers/Answers.java does not exists or is a directory.
+Cannot generate abstraction for the buggy file
+
+Running test on all patches for Mockito_5
+Found no patch in /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Mockito_5_27
+
+Deleting /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_27
+

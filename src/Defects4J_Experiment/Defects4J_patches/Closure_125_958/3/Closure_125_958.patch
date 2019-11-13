@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_125_958/src/com/google/javascript/rhino/jstype/JSType.java	2019-11-12 12:05:07.471229297 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_125_958/3/JSType.java	2019-11-12 12:06:03.089219293 -0500
+@@ -955,7 +955,7 @@
+       // A < B => sup(A, B) == B
+       // does not hold because of unknown parameters and return types.
+       // See the comment in supAndInfHelper for more info on this.
+-      return thisType.toMaybeFunctionType().supAndInfHelper(
++      return thisType.toMaybeFunctionType().supAndInfHelper(thatType.toMaybeFunctionType());
+           thatType.toMaybeFunctionType(), false);
+     } else if (thisType.isEquivalentTo(thatType)) {
+       return thisType;

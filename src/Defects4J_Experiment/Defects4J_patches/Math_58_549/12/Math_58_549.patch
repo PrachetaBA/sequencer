@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_549/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:22.650304190 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_549/12/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:27.669584909 -0500
+@@ -546,7 +546,7 @@
+         }
+         double gNorm = FastMath.sqrt(sum2);
+         double paru = gNorm / delta;
+-        if (paru == 0) {
++        if(paru-paru){
+             // 2.2251e-308 is the smallest positive real for IEE754
+             paru = 2.2251e-308 / FastMath.min(delta, 0.1);
+         }

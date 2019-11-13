@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_32_330/src/main/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.java	2019-11-12 12:05:57.723527568 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_32_330/6/PolygonsSet.java	2019-11-12 12:06:16.509751247 -0500
+@@ -327,7 +327,7 @@
+                 // this is a degenerated loop, it probably comes from a very
+                 // tiny region with some segments smaller than the threshold, we
+                 // simply ignore it
+-                return null;
++                return false;
+             }
+ 
+             end = selectedSegment.getEnd();

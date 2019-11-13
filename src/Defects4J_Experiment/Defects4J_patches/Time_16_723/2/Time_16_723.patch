@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_16_723/src/main/java/org/joda/time/format/DateTimeFormatter.java	2019-11-12 12:22:33.288161918 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_723/2/DateTimeFormatter.java	2019-11-12 12:22:40.104561272 -0500
+@@ -720,7 +720,7 @@
+         if (iZone != null) {
+             instant.setZone(iZone);
+         }
+-        return newPos;
++        return instant;
+     }
+ 
+     /**

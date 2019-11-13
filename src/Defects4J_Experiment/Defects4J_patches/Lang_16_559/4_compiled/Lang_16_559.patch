@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_16_559/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:07:17.349959657 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_16_559/4/NumberUtils.java	2019-11-12 12:07:30.110229456 -0500
+@@ -556,7 +556,7 @@
+             if (dec == null && exp == null) {
+                 //Must be an int,long,bigint
+                 try {
+-                    return createInteger(str);
++                    return NumberUtils.createLong(str);
+                 } catch (NumberFormatException nfe) { // NOPMD
+                     // ignore the bad number
+                 }

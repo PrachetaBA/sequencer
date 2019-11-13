@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_698/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:13.141838185 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_698/8/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:16.106412627 -0500
+@@ -695,7 +695,7 @@
+                     // compute the modified diagonal element of R and
+                     // the modified element of (Qty,0)
+                     weightedResidualJacobian[k][pk] = cos * rkk + sin * lmDiag[k];
+-                    final double temp = cos * work[k] + sin * qtbpj;
++                    final double temp=(cos*(work[k]))+(lmDiag*qtbpj);
+                     qtbpj = -sin * work[k] + cos * qtbpj;
+                     work[k] = temp;
+ 

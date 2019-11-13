@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1334/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:11:15.436644154 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1334/18/NumberUtils.java	2019-11-12 12:11:24.121383910 -0500
+@@ -1331,7 +1331,7 @@
+         if (sz > start + 1) {
+             if (chars[start] == '0' && chars[start + 1] == 'x') {
+                 int i = start + 2;
+-                if (i == sz) {
++                if((i==sz)&&(!allowSigns)){
+                     return false; // str == "0x"
+                 }
+                 // checking hex (it can't be anything else)

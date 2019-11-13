@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_973/src/com/google/javascript/rhino/Node.java	2019-11-12 12:15:15.261903206 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_973/31/Node.java	2019-11-12 12:15:38.216168097 -0500
+@@ -970,7 +970,7 @@
+         PropListItem x = lookupProperty(type);
+         sb.append(" [");
+         sb.append(propToString(type));
+-        sb.append(": ");
++        sb.append(append");
+         String value;
+         switch (type) {
+           default:

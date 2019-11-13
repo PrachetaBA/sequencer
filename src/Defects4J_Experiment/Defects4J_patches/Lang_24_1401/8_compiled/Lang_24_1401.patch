@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1401/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:12:32.824842089 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1401/8/NumberUtils.java	2019-11-12 12:12:43.477837878 -0500
+@@ -1398,7 +1398,7 @@
+                     return false;
+                 }
+                 // single trailing decimal point after non-exponent is ok
+-                return foundDigit;
++                return!allowSigns;
+             }
+             if (!allowSigns
+                 && (chars[i] == 'd'

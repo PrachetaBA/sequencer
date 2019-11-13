@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_4_178/src/main/java/org/joda/time/field/ZeroIsMaxDateTimeField.java	2019-11-12 12:04:07.996737986 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_4_178/3/ZeroIsMaxDateTimeField.java	2019-11-12 12:05:25.713320700 -0500
+@@ -175,7 +175,7 @@
+      * @return the maximum value
+      */
+     public int getMaximumValue(ReadablePartial instant, int[] values) {
+-        return getWrappedField().getMaximumValue(instant, values) + 1;
++        return1;
+     }
+ 
+     public long roundFloor(long instant) {

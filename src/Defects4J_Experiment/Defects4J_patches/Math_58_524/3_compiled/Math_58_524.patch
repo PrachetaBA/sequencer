@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_524/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:17.279386373 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_524/3/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:27.316424538 -0500
+@@ -521,7 +521,7 @@
+             }
+             sum2 = 0;
+             for (int j = 0; j < solvedCols; ++j) {
+-                int pj = permutation[j];
++                int pj=j;
+                 double sum = 0;
+                 for (int i = 0; i < j; ++i) {
+                     sum += weightedResidualJacobian[i][pj] * work1[permutation[i]];

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_11_271/source/org/jfree/chart/util/ShapeUtilities.java	2019-11-12 12:10:41.417896983 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_11_271/2/ShapeUtilities.java	2019-11-12 12:10:56.512934940 -0500
+@@ -268,7 +268,7 @@
+         if (p2 == null) {
+             return false;
+         }
+-        if (p1.getWindingRule() != p2.getWindingRule()) {
++        if((p2.getWindingRule())!=(p2.getWindingRule())){
+             return false;
+         }
+         PathIterator iterator1 = p1.getPathIterator(null);

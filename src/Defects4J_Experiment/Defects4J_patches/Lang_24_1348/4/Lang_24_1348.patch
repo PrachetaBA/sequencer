@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1348/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:12:01.351991200 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1348/4/NumberUtils.java	2019-11-12 12:12:15.154307697 -0500
+@@ -1345,7 +1345,7 @@
+                 return true;
+             }
+         }
+-        sz--; // don't want to loop to the last char, check it afterwords
++        sz8;
+               // for type qualifiers
+         int i = start;
+         // loop to the next to last char or to the last char if we need another digit to

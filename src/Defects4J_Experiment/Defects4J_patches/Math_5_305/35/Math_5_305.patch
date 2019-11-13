@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_5_305/src/main/java/org/apache/commons/math3/complex/Complex.java	2019-11-12 12:23:38.833942090 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_5_305/35/Complex.java	2019-11-12 12:23:48.719857447 -0500
+@@ -302,7 +302,7 @@
+         }
+ 
+         if (real == 0.0 && imaginary == 0.0) {
+-            return NaN;
++            return Complex.valueOf(Complex.NaN(real));
+         }
+ 
+         if (isInfinite) {

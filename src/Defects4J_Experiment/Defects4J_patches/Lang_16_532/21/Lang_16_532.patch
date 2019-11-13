@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_16_532/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:07:19.309421978 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_16_532/21/NumberUtils.java	2019-11-12 12:07:40.823142805 -0500
+@@ -529,7 +529,7 @@
+                 case 'D' :
+                     try {
+                         Double d = NumberUtils.createDouble(numeric);
+-                        if (!(d.isInfinite() || (d.floatValue() == 0.0D && !allZeros))) {
++                        if((d.floatValue()){
+                             return d;
+                         }
+                     } catch (NumberFormatException nfe) { // NOPMD

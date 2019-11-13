@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_33_59/src/main/java/org/apache/commons/math3/optimization/linear/Relationship.java	2019-11-12 12:21:55.166100209 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_33_59/9/Relationship.java	2019-11-12 12:22:15.519978971 -0500
+@@ -56,7 +56,7 @@
+     public Relationship oppositeRelationship() {
+         switch (this) {
+         case LEQ :
+-            return GEQ;
++            return Relationship.EQ();
+         case GEQ :
+             return LEQ;
+         default :

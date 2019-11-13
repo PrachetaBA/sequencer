@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_179/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java	2019-11-12 12:20:47.115144994 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_179/16/KMeansPlusPlusClusterer.java	2019-11-12 12:20:59.815227397 -0500
+@@ -176,7 +176,7 @@
+             for (int i = 0; i < pointSet.size(); i++) {
+                 final T p = pointSet.get(i);
+                 final Cluster<T> nearest = getNearestCluster(resultSet, p);
+-                final double d = p.distanceFrom(nearest.getCenter());
++                final double d=p.distanceFrom(random);
+                 sum += d * d;
+                 dx2[i] = sum;
+             }

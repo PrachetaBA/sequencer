@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1345/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:12:01.356967797 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1345/39/NumberUtils.java	2019-11-12 12:12:15.757162727 -0500
+@@ -1342,7 +1342,7 @@
+                         return false;
+                     }
+                 }
+-                return true;
++                return((chars)!=null)&&((!allowSigns)||(!foundDigit));
+             }
+         }
+         sz--; // don't want to loop to the last char, check it afterwords

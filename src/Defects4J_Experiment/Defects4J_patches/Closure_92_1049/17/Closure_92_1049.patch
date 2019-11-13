@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_92_1049/src/com/google/javascript/rhino/Node.java	2019-11-12 12:19:38.854452456 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_92_1049/17/Node.java	2019-11-12 12:19:53.799940383 -0500
+@@ -1046,7 +1046,7 @@
+   private String toStringTreeImpl() {
+     try {
+       StringBuilder s = new StringBuilder();
+-      appendStringTree(s);
++      appendStringTree(String);
+       return s.toString();
+     } catch (IOException e) {
+       throw new RuntimeException("Should not happen\n" + e);

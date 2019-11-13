@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_426/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:06.690654404 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_426/31/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:08.787048695 -0500
+@@ -423,7 +423,7 @@
+                     weightedResiduals = oldRes;
+                     oldRes    = tmpVec;
+                     tmpVec    = objective;
+-                    objective = oldObj;
++                    objective=(oldObj)+(oldObj);
+                     oldObj    = tmpVec;
+                 }
+ 

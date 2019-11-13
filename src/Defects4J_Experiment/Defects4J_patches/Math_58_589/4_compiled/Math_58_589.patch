@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_589/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:12.583257829 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_589/4/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:19.473443572 -0500
+@@ -586,7 +586,7 @@
+             // of lmPar, also test for the exceptional cases where parl is zero
+             if ((FastMath.abs(fp) <= 0.1 * delta) ||
+                     ((parl == 0) && (fp <= previousFP) && (previousFP < 0))) {
+-                return;
++                break;
+             }
+ 
+             // compute the Newton correction

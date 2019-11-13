@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_85_97/src/java/org/apache/commons/math/distribution/AbstractContinuousDistribution.java	2019-11-12 12:17:20.030253238 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_85_97/9/AbstractContinuousDistribution.java	2019-11-12 12:17:31.673982446 -0500
+@@ -94,7 +94,7 @@
+              * TODO: expose the default solver, defaultAbsoluteAccuracy as
+              * a constant.
+              */ 
+-            if (Math.abs(rootFindingFunction.value(lowerBound)) < 1E-6) {
++            if(rootFindingFunction<1.0E-6){
+                 return lowerBound;
+             }
+             if (Math.abs(rootFindingFunction.value(upperBound)) < 1E-6) {

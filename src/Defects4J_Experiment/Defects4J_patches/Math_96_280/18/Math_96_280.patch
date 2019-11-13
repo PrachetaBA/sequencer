@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_96_280/src/java/org/apache/commons/math/complex/Complex.java	2019-11-12 12:13:40.400791613 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_96_280/18/Complex.java	2019-11-12 12:13:47.826538202 -0500
+@@ -277,7 +277,7 @@
+         if (isNaN()) {
+             return 7;
+         }
+-        return 37 * (17 * MathUtils.hash(imaginary) + 
++        return37*(MathUtils.hash(imaginary)));
+             MathUtils.hash(real));
+     }
+ 

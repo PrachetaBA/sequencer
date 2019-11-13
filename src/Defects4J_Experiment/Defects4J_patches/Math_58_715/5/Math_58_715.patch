@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_715/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:20.818672919 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_715/5/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:20.544376485 -0500
+@@ -712,7 +712,7 @@
+             // store the diagonal element of s and restore
+             // the corresponding diagonal element of R
+             lmDiag[j] = weightedResidualJacobian[j][permutation[j]];
+-            weightedResidualJacobian[j][permutation[j]] = lmDir[j];
++            weightedResidualJacobian[j][permutation][j];
+         }
+ 
+         // solve the triangular system for z, if the system is

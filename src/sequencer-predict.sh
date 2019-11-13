@@ -78,7 +78,8 @@ BUGGY_FILE_NAME=${BUGGY_FILE_PATH##*/}
 BUGGY_FILE_BASENAME=${BUGGY_FILE_NAME%.*}
 
 echo "Creating temporary working folder"
-tmp="$(cut -d'/' -f10 <<<"$OUTPUT")"
+tmp=`basename $OUTPUT`
+#tmp="$(cut -d'/' -f10 <<<"$OUTPUT")"
 mkdir -p $CURRENT_DIR/${tmp}
 echo "Creating tmp directory $CURRENT_DIR/${tmp}"
 echo
@@ -129,6 +130,9 @@ fi
 echo
 
 echo "Creating output directory ${OUTPUT}"
+if [ -d $OUTPUT ]; then
+    rm -rf $OUTPUT
+fi
 mkdir -p $OUTPUT
 echo
 

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_13_287/source/org/jfree/chart/block/BorderArrangement.java	2019-11-12 12:10:37.303512957 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_13_287/5/BorderArrangement.java	2019-11-12 12:10:47.865516776 -0500
+@@ -284,7 +284,7 @@
+             w[0] = size.width;
+             h[0] = size.height;
+         }
+-        if (this.bottomBlock != null) {
++        if((size.bottomBlock)!=null){
+             Size2D size = this.bottomBlock.arrange(g2, c1);
+             w[1] = size.width;
+             h[1] = size.height;

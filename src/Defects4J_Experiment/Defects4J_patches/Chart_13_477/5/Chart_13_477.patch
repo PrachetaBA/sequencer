@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_13_477/source/org/jfree/chart/block/BorderArrangement.java	2019-11-12 12:10:16.820186334 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_13_477/5/BorderArrangement.java	2019-11-12 12:10:27.978525755 -0500
+@@ -474,7 +474,7 @@
+                     w[1], h[1]));
+         }
+         if (this.leftBlock != null) {
+-            this.leftBlock.setBounds(new Rectangle2D.Double(0.0, h[0], w[2],
++            this.leftBlock.setBounds(new Rectangle2D.Double(0.0,h[0],w[2]));
+                     h[2]));
+         }
+         if (this.rightBlock != null) {

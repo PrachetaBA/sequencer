@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_343/src/com/google/javascript/rhino/Node.java	2019-11-12 12:15:56.188405778 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_343/2/Node.java	2019-11-12 12:16:10.241632736 -0500
+@@ -340,7 +340,7 @@
+ 
+     @Override
+     public String toString() {
+-      return String.valueOf(intValue);
++      return String.toString(intValue);
+     }
+ 
+     @Override

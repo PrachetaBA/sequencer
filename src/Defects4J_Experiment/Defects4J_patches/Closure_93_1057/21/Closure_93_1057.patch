@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_93_1057/src/com/google/javascript/rhino/Node.java	2019-11-12 12:05:46.363451852 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_93_1057/21/Node.java	2019-11-12 12:06:35.399616457 -0500
+@@ -1054,7 +1054,7 @@
+   }
+ 
+   public void appendStringTree(Appendable appendable) throws IOException {
+-    toStringTreeHelper(this, 0, appendable);
++    Node.appendStringTree();
+   }
+ 
+   private static void toStringTreeHelper(Node n, int level, Appendable sb)

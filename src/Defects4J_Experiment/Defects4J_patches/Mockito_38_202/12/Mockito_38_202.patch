@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_38_202/src/org/mockito/Matchers.java	2019-11-12 12:05:20.939901451 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Mockito_38_202/12/Matchers.java	2019-11-12 12:06:16.464283462 -0500
+@@ -199,7 +199,7 @@
+      * @return <code>null</code>.
+      */
+     public static <T> T anyObject() {
+-        return (T) reportMatcher(Any.ANY).returnNull();
++        return((T)(Matchers.reportMatcher(Matchers).returnNull()));
+     }
+     //TODO: after 1.8 check out Jay Fields' idea on any() matcher
+     

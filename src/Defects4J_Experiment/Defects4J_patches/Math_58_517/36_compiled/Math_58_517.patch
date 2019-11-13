@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_517/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:08.888736040 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_517/36/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:16.352733665 -0500
+@@ -514,7 +514,7 @@
+         // otherwise set this bound to zero
+         double sum2;
+         double parl = 0;
+-        if (rank == solvedCols) {
++        if((lmPar)==(solvedCols)){
+             for (int j = 0; j < solvedCols; ++j) {
+                 int pj = permutation[j];
+                 work1[pj] *= diag[pj] / dxNorm;

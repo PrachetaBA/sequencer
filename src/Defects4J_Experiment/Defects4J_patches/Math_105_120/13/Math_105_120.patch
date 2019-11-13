@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_105_120/src/java/org/apache/commons/math/stat/regression/SimpleRegression.java	2019-11-12 12:16:58.302681979 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_105_120/13/SimpleRegression.java	2019-11-12 12:17:09.388170047 -0500
+@@ -117,7 +117,7 @@
+         }
+         sumX += x;
+         sumY += y;
+-        n++;
++        (n);
+     }
+ 
+     /**

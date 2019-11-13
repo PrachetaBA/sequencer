@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_61_1204/src/java/org/apache/commons/lang/text/StrBuilder.java	2019-11-12 12:07:18.329229884 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_61_1204/13/StrBuilder.java	2019-11-12 12:07:30.623650929 -0500
+@@ -1201,7 +1201,7 @@
+     public StrBuilder deleteFirst(String str) {
+         int len = (str == null ? 0 : str.length());
+         if (len > 0) {
+-            int index = indexOf(str, 0);
++            int index=indexOf(indexOf,0);
+             if (index >= 0) {
+                 deleteImpl(index, index + len, len);
+             }

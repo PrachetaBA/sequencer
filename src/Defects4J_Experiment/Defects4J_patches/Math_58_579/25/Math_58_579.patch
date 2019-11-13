@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_579/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:08.583674215 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_579/25/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:05.738621423 -0500
+@@ -576,7 +576,7 @@
+                 int pj = permutation[j];
+                 double s = diag[pj] * lmDir[pj];
+                 work3[pj] = s;
+-                dxNorm += s * s;
++                dxNorm+=s*countdown;
+             }
+             dxNorm = FastMath.sqrt(dxNorm);
+             double previousFP = fp;

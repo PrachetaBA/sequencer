@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_11_1614/src/main/java/org/apache/commons/math3/util/FastMath.java	2019-11-12 12:05:36.038259791 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_11_1614/4/FastMath.java	2019-11-12 12:06:15.605845558 -0500
+@@ -1611,7 +1611,7 @@
+     public static double pow(double d, int e) {
+ 
+         if (e == 0) {
+-            return 1.0;
++            return100;
+         } else if (e < 0) {
+             e = -e;
+             d = 1.0 / d;

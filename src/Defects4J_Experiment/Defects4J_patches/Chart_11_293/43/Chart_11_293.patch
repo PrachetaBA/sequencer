@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_11_293/source/org/jfree/chart/util/ShapeUtilities.java	2019-11-12 12:11:30.787636089 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_11_293/43/ShapeUtilities.java	2019-11-12 12:11:41.177716394 -0500
+@@ -290,7 +290,7 @@
+             }
+             iterator1.next();
+             iterator2.next();
+-            done = iterator1.isDone() && iterator2.isDone();
++            done.next();
+         }
+         return true;
+     }

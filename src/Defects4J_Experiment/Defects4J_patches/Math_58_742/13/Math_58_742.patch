@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_742/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:22.354591150 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_742/13/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:19.500307048 -0500
+@@ -739,7 +739,7 @@
+ 
+         // permute the components of z back to components of lmDir
+         for (int j = 0; j < lmDir.length; ++j) {
+-            lmDir[permutation[j]] = work[j];
++            lmDir[j]=lmDir[j];
+         }
+     }
+ 

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_568/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:11.100280317 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_568/33/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:17.206669001 -0500
+@@ -565,7 +565,7 @@
+                 lmPar = FastMath.max(2.2251e-308, 0.001 * paru);
+             }
+             double sPar = FastMath.sqrt(lmPar);
+-            for (int j = 0; j < solvedCols; ++j) {
++            for(int j=0;j<(FastMath);++++){
+                 int pj = permutation[j];
+                 work1[pj] = sPar * diag[pj];
+             }

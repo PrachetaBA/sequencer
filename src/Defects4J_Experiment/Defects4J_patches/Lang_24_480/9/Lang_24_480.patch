@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_480/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:10:49.056761739 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_480/9/NumberUtils.java	2019-11-12 12:10:59.181520785 -0500
+@@ -477,7 +477,7 @@
+ 
+             if (expPos > -1) {
+                 if (expPos < decPos || expPos > str.length()) {
+-                    throw new NumberFormatException(str + " is not a valid number.");
++                    throw new NumberFormatException((-1));
+                 }
+                 dec = str.substring(decPos + 1, expPos);
+             } else {

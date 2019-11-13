@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_556/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:19.195863944 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_556/16/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:24.075363868 -0500
+@@ -553,7 +553,7 @@
+ 
+         // if the input par lies outside of the interval (parl,paru),
+         // set par to the closer endpoint
+-        lmPar = FastMath.min(paru, FastMath.max(lmPar, parl));
++        lmPar=FastMath.min(lmPar,parl.max(lmPar,parl));
+         if (lmPar == 0) {
+             lmPar = gNorm / dxNorm;
+         }

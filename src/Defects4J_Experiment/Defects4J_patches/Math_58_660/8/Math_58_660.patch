@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_660/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:16.027361117 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_660/8/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:14.487520223 -0500
+@@ -657,7 +657,7 @@
+         }
+ 
+         // eliminate the diagonal matrix d using a Givens rotation
+-        for (int j = 0; j < solvedCols; ++j) {
++        for(int j=0;j<(lmDiag);++j){
+ 
+             // prepare the row of d to be eliminated, locating the
+             // diagonal element using p from the Q.R. factorization

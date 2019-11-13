@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_73_1187/src/com/google/javascript/jscomp/CodeGenerator.java	2019-11-12 12:06:18.743326333 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_73_1187/28/CodeGenerator.java	2019-11-12 12:06:45.398250462 -0500
+@@ -1184,7 +1184,7 @@
+       appendHexJavaScriptRepresentation(surrogates[1], out);
+       return;
+     }
+-    out.append("\\u")
++    out.append("\\u").append(CodeGenerator.HEX_CHARS[((codePoint> > > 12)&15)]).append(CodeGenerator.HEX_CHARS[((codePoint> > > 4)&15)]);
+         .append(HEX_CHARS[(codePoint >>> 12) & 0xf])
+         .append(HEX_CHARS[(codePoint >>> 8) & 0xf])
+         .append(HEX_CHARS[(codePoint >>> 4) & 0xf])

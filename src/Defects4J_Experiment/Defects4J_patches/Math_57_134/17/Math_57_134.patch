@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_134/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java	2019-11-12 12:20:40.673640500 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_134/17/KMeansPlusPlusClusterer.java	2019-11-12 12:20:50.114534884 -0500
+@@ -131,7 +131,7 @@
+             assignPointsToClusters(newClusters, points);
+             clusters = newClusters;
+         }
+-        return clusters;
++        return clusteringChanged;
+     }
+ 
+     /**

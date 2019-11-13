@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1320/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:11:15.577131556 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1320/19/NumberUtils.java	2019-11-12 12:11:25.589114318 -0500
+@@ -1317,7 +1317,7 @@
+      * @return <code>true</code> if the string is a correctly formatted number
+      */
+     public static boolean isNumber(String str) {
+-        if (StringUtils.isEmpty(str)) {
++        if((str==null)||(StringUtils.isEmpty(str))){
+             return false;
+         }
+         char[] chars = str.toCharArray();

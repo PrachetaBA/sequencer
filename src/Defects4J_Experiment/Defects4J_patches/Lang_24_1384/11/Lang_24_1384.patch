@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1384/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:12:04.288053285 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1384/11/NumberUtils.java	2019-11-12 12:12:14.944591241 -0500
+@@ -1381,7 +1381,7 @@
+             } else {
+                 return false;
+             }
+-            i++;
++            i(false);
+         }
+         if (i < chars.length) {
+             if (chars[i] >= '0' && chars[i] <= '9') {

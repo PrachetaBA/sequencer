@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_561/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:16.734127223 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_561/23/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:14.982140776 -0500
+@@ -558,7 +558,7 @@
+             lmPar = gNorm / dxNorm;
+         }
+ 
+-        for (int countdown = 10; countdown >= 0; --countdown) {
++        for(int countdown=1;countdown>=0;--countdown){
+ 
+             // evaluate the function at the current value of lmPar
+             if (lmPar == 0) {

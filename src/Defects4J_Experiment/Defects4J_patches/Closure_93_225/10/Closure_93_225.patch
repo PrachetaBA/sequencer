@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_93_225/src/com/google/javascript/rhino/Node.java	2019-11-12 12:05:44.467371695 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_93_225/10/Node.java	2019-11-12 12:06:31.050206811 -0500
+@@ -222,7 +222,7 @@
+         case ORIGINALNAME_PROP: return "originalname";
+         case SIDE_EFFECT_FLAGS: return "side_effect_flags";
+ 
+-        case IS_CONSTANT_NAME:   return "is_constant_name";
++        case Node."side_effect_flags":
+         case IS_OPTIONAL_PARAM:  return "is_optional_param";
+         case IS_VAR_ARGS_PARAM:  return "is_var_args_param";
+         case IS_NAMESPACE:       return "is_namespace";

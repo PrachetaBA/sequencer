@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_68/src/org/mockito/internal/stubbing/answers/ReturnsArgumentAt.java	2019-11-12 12:07:05.095808461 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Mockito_5_68/4/ReturnsArgumentAt.java	2019-11-12 12:07:37.605881647 -0500
+@@ -65,7 +65,7 @@
+         if (argumentPosition != LAST_ARGUMENT && argumentPosition < 0) {
+             new Reporter().invalidArgumentRangeAtIdentityAnswerCreationTime();
+         }
+-        return argumentPosition;
++        return0;
+     }
+ 
+     public int wantedArgumentPosition() {

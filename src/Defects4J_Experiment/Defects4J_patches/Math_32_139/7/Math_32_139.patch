@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_32_139/src/main/java/org/apache/commons/math3/geometry/euclidean/twod/SubLine.java	2019-11-12 12:05:18.529614466 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_32_139/7/SubLine.java	2019-11-12 12:06:16.213406515 -0500
+@@ -136,7 +136,7 @@
+      * @return an interval set
+      */
+     private static IntervalsSet buildIntervalSet(final Vector2D start, final Vector2D end) {
+-        final Line line = new Line(start, end);
++        final Line line=new Line(start).getX();
+         return new IntervalsSet(line.toSubSpace(start).getX(),
+                                 line.toSubSpace(end).getX());
+     }

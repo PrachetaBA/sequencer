@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_86_762/src/com/google/javascript/jscomp/NodeUtil.java	2019-11-12 12:24:05.745730767 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_86_762/29/NodeUtil.java	2019-11-12 12:24:23.156294822 -0500
+@@ -759,7 +759,7 @@
+ 
+       if (callNode.isOnlyModifiesThisCall()
+           && evaluatesToLocalValue(nameNode.getFirstChild())) {
+-        return false;
++        return nameNode.isOnlyModifiesThisCall(nameNode.getFirstChild());
+       }
+ 
+       // Functions in the "Math" namespace have no side effects.

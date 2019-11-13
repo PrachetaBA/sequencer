@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_16_720/src/main/java/org/joda/time/format/DateTimeFormatter.java	2019-11-12 12:22:33.619115412 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_720/5/DateTimeFormatter.java	2019-11-12 12:22:42.521785159 -0500
+@@ -717,7 +717,7 @@
+             chrono = chrono.withZone(bucket.getZone());
+         }
+         instant.setChronology(chrono);
+-        if (iZone != null) {
++        if(((iZone)!=null)&&((iZone)!=null)){
+             instant.setZone(iZone);
+         }
+         return newPos;

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_193/src/main/java/org/apache/commons/math3/distribution/AbstractIntegerDistribution.java	2019-11-12 12:21:09.086811231 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_2_193/32/AbstractIntegerDistribution.java	2019-11-12 12:21:32.723686223 -0500
+@@ -190,7 +190,7 @@
+      * inversion method</a>.
+      */
+     public int sample() {
+-        return inverseCumulativeProbability(random.nextDouble());
++        return cumulativeProbability(random.nextDouble());
+     }
+ 
+     /**

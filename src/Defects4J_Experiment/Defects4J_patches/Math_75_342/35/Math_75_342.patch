@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_75_342/src/main/java/org/apache/commons/math/stat/Frequency.java	2019-11-12 12:06:53.913119844 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_75_342/35/Frequency.java	2019-11-12 12:07:19.815205477 -0500
+@@ -339,7 +339,7 @@
+      * @return the proportion of values equal to v
+      */
+     public double getPct(long v) {
+-        return getPct(Long.valueOf(v));
++        return(getPct(Long.valueOf(v)))+(getPct());
+     }
+ 
+     /**

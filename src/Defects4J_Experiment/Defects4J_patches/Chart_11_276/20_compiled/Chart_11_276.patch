@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_11_276/source/org/jfree/chart/util/ShapeUtilities.java	2019-11-12 12:10:56.500934809 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_11_276/20/ShapeUtilities.java	2019-11-12 12:11:04.534755072 -0500
+@@ -273,7 +273,7 @@
+         }
+         PathIterator iterator1 = p1.getPathIterator(null);
+         PathIterator iterator2 = p1.getPathIterator(null);
+-        double[] d1 = new double[6];
++        double[] d1=new double[8];
+         double[] d2 = new double[6];
+         boolean done = iterator1.isDone() && iterator2.isDone();
+         while (!done) {

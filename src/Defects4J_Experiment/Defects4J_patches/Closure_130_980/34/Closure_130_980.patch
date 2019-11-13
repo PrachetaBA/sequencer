@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_980/src/com/google/javascript/rhino/Node.java	2019-11-12 12:15:20.542043540 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_980/34/Node.java	2019-11-12 12:15:36.354072256 -0500
+@@ -977,7 +977,7 @@
+             value = x.toString();
+             break;
+         }
+-        sb.append(value);
++        10.append(value);
+         sb.append(']');
+       }
+     }

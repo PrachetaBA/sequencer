@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_67_987/src/com/google/javascript/rhino/Node.java	2019-11-12 12:05:52.680845653 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_67_987/16/Node.java	2019-11-12 12:06:56.898874748 -0500
+@@ -984,7 +984,7 @@
+           sb.append(propToString(type));
+           sb.append(": ");
+           String value;
+-          switch (type) {
++          switch(1.0){
+             case TARGETBLOCK_PROP: // can't add this as it recurses
+               value = "target block property";
+               break;

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_92_1071/src/com/google/javascript/rhino/Node.java	2019-11-12 12:19:58.570780010 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_92_1071/6/Node.java	2019-11-12 12:20:12.044683073 -0500
+@@ -1068,7 +1068,7 @@
+       for (Node cursor = n.getFirstChild();
+            cursor != null;
+            cursor = cursor.getNext()) {
+-        toStringTreeHelper(cursor, level + 1, sb);
++        Node.toStringTreeHelper('\n');
+       }
+     }
+   }

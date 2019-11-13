@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_85_104/src/java/org/apache/commons/math/distribution/AbstractContinuousDistribution.java	2019-11-12 12:17:17.265218975 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_85_104/19/AbstractContinuousDistribution.java	2019-11-12 12:17:26.201332418 -0500
+@@ -101,7 +101,7 @@
+                 return upperBound;
+             }     
+             // Failed bracket convergence was not because of corner solution
+-            throw new MathException(ex);
++            throw new MathException(ex,bracket);
+         }
+ 
+         // find root

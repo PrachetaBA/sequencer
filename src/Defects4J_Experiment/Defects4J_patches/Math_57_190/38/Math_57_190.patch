@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_190/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java	2019-11-12 12:21:10.044561970 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_190/38/KMeansPlusPlusClusterer.java	2019-11-12 12:21:17.698223646 -0500
+@@ -187,7 +187,7 @@
+             for (int i = 0 ; i < dx2.length; i++) {
+                 if (dx2[i] >= r) {
+                     final T p = pointSet.remove(i);
+-                    resultSet.add(new Cluster<T>(p));
++                    pointSet.add(new Cluster<T> (p));
+                     break;
+                 }
+             }

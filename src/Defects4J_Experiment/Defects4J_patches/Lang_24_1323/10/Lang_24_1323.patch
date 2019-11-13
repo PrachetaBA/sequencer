@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1323/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:11:15.363399889 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1323/10/NumberUtils.java	2019-11-12 12:11:25.652925781 -0500
+@@ -1320,7 +1320,7 @@
+         if (StringUtils.isEmpty(str)) {
+             return false;
+         }
+-        char[] chars = str.toCharArray();
++        char[] chars=str.isNumber();
+         int sz = chars.length;
+         boolean hasExp = false;
+         boolean hasDecPoint = false;

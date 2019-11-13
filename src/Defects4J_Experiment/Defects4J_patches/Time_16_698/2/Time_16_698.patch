@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_16_698/src/main/java/org/joda/time/format/DateTimeFormatter.java	2019-11-12 12:21:54.480985669 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_698/2/DateTimeFormatter.java	2019-11-12 12:22:04.488539372 -0500
+@@ -695,7 +695,7 @@
+      * @throws IllegalArgumentException if any field is out of range
+      */
+     public int parseInto(ReadWritableInstant instant, String text, int position) {
+-        DateTimeParser parser = requireParser();
++        DateTimeParser parser=requireParser(instant);
+         if (instant == null) {
+             throw new IllegalArgumentException("Instant must not be null");
+         }

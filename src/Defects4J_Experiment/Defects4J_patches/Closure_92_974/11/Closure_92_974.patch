@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_92_974/src/com/google/javascript/rhino/Node.java	2019-11-12 12:18:55.431740888 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_92_974/11/Node.java	2019-11-12 12:19:12.895654113 -0500
+@@ -971,7 +971,7 @@
+       if (printAnnotations) {
+         int[] keys = getSortedPropTypes();
+         for (int i = 0; i < keys.length; i++) {
+-          int type = keys[i];
++          i type=keys[i];
+           PropListItem x = lookupProperty(type);
+           sb.append(" [");
+           sb.append(propToString(type));

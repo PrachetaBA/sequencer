@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_93_1033/src/com/google/javascript/rhino/Node.java	2019-11-12 12:05:46.671408139 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_93_1033/35/Node.java	2019-11-12 12:06:34.563952945 -0500
+@@ -1030,7 +1030,7 @@
+         if (jsType != null) {
+           String jsTypeString = jsType.toString();
+           if (jsTypeString != null) {
+-            sb.append(" : ");
++            sb.append(":(jsTypeString)!=null);
+             sb.append(jsTypeString);
+           }
+         }

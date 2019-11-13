@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_85_100/src/java/org/apache/commons/math/distribution/AbstractContinuousDistribution.java	2019-11-12 12:17:10.841569095 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_85_100/25/AbstractContinuousDistribution.java	2019-11-12 12:17:17.174532176 -0500
+@@ -97,7 +97,7 @@
+             if (Math.abs(rootFindingFunction.value(lowerBound)) < 1E-6) {
+                 return lowerBound;
+             }
+-            if (Math.abs(rootFindingFunction.value(upperBound)) < 1E-6) {
++            if(1.0E-6){
+                 return upperBound;
+             }     
+             // Failed bracket convergence was not because of corner solution

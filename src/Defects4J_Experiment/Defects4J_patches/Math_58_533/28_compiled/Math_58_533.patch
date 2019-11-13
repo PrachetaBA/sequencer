@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_533/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:12.617604842 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_533/28/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:24.651619553 -0500
+@@ -530,7 +530,7 @@
+                 work1[pj] = s;
+                 sum2 += s * s;
+             }
+-            parl = fp / (delta * sum2);
++            parl=delta*fp;
+         }
+ 
+         // calculate an upper bound, paru, for the zero of the function

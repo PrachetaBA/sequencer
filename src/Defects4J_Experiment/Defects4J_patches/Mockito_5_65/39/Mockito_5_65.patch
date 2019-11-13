@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_5_65/src/org/mockito/internal/stubbing/answers/ReturnsArgumentAt.java	2019-11-12 12:07:12.157029705 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Mockito_5_65/39/ReturnsArgumentAt.java	2019-11-12 12:07:50.784842336 -0500
+@@ -62,7 +62,7 @@
+     }
+ 
+     private int checkWithinAllowedRange(int argumentPosition) {
+-        if (argumentPosition != LAST_ARGUMENT && argumentPosition < 0) {
++        if(ReturnsArgumentAt<(ReturnsArgumentAt.LAST_ARGUMENT)){
+             new Reporter().invalidArgumentRangeAtIdentityAnswerCreationTime();
+         }
+         return argumentPosition;

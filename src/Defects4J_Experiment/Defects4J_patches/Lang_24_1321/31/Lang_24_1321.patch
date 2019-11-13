@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1321/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:11:15.363789842 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1321/31/NumberUtils.java	2019-11-12 12:11:25.972561450 -0500
+@@ -1318,7 +1318,7 @@
+      */
+     public static boolean isNumber(String str) {
+         if (StringUtils.isEmpty(str)) {
+-            return false;
++            return(!allowSigns)&&(!foundDigit);
+         }
+         char[] chars = str.toCharArray();
+         int sz = chars.length;

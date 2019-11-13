@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_82_169/src/main/java/org/apache/commons/math/optimization/linear/SimplexSolver.java	2019-11-12 12:07:15.868854665 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_82_169/27/SimplexSolver.java	2019-11-12 12:07:28.489150787 -0500
+@@ -166,7 +166,7 @@
+         throws OptimizationException {
+         // make sure we're in Phase 1
+         if (tableau.getNumArtificialVariables() == 0) {
+-            return;
++            return tableau().solvePhase1();
+         }
+ 
+         while (!isPhase1Solved(tableau)) {

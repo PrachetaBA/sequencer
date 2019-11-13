@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_187/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java	2019-11-12 12:21:02.105764770 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_187/15/KMeansPlusPlusClusterer.java	2019-11-12 12:21:13.339891701 -0500
+@@ -184,7 +184,7 @@
+             // Add one new data point as a center. Each point x is chosen with
+             // probability proportional to D(x)2
+             final double r = random.nextDouble() * sum;
+-            for (int i = 0 ; i < dx2.length; i++) {
++            for(int i=0;i<k;i++){
+                 if (dx2[i] >= r) {
+                     final T p = pointSet.remove(i);
+                     resultSet.add(new Cluster<T>(p));

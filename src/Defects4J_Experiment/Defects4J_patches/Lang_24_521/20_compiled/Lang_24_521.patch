@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_521/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:10:38.246576678 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_521/20/NumberUtils.java	2019-11-12 12:10:48.453973268 -0500
+@@ -518,7 +518,7 @@
+                         return createBigInteger(numeric);
+ 
+                     }
+-                    throw new NumberFormatException(str + " is not a valid number.");
++                    throw new NumberFormatException(str);
+                 case 'f' :
+                 case 'F' :
+                     try {

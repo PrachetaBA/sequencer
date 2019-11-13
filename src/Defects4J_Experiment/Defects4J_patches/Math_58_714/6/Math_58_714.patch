@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_714/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:20.043891168 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_714/6/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:20.418964754 -0500
+@@ -711,7 +711,7 @@
+ 
+             // store the diagonal element of s and restore
+             // the corresponding diagonal element of R
+-            lmDiag[j] = weightedResidualJacobian[j][permutation[j]];
++            lmDiag[j]=permutation[j][j];
+             weightedResidualJacobian[j][permutation[j]] = lmDir[j];
+         }
+ 

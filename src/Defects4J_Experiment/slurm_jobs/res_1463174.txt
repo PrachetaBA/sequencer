@@ -1,0 +1,49 @@
+Defects4J_oneLinerFix.sh start
+Creating directory 'Defects4J_projects'
+
+Creating directory 'Defects4J_patches'
+
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/genetics/PermutationChromosome.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/genetics/AbstractListChromosome.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/genetics/InvalidRepresentationException.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/genetics/BinaryChromosome.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/genetics/RandomKeyMutation.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/genetics/FixedElapsedTime.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/genetics/Fitness.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/stat/descriptive/moment/Mean.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/stat/descriptive/moment/GeometricMean.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/stat/descriptive/moment/VectorialMean.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/stat/descriptive/moment/Kurtosis.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/stat/descriptive/moment/FourthMoment.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/stat/descriptive/SynchronizedMultivariateSummaryStatistics.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/optim/nonlinear/scalar/GradientMultivariateOptimizer.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/optim/nonlinear/scalar/GoalType.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/optim/nonlinear/vector/package-info.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/optim/nonlinear/vector/ModelFunctionJacobian.java’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/.git/refs/heads’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/.git/refs/remotes’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/.git/config’: Stale file handle
+rm: cannot remove ‘/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/.git/info’: Stale file handle
+rm: fts_read failed: Stale file handle
+Checking out Math_2 to /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90
+
+Generating patches for Math_2_90
+sequencer-predict.sh start
+Input parameter:
+BUGGY_FILE_PATH = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/random/Well19937c.java
+BUGGY_LINE = 90
+BEAM_SIZE = 50
+OUTPUT = /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_2_90
+
+Creating temporary working folder
+Creating tmp directory /home/pboddavarama/myworkdir/cs682/sequencer/src/Math_2_90
+
+Abstracting the source file
+/home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90/src/main/java/org/apache/commons/math3/random/Well19937c.java does not exists or is a directory.
+Cannot generate abstraction for the buggy file
+
+Running test on all patches for Math_2
+Found no patch in /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_2_90
+
+Deleting /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_90
+

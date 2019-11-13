@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_92_918/src/com/google/javascript/rhino/Node.java	2019-11-12 12:18:13.822786208 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_92_918/12/Node.java	2019-11-12 12:18:29.936827799 -0500
+@@ -915,7 +915,7 @@
+     if (Token.printTrees) {
+         StringBuilder sb = new StringBuilder();
+         toString(sb, printSource, printAnnotations, printType);
+-        return sb.toString();
++        return(sb.toString())+"/";
+     }
+     return String.valueOf(type);
+   }

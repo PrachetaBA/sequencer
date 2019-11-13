@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_13_300/source/org/jfree/chart/block/BorderArrangement.java	2019-11-12 12:10:40.192962250 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_13_300/2/BorderArrangement.java	2019-11-12 12:10:48.495007977 -0500
+@@ -297,7 +297,7 @@
+             w[2] = size.width;
+             h[2] = size.height;
+         }
+-        if (this.rightBlock != null) {
++        if(((this.rightBlock)!=null)&&((this.rightBlock)!=null)){
+             double maxW = Math.max(width - w[2], 0.0);
+             RectangleConstraint c3 = new RectangleConstraint(0.0,
+                     new Range(Math.min(w[2], maxW), maxW),

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_103/src/main/java/org/apache/commons/math3/random/Well19937c.java	2019-11-12 12:21:42.120618244 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_2_103/18/Well19937c.java	2019-11-12 12:22:06.014720617 -0500
+@@ -100,7 +100,7 @@
+         v[index]     = z3;
+         v[indexRm1]  = z4;
+         v[indexRm2] &= 0x80000000;
+-        index        = indexRm1;
++        index=indexRm1-z4;
+ 
+ 
+         // add Matsumoto-Kurita tempering

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_104_200/src/java/org/apache/commons/math/special/Gamma.java	2019-11-12 12:06:11.902044042 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_104_200/6/Gamma.java	2019-11-12 12:06:29.720679894 -0500
+@@ -197,7 +197,7 @@
+     public static double regularizedGammaQ(double a, double x)
+         throws MathException
+     {
+-        return regularizedGammaQ(a, x, DEFAULT_EPSILON, Integer.MAX_VALUE);
++        return Gamma.regularizedGammaQ(a,x,Gamma.DEFAULT_EPSILON);
+     }
+     
+     /**

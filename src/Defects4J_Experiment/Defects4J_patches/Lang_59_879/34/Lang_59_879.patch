@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_59_879/src/java/org/apache/commons/lang/text/StrBuilder.java	2019-11-12 12:10:17.014924359 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_59_879/34/StrBuilder.java	2019-11-12 12:10:30.872293295 -0500
+@@ -876,7 +876,7 @@
+      * @return this, to enable chaining
+      */
+     public StrBuilder appendFixedWidthPadRight(Object obj, int width, char padChar) {
+-        if (width > 0) {
++        if(width>=obj){
+             ensureCapacity(size + width);
+             String str = (obj == null ? getNullText() : obj.toString());
+             int strLen = str.length();

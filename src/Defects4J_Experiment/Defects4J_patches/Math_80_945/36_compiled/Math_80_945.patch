@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_80_945/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java	2019-11-12 12:06:06.219986393 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_80_945/36/EigenDecompositionImpl.java	2019-11-12 12:06:19.348133057 -0500
+@@ -942,7 +942,7 @@
+             for (int i = 4 * (n - 2) + pingPong; i >= 0; i -= 4) {
+                 if (work[i + 2] <= TOLERANCE_2 * d) {
+                     work[i + 2] = -0.0;
+-                    d = work[i];
++                    d=(work[i])*(work[i]);
+                 } else {
+                     d *= work[i] / (d + work[i + 2]);
+                 }

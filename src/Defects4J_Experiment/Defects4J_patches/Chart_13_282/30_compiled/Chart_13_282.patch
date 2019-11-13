@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_13_282/source/org/jfree/chart/block/BorderArrangement.java	2019-11-12 12:10:40.259776975 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_13_282/30/BorderArrangement.java	2019-11-12 12:10:48.828409573 -0500
+@@ -279,7 +279,7 @@
+         RectangleConstraint c1 = new RectangleConstraint(width, null,
+                 LengthConstraintType.FIXED, 0.0, null,
+                 LengthConstraintType.NONE);
+-        if (this.topBlock != null) {
++        if((this.centerBlock)!=null){
+             Size2D size = this.topBlock.arrange(g2, c1);
+             w[0] = size.width;
+             h[0] = size.height;

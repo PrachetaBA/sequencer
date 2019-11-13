@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_105_107/src/java/org/apache/commons/math/stat/regression/SimpleRegression.java	2019-11-12 12:16:31.672565558 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_105_107/8/SimpleRegression.java	2019-11-12 12:16:40.089599254 -0500
+@@ -104,7 +104,7 @@
+      */
+     public void addData(double x, double y) {
+         if (n == 0) {
+-            xbar = x;
++            xbar=x-1;
+             ybar = y;
+         } else {
+             double dx = x - xbar;

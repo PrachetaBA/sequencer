@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1377/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:11:54.596228608 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1377/36/NumberUtils.java	2019-11-12 12:12:01.566353920 -0500
+@@ -1374,7 +1374,7 @@
+                 allowSigns = true;
+             } else if (chars[i] == '+' || chars[i] == '-') {
+                 if (!allowSigns) {
+-                    return false;
++                    return(chars)&&(!foundDigit);
+                 }
+                 allowSigns = false;
+                 foundDigit = false; // we need a digit after the E

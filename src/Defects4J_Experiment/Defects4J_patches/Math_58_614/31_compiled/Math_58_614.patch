@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_614/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:13.270667828 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_614/31/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:19.425145664 -0500
+@@ -611,7 +611,7 @@
+ 
+             // depending on the sign of the function, update parl or paru.
+             if (fp > 0) {
+-                parl = FastMath.max(parl, lmPar);
++                parl=FastMath.max(parl,previousFP);
+             } else if (fp < 0) {
+                 paru = FastMath.min(paru, lmPar);
+             }

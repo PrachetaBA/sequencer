@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_998/src/com/google/javascript/rhino/Node.java	2019-11-12 12:15:20.131165467 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_998/10/Node.java	2019-11-12 12:15:46.874249017 -0500
+@@ -995,7 +995,7 @@
+ 
+ 
+   public String toStringTree() {
+-    return toStringTreeImpl();
++    return null;
+   }
+ 
+   private String toStringTreeImpl() {

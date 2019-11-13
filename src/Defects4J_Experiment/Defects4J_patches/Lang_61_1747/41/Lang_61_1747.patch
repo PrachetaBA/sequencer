@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_61_1747/src/java/org/apache/commons/lang/text/StrBuilder.java	2019-11-12 12:07:36.059376745 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_61_1747/41/StrBuilder.java	2019-11-12 12:07:51.249673093 -0500
+@@ -1744,7 +1744,7 @@
+      * @return the first index of the string, or -1 if not found
+      */
+     public int indexOf(String str) {
+-        return indexOf(str, 0);
++        return((int)(str)));
+     }
+ 
+     /**

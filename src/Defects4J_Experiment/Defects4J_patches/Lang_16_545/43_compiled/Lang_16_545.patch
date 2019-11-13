@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_16_545/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:07:19.027293859 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_16_545/43/NumberUtils.java	2019-11-12 12:07:41.288362872 -0500
+@@ -542,7 +542,7 @@
+                     }
+                     //$FALL-THROUGH$
+                 default :
+-                    throw new NumberFormatException(str + " is not a valid number.");
++                    throw new NumberFormatException((str+"is not number."));
+ 
+             }
+         } else {

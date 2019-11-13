@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_92_854/src/com/google/javascript/rhino/Node.java	2019-11-12 12:17:52.152688020 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_92_854/6/Node.java	2019-11-12 12:18:06.836014477 -0500
+@@ -851,7 +851,7 @@
+       keys[count] = x.type;
+     }
+ 
+-    Arrays.sort(keys);
++    Arrays.sort(keys));
+     return keys;
+   }
+ 

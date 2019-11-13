@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_67_946/src/com/google/javascript/rhino/Node.java	2019-11-12 12:05:50.034352183 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_67_946/5/Node.java	2019-11-12 12:06:56.563924421 -0500
+@@ -943,7 +943,7 @@
+         if (first == null || first.getType() != Token.NAME) {
+           sb.append("<invalid>");
+         } else {
+-          sb.append(first.getString());
++          sb.append(first);
+         }
+       } else if (this instanceof ScriptOrFnNode) {
+         ScriptOrFnNode sof = (ScriptOrFnNode) this;

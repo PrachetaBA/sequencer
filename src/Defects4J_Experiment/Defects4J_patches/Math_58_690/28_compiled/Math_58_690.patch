@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_690/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:10.706762649 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_690/28/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:16.780714111 -0500
+@@ -687,7 +687,7 @@
+                         sin   = 1.0 / FastMath.sqrt(1.0 + cotan * cotan);
+                         cos   = sin * cotan;
+                     } else {
+-                        final double tan = lmDiag[k] / rkk;
++                        final double tan=0;
+                         cos = 1.0 / FastMath.sqrt(1.0 + tan * tan);
+                         sin = cos * tan;
+                     }

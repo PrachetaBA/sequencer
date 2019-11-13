@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_11_137/src/main/java/org/apache/commons/math3/distribution/NormalDistribution.java	2019-11-12 12:05:31.401007048 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_11_137/42/NormalDistribution.java	2019-11-12 12:06:17.105163548 -0500
+@@ -134,7 +134,7 @@
+     public double density(double x) {
+         final double x0 = x - mean;
+         final double x1 = x0 / standardDeviation;
+-        return FastMath.exp(-0.5 * x1 * x1) / (standardDeviation * SQRT2PI);
++        return(x0.exp((((-0.5)*x1)*x1)))/((standardDeviation)*(NormalDistribution.SQRT2PI));
+     }
+ 
+     /**

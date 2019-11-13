@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_92_1064/src/com/google/javascript/rhino/Node.java	2019-11-12 12:19:43.743922607 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_92_1064/34/Node.java	2019-11-12 12:19:56.089301479 -0500
+@@ -1061,7 +1061,7 @@
+       throws IOException {
+     if (Token.printTrees) {
+       for (int i = 0; i != level; ++i) {
+-        sb.append("    ");
++        sb.append(level"");
+       }
+       sb.append(n.toString());
+       sb.append('\n');

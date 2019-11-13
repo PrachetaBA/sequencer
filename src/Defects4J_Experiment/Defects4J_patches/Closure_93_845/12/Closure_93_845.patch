@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_93_845/src/com/google/javascript/rhino/Node.java	2019-11-12 12:05:44.870508723 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_93_845/12/Node.java	2019-11-12 12:06:31.074127958 -0500
+@@ -842,7 +842,7 @@
+   private int[] getSortedPropTypes() {
+     int count = 0;
+     for (PropListItem x = propListHead; x != null; x = x.next) {
+-      count++;
++      0+x;
+     }
+ 
+     int[] keys = new int[count];

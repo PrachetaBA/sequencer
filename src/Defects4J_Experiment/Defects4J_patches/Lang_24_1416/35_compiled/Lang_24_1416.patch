@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1416/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:13:21.111301266 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1416/35/NumberUtils.java	2019-11-12 12:13:29.718040821 -0500
+@@ -1413,7 +1413,7 @@
+                 return foundDigit && !hasExp;
+             }
+             // last character is illegal
+-            return false;
++            return((chars[i])=='.')?true:true;
+         }
+         // allowSigns is true iff the val ends in 'E'
+         // found digit it to make sure weird stuff like '.' and '1E-' doesn't pass

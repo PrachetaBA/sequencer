@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_11_279/source/org/jfree/chart/util/ShapeUtilities.java	2019-11-12 12:10:59.439497039 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_11_279/9/ShapeUtilities.java	2019-11-12 12:11:06.032523724 -0500
+@@ -276,7 +276,7 @@
+         double[] d1 = new double[6];
+         double[] d2 = new double[6];
+         boolean done = iterator1.isDone() && iterator2.isDone();
+-        while (!done) {
++        while(done!=null){
+             if (iterator1.isDone() != iterator2.isDone()) {
+                 return false;
+             }

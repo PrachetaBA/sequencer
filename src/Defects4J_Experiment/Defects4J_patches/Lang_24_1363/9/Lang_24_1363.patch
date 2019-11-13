@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1363/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:11:58.270160580 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1363/9/NumberUtils.java	2019-11-12 12:12:06.202509579 -0500
+@@ -1360,7 +1360,7 @@
+                     // two decimal points or dec in exponent   
+                     return false;
+                 }
+-                hasDecPoint = true;
++                return0;
+             } else if (chars[i] == 'e' || chars[i] == 'E') {
+                 // we've already taken care of hex.
+                 if (hasExp) {

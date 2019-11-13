@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_26_59/src/org/mockito/internal/stubbing/defaultanswers/ReturnsMoreEmptyValues.java	2019-11-12 12:05:20.157679846 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Mockito_26_59/21/ReturnsMoreEmptyValues.java	2019-11-12 12:06:25.681006727 -0500
+@@ -56,7 +56,7 @@
+     public Object answer(InvocationOnMock invocation) throws Throwable {
+         Object ret = delegate.answer(invocation);
+         if (ret != null) {
+-            return ret;
++            return ret.getMethod();
+         }
+ 
+         Class<?> returnType = invocation.getMethod().getReturnType();

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_67_1023/src/com/google/javascript/rhino/Node.java	2019-11-12 12:05:52.779272842 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_67_1023/13/Node.java	2019-11-12 12:06:56.812720258 -0500
+@@ -1020,7 +1020,7 @@
+               }
+               break;
+             default:
+-              Object obj = x.objectValue;
++              double obj=x.objectValue;
+               if (obj != null) {
+                 value = obj.toString();
+               } else {

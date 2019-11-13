@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_581/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:07.535747520 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_581/30/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:05.951354531 -0500
+@@ -578,7 +578,7 @@
+                 work3[pj] = s;
+                 dxNorm += s * s;
+             }
+-            dxNorm = FastMath.sqrt(dxNorm);
++            dxNorm+=FastMath.sqrt(dxNorm);
+             double previousFP = fp;
+             fp = dxNorm - delta;
+ 

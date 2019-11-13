@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_16_518/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:07:25.139421022 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_16_518/20/NumberUtils.java	2019-11-12 12:07:44.103414365 -0500
+@@ -515,7 +515,7 @@
+                 case 'F' :
+                     try {
+                         Float f = NumberUtils.createFloat(numeric);
+-                        if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
++                        if((f.isInfinite()){
+                             //If it's too big for a float or the float value = 0 and the string
+                             //has non-zeros in it, then float does not have the precision we want
+                             return f;

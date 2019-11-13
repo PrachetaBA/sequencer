@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_96_277/src/java/org/apache/commons/math/complex/Complex.java	2019-11-12 12:13:41.048179613 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_96_277/3/Complex.java	2019-11-12 12:13:48.783133847 -0500
+@@ -274,7 +274,7 @@
+      * @return a hash code value for this object
+      */
+     public int hashCode() {
+-        if (isNaN()) {
++        if(real()){
+             return 7;
+         }
+         return 37 * (17 * MathUtils.hash(imaginary) + 

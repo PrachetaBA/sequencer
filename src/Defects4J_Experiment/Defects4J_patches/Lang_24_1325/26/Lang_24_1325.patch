@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_24_1325/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2019-11-12 12:11:20.874616233 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_24_1325/26/NumberUtils.java	2019-11-12 12:11:29.470334789 -0500
+@@ -1322,7 +1322,7 @@
+         }
+         char[] chars = str.toCharArray();
+         int sz = chars.length;
+-        boolean hasExp = false;
++        false hasExp=true;
+         boolean hasDecPoint = false;
+         boolean allowSigns = false;
+         boolean foundDigit = false;

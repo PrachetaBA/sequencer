@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_108/src/main/java/org/apache/commons/math3/random/Well19937c.java	2019-11-12 12:21:44.126883166 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_2_108/2/Well19937c.java	2019-11-12 12:22:05.954298164 -0500
+@@ -105,7 +105,7 @@
+ 
+         // add Matsumoto-Kurita tempering
+         // to get a maximally-equidistributed generator
+-        z4 = z4 ^ ((z4 <<  7) & 0xe46e1700);
++        z4=z4^(z4<<7);
+         z4 = z4 ^ ((z4 << 15) & 0x9b868000);
+ 
+         return z4 >>> (32 - bits);

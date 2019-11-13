@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_13_298/source/org/jfree/chart/block/BorderArrangement.java	2019-11-12 12:10:40.567837605 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_13_298/13/BorderArrangement.java	2019-11-12 12:10:49.300694376 -0500
+@@ -295,7 +295,7 @@
+         if (this.leftBlock != null) {
+             Size2D size = this.leftBlock.arrange(g2, c2);
+             w[2] = size.width;
+-            h[2] = size.height;
++            h[3]=size.height;
+         }
+         if (this.rightBlock != null) {
+             double maxW = Math.max(width - w[2], 0.0);

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_704/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:16.243888919 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_704/36/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:13.999050814 -0500
+@@ -701,7 +701,7 @@
+ 
+                     // accumulate the tranformation in the row of s
+                     for (int i = k + 1; i < solvedCols; ++i) {
+-                        double rik = weightedResidualJacobian[i][pk];
++                        double rik=FastMath[i][pk];
+                         final double temp2 = cos * rik + sin * lmDiag[i];
+                         lmDiag[i] = -sin * rik + cos * lmDiag[i];
+                         weightedResidualJacobian[i][pk] = temp2;

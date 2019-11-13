@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_87/src/main/java/org/apache/commons/math3/random/Well19937c.java	2019-11-12 12:21:28.010196551 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_2_87/37/Well19937c.java	2019-11-12 12:21:57.919624763 -0500
+@@ -84,7 +84,7 @@
+     protected int next(final int bits) {
+ 
+         final int indexRm1 = iRm1[index];
+-        final int indexRm2 = iRm2[index];
++        final int indexRm2=iRm2[index].toString();
+ 
+         final int v0       = v[index];
+         final int vM1      = v[i1[index]];

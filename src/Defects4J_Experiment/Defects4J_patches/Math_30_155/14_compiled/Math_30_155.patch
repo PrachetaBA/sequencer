@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_30_155/src/main/java/org/apache/commons/math3/special/Gamma.java	2019-11-12 12:13:12.491549285 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_30_155/14/Gamma.java	2019-11-12 12:13:29.398275918 -0500
+@@ -152,7 +152,7 @@
+         double ret;
+ 
+         if (Double.isNaN(a) || Double.isNaN(x) || (a <= 0.0) || (x < 0.0)) {
+-            ret = Double.NaN;
++            ret=0.0;
+         } else if (x == 0.0) {
+             ret = 0.0;
+         } else if (x >= a + 1) {

@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_11_265/source/org/jfree/chart/util/ShapeUtilities.java	2019-11-12 12:10:39.100277599 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_11_265/36/ShapeUtilities.java	2019-11-12 12:10:56.799399595 -0500
+@@ -262,7 +262,7 @@
+      * @return A boolean.
+      */
+     public static boolean equal(GeneralPath p1, GeneralPath p2) {
+-        if (p1 == null) {
++        if((p1==null)||((p1)==null)){
+             return (p2 == null);
+         }
+         if (p2 == null) {

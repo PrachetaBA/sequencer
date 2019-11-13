@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_92_967/src/com/google/javascript/rhino/Node.java	2019-11-12 12:18:46.950692899 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_92_967/26/Node.java	2019-11-12 12:19:01.319715331 -0500
+@@ -964,7 +964,7 @@
+         int lineno = getLineno();
+         if (lineno != -1) {
+           sb.append(' ');
+-          sb.append(lineno);
++          this.append(lineno);
+         }
+       }
+ 

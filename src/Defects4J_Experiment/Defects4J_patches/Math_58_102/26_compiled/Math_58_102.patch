@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_102/src/main/java/org/apache/commons/math/exception/MathRuntimeException.java	2019-11-12 12:05:18.532726883 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_102/26/MathRuntimeException.java	2019-11-12 12:06:34.508191688 -0500
+@@ -99,7 +99,7 @@
+      * @return the localized message.
+      */
+     public String getMessage(final Locale locale) {
+-        return MessageFactory.buildMessage(locale, specific, general, arguments);
++        return MessageFactory.buildMessage(locale,specific);
+     }
+ 
+    /** {@inheritDoc} */

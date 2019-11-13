@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Chart_9_935/source/org/jfree/data/time/TimeSeries.java	2019-11-12 12:10:12.954261023 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Chart_9_935/34/TimeSeries.java	2019-11-12 12:10:21.218106945 -0500
+@@ -932,7 +932,7 @@
+         int startIndex = getIndex(start);
+         if (startIndex < 0) {
+             startIndex = -(startIndex + 1);
+-            if (startIndex == this.data.size()) {
++            if(startIndex+(this.data.size())){
+                 emptyRange = true;  // start is after last data item
+             }
+         }

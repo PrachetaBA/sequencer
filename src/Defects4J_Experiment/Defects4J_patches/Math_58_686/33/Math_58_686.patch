@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_686/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:17.259004636 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_686/33/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:13.970902661 -0500
+@@ -683,7 +683,7 @@
+                     final double cos;
+                     double rkk = weightedResidualJacobian[k][pk];
+                     if (FastMath.abs(rkk) < FastMath.abs(lmDiag[k])) {
+-                        final double cotan = rkk / lmDiag[k];
++                        final double cotan=rkk/(lmDiag[pj]);
+                         sin   = 1.0 / FastMath.sqrt(1.0 + cotan * cotan);
+                         cos   = sin * cotan;
+                     } else {

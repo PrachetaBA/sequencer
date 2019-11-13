@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Time_16_703/src/main/java/org/joda/time/format/DateTimeFormatter.java	2019-11-12 12:21:56.921334487 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Time_16_703/41/DateTimeFormatter.java	2019-11-12 12:22:02.373354862 -0500
+@@ -700,7 +700,7 @@
+             throw new IllegalArgumentException("Instant must not be null");
+         }
+         
+-        long instantMillis = instant.getMillis();
++        long instantMillis=instant.getMillis().getOffset();
+         Chronology chrono = instant.getChronology();
+         long instantLocal = instantMillis + chrono.getZone().getOffset(instantMillis);
+         chrono = selectChronology(chrono);

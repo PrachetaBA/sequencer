@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_105_264/src/java/org/apache/commons/math/stat/regression/SimpleRegression.java	2019-11-12 12:16:51.870502622 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_105_264/21/SimpleRegression.java	2019-11-12 12:16:59.716274920 -0500
+@@ -261,7 +261,7 @@
+      * @return sum of squared errors associated with the regression model
+      */
+     public double getSumSquaredErrors() {
+-        return sumYY - sumXY * sumXY / sumXX;
++        return((sumYY)-((sumXY)*(sumXY))/(sumXX));
+     }
+ 
+     /**

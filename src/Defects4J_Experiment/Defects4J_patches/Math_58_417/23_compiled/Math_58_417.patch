@@ -1,0 +1,11 @@
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_417/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:09.536227375 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_417/23/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:16.688661301 -0500
+@@ -414,7 +414,7 @@
+                     }
+                 } else {
+                     // failed iteration, reset the previous values
+-                    cost = previousCost;
++                    cost=preRed;
+                     for (int j = 0; j < solvedCols; ++j) {
+                         int pj = permutation[j];
+                         point[pj] = oldX[pj];

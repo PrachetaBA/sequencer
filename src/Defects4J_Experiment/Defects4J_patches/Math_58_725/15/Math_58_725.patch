@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_725/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:23.580310030 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_725/15/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:20.888735650 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_725/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 19:25:50.903849498 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_725/15/LevenbergMarquardtOptimizer.java	2019-11-12 19:26:02.426540272 -0500
 @@ -722,7 +722,7 @@
              if ((lmDiag[j] == 0) && (nSing == solvedCols)) {
                  nSing = j;

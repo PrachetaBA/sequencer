@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_390/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:08.502826107 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_390/34/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:16.919428165 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_390/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 19:25:49.003561037 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_390/34/LevenbergMarquardtOptimizer.java	2019-11-12 19:25:59.516132763 -0500
 @@ -387,7 +387,7 @@
                              tmp = 0.1;
                          }

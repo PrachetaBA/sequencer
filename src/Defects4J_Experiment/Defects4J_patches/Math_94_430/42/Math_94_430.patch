@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_94_430/src/java/org/apache/commons/math/util/MathUtils.java	2019-11-12 12:06:09.356318325 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_94_430/42/MathUtils.java	2019-11-12 12:06:26.894631332 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_94_430/src/java/org/apache/commons/math/util/MathUtils.java	2019-11-12 19:25:48.352960450 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_94_430/42/MathUtils.java	2019-11-12 19:25:58.366645852 -0500
 @@ -427,7 +427,7 @@
          int k = 0;
          while ((u & 1) == 0 && (v & 1) == 0 && k < 31) { // while u and v are

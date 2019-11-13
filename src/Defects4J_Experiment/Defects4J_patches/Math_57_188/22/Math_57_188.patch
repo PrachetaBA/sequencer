@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_188/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java	2019-11-12 12:21:10.248214201 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_188/22/KMeansPlusPlusClusterer.java	2019-11-12 12:21:20.959173248 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_57_188/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java	2019-11-12 19:25:48.530203686 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_57_188/22/KMeansPlusPlusClusterer.java	2019-11-12 19:25:58.249856532 -0500
 @@ -185,7 +185,7 @@
              // probability proportional to D(x)2
              final double r = random.nextDouble() * sum;

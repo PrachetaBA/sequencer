@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_680/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:17.203886368 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/39/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:15.163003842 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_680/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 19:25:43.159754102 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_680/39/LevenbergMarquardtOptimizer.java	2019-11-12 19:25:59.924641185 -0500
 @@ -677,7 +677,7 @@
  
                  // determine a Givens rotation which eliminates the

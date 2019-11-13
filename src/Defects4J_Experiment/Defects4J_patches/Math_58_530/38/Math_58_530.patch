@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_530/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:10.963460053 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_530/38/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:24.835455987 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_530/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 19:25:49.374803161 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_530/38/LevenbergMarquardtOptimizer.java	2019-11-12 19:26:01.957033454 -0500
 @@ -527,7 +527,7 @@
                      sum += weightedResidualJacobian[i][pj] * work1[permutation[i]];
                  }

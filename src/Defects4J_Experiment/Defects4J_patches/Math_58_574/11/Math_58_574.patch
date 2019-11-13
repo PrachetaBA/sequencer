@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_574/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:10.520255137 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_574/11/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:14.381735993 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_574/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 19:25:34.854196357 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_574/11/LevenbergMarquardtOptimizer.java	2019-11-12 19:25:50.792548518 -0500
 @@ -571,7 +571,7 @@
              }
              determineLMDirection(qy, work1, work2, work3);

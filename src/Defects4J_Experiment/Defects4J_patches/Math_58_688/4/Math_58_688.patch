@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_688/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:16.061209785 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_688/4/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:13.223717422 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_688/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 19:25:49.885115318 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_688/4/LevenbergMarquardtOptimizer.java	2019-11-12 19:26:01.397025820 -0500
 @@ -685,7 +685,7 @@
                      if (FastMath.abs(rkk) < FastMath.abs(lmDiag[k])) {
                          final double cotan = rkk / lmDiag[k];

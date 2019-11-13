@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_389/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 12:05:08.913512007 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_389/12/LevenbergMarquardtOptimizer.java	2019-11-12 12:06:16.458923391 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_389/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java	2019-11-12 19:25:49.590190265 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_389/12/LevenbergMarquardtOptimizer.java	2019-11-12 19:26:01.777117187 -0500
 @@ -386,7 +386,7 @@
                          if ((0.1 * cost >= previousCost) || (tmp < 0.1)) {
                              tmp = 0.1;

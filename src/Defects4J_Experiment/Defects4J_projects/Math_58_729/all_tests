@@ -1,3 +1,0 @@
-testPerformClusterAnalysisDegenerate(org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest)
-testCertainSpace(org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest)
-dimension2(org.apache.commons.math.stat.clustering.KMeansPlusPlusClustererTest)

@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_24_71/src/org/mockito/internal/creation/jmock/SearchingClassLoader.java	2019-11-12 12:13:13.649048071 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Mockito_24_71/27/SearchingClassLoader.java	2019-11-12 12:13:27.386072606 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Mockito_24_71/src/org/mockito/internal/creation/jmock/SearchingClassLoader.java	2019-11-12 19:25:46.418785161 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Mockito_24_71/27/SearchingClassLoader.java	2019-11-12 19:25:59.840858890 -0500
 @@ -68,7 +68,7 @@
      @Override
      protected Class<?> findClass(String name) throws ClassNotFoundException {

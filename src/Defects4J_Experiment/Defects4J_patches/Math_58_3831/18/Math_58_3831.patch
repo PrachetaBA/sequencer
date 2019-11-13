@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_3831/src/main/java/org/apache/commons/math/util/FastMath.java	2019-11-12 12:05:29.206371130 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_3831/18/FastMath.java	2019-11-12 12:06:19.867009660 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_58_3831/src/main/java/org/apache/commons/math/util/FastMath.java	2019-11-12 19:25:51.747875666 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_58_3831/18/FastMath.java	2019-11-12 19:26:02.410269172 -0500
 @@ -3828,7 +3828,7 @@
              return b;
          }

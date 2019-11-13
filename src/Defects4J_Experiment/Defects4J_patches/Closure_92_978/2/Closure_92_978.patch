@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_92_978/src/com/google/javascript/rhino/Node.java	2019-11-12 12:18:58.411976740 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_92_978/2/Node.java	2019-11-12 12:19:11.163123008 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_92_978/src/com/google/javascript/rhino/Node.java	2019-11-12 19:25:49.202763198 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_92_978/2/Node.java	2019-11-12 19:25:58.293715993 -0500
 @@ -975,7 +975,7 @@
            PropListItem x = lookupProperty(type);
            sb.append(" [");

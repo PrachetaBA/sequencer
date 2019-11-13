@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_61_1188/src/java/org/apache/commons/lang/text/StrBuilder.java	2019-11-12 12:07:53.335134964 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_61_1188/8/StrBuilder.java	2019-11-12 12:08:09.130275259 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Lang_61_1188/src/java/org/apache/commons/lang/text/StrBuilder.java	2019-11-12 19:26:03.211019096 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Lang_61_1188/8/StrBuilder.java	2019-11-12 19:26:11.185704766 -0500
 @@ -1185,7 +1185,7 @@
          if (len > 0) {
              int index = indexOf(str, 0);

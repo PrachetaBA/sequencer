@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_108/src/main/java/org/apache/commons/math3/random/Well19937c.java	2019-11-12 12:21:44.126883166 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_2_108/42/Well19937c.java	2019-11-12 12:22:06.404180308 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_2_108/src/main/java/org/apache/commons/math3/random/Well19937c.java	2019-11-12 19:25:37.036505850 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_2_108/42/Well19937c.java	2019-11-12 19:25:55.123887558 -0500
 @@ -105,7 +105,7 @@
  
          // add Matsumoto-Kurita tempering

@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_959/src/com/google/javascript/rhino/Node.java	2019-11-12 12:14:55.974653542 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_959/13/Node.java	2019-11-12 12:15:19.302120203 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_959/src/com/google/javascript/rhino/Node.java	2019-11-12 19:25:45.871466973 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_959/13/Node.java	2019-11-12 19:25:55.345791969 -0500
 @@ -956,7 +956,7 @@
        sb.append(getDouble());
      }

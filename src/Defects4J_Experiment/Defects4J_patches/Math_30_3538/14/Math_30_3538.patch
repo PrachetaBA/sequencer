@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_30_3538/src/main/java/org/apache/commons/math3/util/FastMath.java	2019-11-12 12:13:02.860335744 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_30_3538/14/FastMath.java	2019-11-12 12:13:19.327832345 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Math_30_3538/src/main/java/org/apache/commons/math3/util/FastMath.java	2019-11-12 19:25:41.954660292 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Math_30_3538/14/FastMath.java	2019-11-12 19:25:59.500249896 -0500
 @@ -3535,7 +3535,7 @@
          if (a > b) {
              return a;

@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_1025/src/com/google/javascript/rhino/Node.java	2019-11-12 12:15:44.565400868 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_1025/2/Node.java	2019-11-12 12:16:04.868770988 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_1025/src/com/google/javascript/rhino/Node.java	2019-11-12 19:25:47.179009579 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_1025/2/Node.java	2019-11-12 19:25:56.538443059 -0500
 @@ -1022,7 +1022,7 @@
      for (Node cursor = n.getFirstChild();
           cursor != null;

@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_1433/src/com/google/javascript/rhino/Node.java	2019-11-12 12:16:00.192840258 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_1433/39/Node.java	2019-11-12 12:16:22.131555243 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_1433/src/com/google/javascript/rhino/Node.java	2019-11-12 19:25:37.952863729 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_1433/39/Node.java	2019-11-12 19:25:57.567914422 -0500
 @@ -1430,7 +1430,7 @@
     */
    NodeMismatch checkTreeEqualsImpl(Node node2) {

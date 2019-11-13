@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_123_1397/src/com/google/javascript/jscomp/parsing/IRFactory.java	2019-11-12 12:16:55.375040672 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_123_1397/38/IRFactory.java	2019-11-12 12:17:11.396674850 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_123_1397/src/com/google/javascript/jscomp/parsing/IRFactory.java	2019-11-12 19:25:44.406323348 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_123_1397/38/IRFactory.java	2019-11-12 19:25:55.752429401 -0500
 @@ -1394,7 +1394,7 @@
        case com.google.javascript.rhino.head.Token.THROW:
          return Token.THROW;

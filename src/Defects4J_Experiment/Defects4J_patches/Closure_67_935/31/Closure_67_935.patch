@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_67_935/src/com/google/javascript/rhino/Node.java	2019-11-12 12:05:24.730389915 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_67_935/31/Node.java	2019-11-12 12:06:37.442646548 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_67_935/src/com/google/javascript/rhino/Node.java	2019-11-12 19:25:48.707051566 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_67_935/31/Node.java	2019-11-12 19:25:57.965380230 -0500
 @@ -932,7 +932,7 @@
        boolean printType) {
      if (Token.printTrees) {

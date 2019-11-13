@@ -1,5 +1,5 @@
---- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_1005/src/com/google/javascript/rhino/Node.java	2019-11-12 12:15:28.587135512 -0500
-+++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_1005/13/Node.java	2019-11-12 12:15:49.254566535 -0500
+--- /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_projects/Closure_130_1005/src/com/google/javascript/rhino/Node.java	2019-11-12 19:25:44.796357152 -0500
++++ /home/pboddavarama/myworkdir/cs682/sequencer/src/Defects4J_Experiment/Defects4J_patches/Closure_130_1005/13/Node.java	2019-11-12 19:25:54.738254975 -0500
 @@ -1002,7 +1002,7 @@
      try {
        StringBuilder s = new StringBuilder();

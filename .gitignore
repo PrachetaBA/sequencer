@@ -5,6 +5,4 @@ __pycache__/
 src/Defects4J_experiment/Defects4J_project/*
 src/Defects4J_experiment/Defects4J_patches/*
 src/Defects4J_experiment/slurm_jobs/*
-results/NPR_test/*
-results/NPR_model_fairseq/*
-results/NPR_model/*
+*.pt

@@ -1,0 +1,100 @@
+cam . position . scl ( 30 ) ;
+new com . badlogic . gdx . backends . lwjgl . LwjglApplication ( new Metagun ( ) , "Metagun" , 320 , 240 ) ;
+SearchResponse searchResponse = client . prepareSearch ( ) . setSearchType ( COUNT ) . setFacets ( XContentFactory . jsonBuilder ( ) . startObject ( ) . startObject ( "facet1" ) . startObject ( "terms" ) . field ( "field" , "tag" ) . endObject ( ) . endObject ( ) . endObject ( ) . bytes ( ) ) . execute ( ) . actionGet ( ) ;
+new com . badlogic . gdx . backends . jogl . JoglApplication ( new com . badlogic . gdx . tests . MusicTest ( ) , "Debug<seq2seq4repair_space>Test" , 480 , 320 , false ) ;
+indexShard . refresh ( new Engine . Refresh ( ) . force ( REFRESH_FORCE ) ) ;
+fieldType . setOmitNorms ( ( ( fieldType . omitNorms ( ) ) && ( ( boost ) == 1.0F ) ) ) ;
+if ( input . justTouched ( ) ) {
+throw new org . elasticsearch . search . builder . SearchSourceBuilderException ( ( ( "filter<seq2seq4repair_space>must<seq2seq4repair_space>be<seq2seq4repair_space>set<seq2seq4repair_space>on<seq2seq4repair_space>filter<seq2seq4repair_space>aggregation<seq2seq4repair_space>[" + ( name ) ) + "]" ) ) ;
+new com . badlogic . gdx . backends . lwjgl . LwjglApplication ( new Bouncy ( ) , "Bouncy" , 320 , 480 , true ) ;
+mesh = new Mesh ( false , ( ( ( WaterRipples . WIDTH ) + 1 ) * ( ( WaterRipples . HEIGHT ) + 1 ) ) , ( ( ( WaterRipples . WIDTH ) * ( WaterRipples . HEIGHT ) ) * 6 ) , new com . badlogic . gdx . graphics . VertexAttribute ( Usage . Position , 3 , "a_Position" ) , new com . badlogic . gdx . graphics . VertexAttribute ( Usage . TextureCoordinates , 2 , "a_texCoords" ) ) ;
+throw new IOException ( ( ( "Malformed<seq2seq4repair_space>commit,<seq2seq4repair_space>missing<seq2seq4repair_space>length<seq2seq4repair_space>for<seq2seq4repair_space>[" + fileName ) + "]" ) ) ;
+this . listener . dispose ( app ) ;
+setTitle ( saved_filters_title ) ;
+return ( ( a * a ) + ( b * b ) ) + ( c * c ) ;
+loadingView = getLayoutInflater ( ) . inflate ( comment_load_item , null ) ;
+injector . getInstance ( MapperService . class ) . merge ( "person" , mapping , true ) ;
+public Facet reduce ( List < Facet > facets ) {
+return new IOSFileHandle ( new File ( IOSFiles . internalPath , path ) , FileType . Internal ) ;
+existingMappers . put ( index , existingMapper ) ;
+deleteByQueryRequest . query ( RestActions . parseQuerySource ( request ) ) ;
+return builder . underlyingStream ( ) ;
+assertExplanation ( QueryBuilders . filteredQuery ( QueryBuilders . termQuery ( "foo" , "1" ) , FilterBuilders . hasChildFilter ( "child-type" , QueryBuilders . fieldQuery ( "foo" , "1" ) ) ) , equalTo ( "filtered(foo:1)->CustomQueryWrappingFilter(child_filter[child-type/type1](filtered(foo:1)->cache(_type:child-type)))" ) ) ;
+return wrapSmartNameQuery ( mltQuery , smartNameFieldMappers , parseContext ) ;
+int type = Shape . jniGetType ( shapeAddr ) ;
+new com . badlogic . gdx . backends . jogl . JoglApplication ( new com . badlogic . gdx . tests . ETC1Test ( ) , config ) ;
+vboBatch = new SpriteBatch ( 1000 , VertexDataType . VertexBufferObject ) ;
+} catch ( Throwable e ) {
+indexRandom ( true , false , client ( ) . prepareIndex ( "test" , "type1" , "1" ) . setSource ( "body" , "foo" ) , client ( ) . prepareIndex ( "test" , "type1" , "2" ) . setSource ( "body" , "bar" ) , client ( ) . prepareIndex ( "test" , "type1" , "3" ) . setSource ( "body" , "foo<seq2seq4repair_space>bar" ) , client ( ) . prepareIndex ( "test" , "type1" , "4" ) . setSource ( "body" , "quux<seq2seq4repair_space>baz<seq2seq4repair_space>eggplant" ) , client ( ) . prepareIndex ( "test" , "type1" , "5" ) . setSource ( "body" , "quux<seq2seq4repair_space>baz<seq2seq4repair_space>spaghetti" ) , client ( ) . prepareIndex ( "test" , "type1" , "6" ) . setSource ( "otherbody" , "spaghetti" ) ) ;
+if ( ! ( childDocMapper . parentFieldMapper ( ) . active ( ) ) ) {
+Query query = new DeletionAwareConstantScoreQuery ( Queries . MATCH_ALL_FILTER , true ) ;
+return BytesRefOrdValComparator . binarySearch ( a , key , 1 , a . ordinals ( ) . getNumOrds ( ) ) ;
+ContentResolver . addPeriodicSync ( account , Constants . GITHUB_PROVIDER_AUTHORITY , new Bundle ( ) , ( 15L * 60L ) ) ;
+final InternalSearchResponse internalResponse = new InternalSearchResponse ( new InternalSearchHits ( InternalSearchHits . EMPTY , Long . parseLong ( this . scrollId . getAttributes ( ) . get ( "total_hits" ) ) , 0.0F ) , null , null , false , null ) ;
+if ( object == null )
+ui = new Stage ( ) ;
+buckets . add ( histogramFactory . createBucket ( rounding . valueForKey ( bucketOrds . get ( i ) ) , bucketDocCount ( i ) , bucketAggregations ( i ) , keyed , formatter ) ) ;
+SpriteBatch spriteBatch = ( ( SpriteBatch ) ( stage . getSpriteBatch ( ) ) ) ;
+return MockRamDirectoryService . class ;
+return new ShortValuesComparator ( indexFieldData , dMissingValue , numHits , reversed ) ;
+return new ThreadPoolExecutor ( size , size , 0L , TimeUnit . MILLISECONDS , ( queueSize <= 0 ? new LinkedTransferQueue < Runnable > ( ) : new ArrayBlockingQueue < Runnable > ( queueSize ) ) , threadFactory , rejectedExecutionHandler ) ;
+return execute ( new TransportNodesListShardStoreMetaData . Request ( shardId , onlyUnallocated , nodesIds ) . setTimeout ( timeout ) ) ;
+lastTotalTranslogOperations = translogSnapshot . estimatedTotalOperations ( ) ;
+if ( parentFieldMapper . active ( ) ) {
+assertEquals ( "<pre><code>a<br>b<br>c</code></pre>" , formatted . toString ( ) ) ;
+BytesStreamOutput out = cachedEntry . bytes ( ) ;
+if ( Queries . isConstantMatchAllQuery ( query ( ) ) ) {
+SearchResponse searchResponse = client ( ) . prepareSearch ( "empty_bucket_idx" ) . setQuery ( matchAllQuery ( ) ) . addAggregation ( histogram ( "histo" ) . field ( "value" ) . interval ( 1L ) . minDocCount ( 0 ) . subAggregation ( nested ( "nested" ) . path ( "nested" ) ) ) . execute ( ) . actionGet ( ) ;
+NodesInfoResponse response = client ( "server1" ) . admin ( ) . cluster ( ) . prepareNodesInfo ( ) . execute ( ) . actionGet ( ) ;
+validateQueryRequest . query ( request . content ( ) , request . contentUnsafe ( ) ) ;
+client ( "server1" ) . admin ( ) . indices ( ) . create ( createIndexRequest ( "test" ) . settings ( settingsBuilder ( ) . put ( "index.number_of_shards" , 3 ) . put ( "index.number_of_replicas" , 2 ) . put ( "routing.hash.type" , "simple" ) ) ) . actionGet ( ) ;
+buffers [ i ] = GL15 . glGenBuffers ( ) ;
+return engine . acquireSearcher ( ) ;
+input = AndroidInputFactory . newAndroidInput ( this , this . getService ( ) , null , config ) ;
+if ( ( context . fieldNames ( ) ) == null ) {
+System . arraycopy ( value , 0 , chars , length , value . length ) ;
+BytesStreamInput in = new BytesStreamInput ( data , false ) ;
+if ( ( sValue != null ) && ( sValue . endsWith ( "%" ) ) ) {
+if ( response . isCreated ( ) ) {
+return ( idx + 1 ) % ( queue . length ( ) ) ;
+node = nodeBuilder ( ) . local ( true ) . settings ( settingsBuilder ( ) . put ( "gateway.type" , "none" ) ) . node ( ) ;
+new com . badlogic . gdx . backends . jogl . JoglApplication ( new com . badlogic . gdx . tests . CullTest ( ) , "Debug<seq2seq4repair_space>Test" , 480 , 320 , false ) ;
+model . setAnimation ( "all" , 0 , false ) ;
+stage . setViewport ( width , height , true ) ;
+if ( ( ( input . isKeyPressed ( F ) ) || followButton ) && ( ( stateTime ) > 0.5F ) ) {
+builder . field ( "locale" , dateTimeFormatter . locale ( ) ) ;
+clusterService . submitStateUpdateTask ( "indices_store" , new ClusterStateNonMasterUpdateTask ( ) {
+TribeTests . cluster2 = new InternalTestCluster ( randomLong ( ) , 2 , 2 , Strings . randomBase64UUID ( getRandom ( ) ) , 0 , false ) ;
+currentShader . setUniformf ( "camPos" , cam . position . x , cam . position . y , cam . position . z , ( 1.2F / ( cam . far ) ) ) ;
+listener . onResponse ( new SearchResponse ( internalResponse , scrollId , expectedSuccessfulOps , successulOps . get ( ) , buildTookInMillis ( ) , buildShardFailures ( ) ) ) ;
+NumericUtils . intToPrefixCoded ( parseValue ( value ) , 0 , bytesRef ) ;
+node . client ( ) . admin ( ) . indices ( ) . putMapping ( putMappingRequest ( "test" ) . source ( mapping ) ) . actionGet ( ) ;
+startActivity ( ViewIssuesActivity . createIntent ( items , ( position - ( getListAdapter ( ) . getHeadersCount ( ) ) ) ) ) ;
+logger . warn ( "received<seq2seq4repair_space>ping<seq2seq4repair_space>response<seq2seq4repair_space>{}<seq2seq4repair_space>with<seq2seq4repair_space>no<seq2seq4repair_space>matching<seq2seq4repair_space>id<seq2seq4repair_space>[{}]" , pingResponse , response . id ) ;
+return ESLoggerFactory . getLogger ( Loggers . getLoggerName ( s ) ) ;
+Settings updated = settingsBuilder ( ) . put ( tuple . v1 ( ) ) . put ( CREATE_CONNECTOR , true ) . build ( ) ;
+logger . info ( "[cluster_shutdown]:<seq2seq4repair_space>done<seq2seq4repair_space>shutting<seq2seq4repair_space>down<seq2seq4repair_space>all<seq2seq4repair_space>nodes<seq2seq4repair_space>except<seq2seq4repair_space>master,<seq2seq4repair_space>proceeding<seq2seq4repair_space>to<seq2seq4repair_space>master" ) ;
+atlasFilePath = atlasFile . name ( ) ;
+logger . debug ( "{}<seq2seq4repair_space>recovery<seq2seq4repair_space>completed<seq2seq4repair_space>from<seq2seq4repair_space>[{}],<seq2seq4repair_space>took<seq2seq4repair_space>[{}]" , request . shardId ( ) , request . sourceNode ( ) , stopWatch . totalTime ( ) ) ;
+logger . debug ( "[{}][{}]:<seq2seq4repair_space>throttling<seq2seq4repair_space>allocation<seq2seq4repair_space>[{}]<seq2seq4repair_space>to<seq2seq4repair_space>[{}]<seq2seq4repair_space>in<seq2seq4repair_space>order<seq2seq4repair_space>to<seq2seq4repair_space>reuse<seq2seq4repair_space>its<seq2seq4repair_space>unallocated<seq2seq4repair_space>persistent<seq2seq4repair_space>store<seq2seq4repair_space>with<seq2seq4repair_space>total_size<seq2seq4repair_space>[{}]" , shard . index ( ) , shard . id ( ) , shard , lastDiscoNodeMatched , new ByteSizeValue ( lastSizeMatched ) ) ;
+Node node = org . elasticsearch . node . NodeBuilder . nodeBuilder ( ) . clusterName ( GeoDistanceSearchBenchmark . class . getSimpleName ( ) ) . node ( ) ;
+return new CountResponse ( count , shardsResponses . length ( ) , successfulShards , failedShards , shardFailures ) ;
+public int freq ( ) throws IOException {
+logger . debug ( "Updating<seq2seq4repair_space>cluster<seq2seq4repair_space>state<seq2seq4repair_space>version<seq2seq4repair_space>{}" , newClusterState . version ( ) ) ;
+BytesHolder bytes = in . readBytesReference ( ) ;
+FlushResponse flushResponse = client ( ) . admin ( ) . indices ( ) . prepareFlush ( "my-index" ) . setForce ( true ) . get ( ) ;
+return ( ! ( TextUtils . isEmpty ( loginText . getText ( ) ) ) ) && ( ! ( TextUtils . isEmpty ( passwordText . getText ( ) ) ) ) ;
+MoreLikeThisFieldQueryBuilder mlt = moreLikeThisFieldQuery ( fieldName ) . likeText ( likeText ) . minimumShouldMatch ( request . minimumShouldMatch ( ) ) . boostTerms ( request . boostTerms ( ) ) . minDocFreq ( request . minDocFreq ( ) ) . maxDocFreq ( request . maxDocFreq ( ) ) . minWordLength ( request . minWordLength ( ) ) . maxWordLen ( request . maxWordLength ( ) ) . minTermFreq ( request . minTermFreq ( ) ) . maxQueryTerms ( request . maxQueryTerms ( ) ) . stopWords ( request . stopWords ( ) ) . failOnUnsupportedField ( failOnUnsupportedField ) ;
+MipMapGenerator . generateMipMap ( pixmap , pixmap . getWidth ( ) , pixmap . getHeight ( ) , disposePixmap ) ;
+if ( ( ! ( build . isMultiValued ( ) ) ) && ( CommonSettings . removeOrdsOnSingleValue ( fieldDataType ) ) ) {
+new com . badlogic . gdx . backends . lwjgl . LwjglApplication ( new SuperJumper ( ) , "Super<seq2seq4repair_space>Jumper" , 320 , 480 ) ;
+final TransportService transportService = new TransportService ( new org . elasticsearch . transport . netty . NettyTransport ( settings , threadPool ) , threadPool ) . start ( ) ;
+gl . glGetIntegerv ( GL_MAX_TEXTURE_UNITS , buffer ) ;
+ShardIterator shardsIt ( ) ;
+GdxTest test = new TiledMapBench ( ) ;
+getRequest . operationThreaded ( true ) ;
+String [ ] indices = currentState . metaData ( ) . concreteIndicesIgnoreMissing ( request . filteredIndices ( ) ) ;
+entries . close ( ) ;
+builder . startObject ( "version" ) . field ( "number" , Version . number ( ) ) . field ( "date" , Version . date ( ) ) . field ( "snapshot_build" , Version . snapshotBuild ( ) ) . endObject ( ) ;
+MetaDataService . PutMappingResult result = metaDataService . putMapping ( indices , request . type ( ) , request . mappingSource ( ) , request . ignoreConflicts ( ) , request . timeout ( ) ) ;
+int size = 0 ;

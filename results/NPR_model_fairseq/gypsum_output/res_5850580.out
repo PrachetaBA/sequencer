@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/home/mmotwani/anaconda3/envs/npr-py36/bin/fairseq-preprocess", line 11, in <module>
+    load_entry_point('fairseq', 'console_scripts', 'fairseq-preprocess')()
+  File "/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/pkg_resources/__init__.py", line 489, in load_entry_point
+    return get_distribution(dist).load_entry_point(group, name)
+  File "/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/pkg_resources/__init__.py", line 2852, in load_entry_point
+    return ep.load()
+  File "/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/pkg_resources/__init__.py", line 2443, in load
+    return self.resolve()
+  File "/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/pkg_resources/__init__.py", line 2449, in resolve
+    module = __import__(self.module_name, fromlist=['__name__'], level=0)
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/fairseq/fairseq_cli/preprocess.py", line 13, in <module>
+    from fairseq import options, tasks, utils
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/fairseq/fairseq/__init__.py", line 9, in <module>
+    import fairseq.criterions  # noqa
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/fairseq/fairseq/criterions/__init__.py", line 24, in <module>
+    importlib.import_module('fairseq.criterions.' + module)
+  File "/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/fairseq/fairseq/criterions/adaptive_loss.py", line 10, in <module>
+    from fairseq import utils
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/fairseq/fairseq/utils.py", line 20, in <module>
+    from fairseq.modules import gelu, gelu_accurate
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/fairseq/fairseq/modules/__init__.py", line 9, in <module>
+    from .character_token_embedder import CharacterTokenEmbedder
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/fairseq/fairseq/modules/character_token_embedder.py", line 14, in <module>
+    from fairseq.data import Dictionary
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/fairseq/fairseq/data/__init__.py", line 8, in <module>
+    from .fairseq_dataset import FairseqDataset, FairseqIterableDataset
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/fairseq/fairseq/data/fairseq_dataset.py", line 66, in <module>
+    class FairseqIterableDataset(torch.utils.data.IterableDataset, EpochListening):
+AttributeError: module 'torch.utils.data' has no attribute 'IterableDataset'

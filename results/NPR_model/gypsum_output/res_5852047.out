@@ -1,0 +1,4 @@
+[2019-11-25 14:07:23,495 INFO] Translating shard 0.
+slurmstepd: error: Job 5852047 exceeded memory limit (16444444 > 16384000), being killed
+slurmstepd: error: Exceeded job memory limit
+slurmstepd: error: *** JOB 5852047 ON node161 CANCELLED AT 2019-11-25T15:05:16 ***

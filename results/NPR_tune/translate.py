@@ -1,0 +1,23 @@
+import random
+import numpy as np 
+import subprocess
+import pickle
+import os
+
+predict_file = 'predict_params.pickle'
+predict = []
+
+for model_number in range(1,214):
+	file_path = 'models/model_t'+str(model_number)+'_step_20000.pt'
+	if os.path.isfile(file_path):
+		cmd = 'sbatch --output=logs/translate_' + str(model_number) + '.out translate.sh' + \
+		' ' + str(model_number)
+
+		subprocess.call(cmd, shell=True)
+			
+		predict.append(model_number)
+
+
+#Write parameter to model mapping to a dictionary which is stored in a pickle file
+with open(predict_file, "wb") as f:
+	pickle.dump(predict, f)

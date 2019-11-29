@@ -1,8 +1,10 @@
 #! /bin/bash
 #SBATCH --job-name=npr_train
-#SBATCH --partition=m40-short
+#SBATCH --partition=titanx-short
 #SBATCH --time=0-04:00
-#SBATCH --output=gypsum_output/res_%j.out
+#SBATCH --mem=8GB
+#SBATCH --ntasks-per-node=8
+#SBATCH --output=gypsum_output/model_full.out
 
 export CUDA_VISIBLE_DEVICES=0
 export THC_CACHING_ALLOCATOR=0
@@ -14,20 +16,13 @@ if [ ! -f $OpenNMT_py/preprocess.py ]; then
 fi
 
 data_path=$(pwd)
-if [ ! -d $data_path ]; then
-        data_path=`/bin/pwd`
-	export data_path
-fi
-
-echo "Print the data path $data_path"
-
-
-#conda init bash
-#conda activate npr-py36
 
 cd $OpenNMT_py
 
-echo $OpenNMT_py
-
-python train.py -data $data_path/final -encoder_type cnn -enc_layers 4 -decoder_type cnn -dec_layers 4 -cnn_kernel_width 3 -global_attention general -batch_size 32 -word_vec_size 256 -bridge -train_steps 5000 -gpu_ranks 0 -save_checkpoint_steps 1000 -early_stopping 5 -log_file $data_path_model_1_log -tensorboard -tensorboard_log_dir $data_path/model_1_tensorboard -save_model $data_path/model_1 > $data_path/model_1.out
+python train.py -data $data_path/models/model -encoder_type cnn -enc_layers 4 \
+-decoder_type cnn -dec_layers 4 -cnn_kernel_width 3 -global_attention general \
+-batch_size 32 -word_vec_size 256 -copy-attn -reuse_copy_attn -bridge -train_steps 3000 -gpu_ranks 0 \
+-save_checkpoint_steps 3000 -early_stopping 5 -log_file $data_path/logs/model_full_log \
+-save_model $data_path/models/model_full > $data_path/models/model_full.out
+#-tensorboard -tensorboard_log_dir $data_path/logs/model_v1_tensorboard \
 echo "train.sh complete" >> $data_path/train.out

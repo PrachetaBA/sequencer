@@ -4,3 +4,17 @@ src/Buggy_Context_Abstraction/abstraction/target/
 __pycache__/
 src/Defects4J_experiment/Defects4J_project/*
 src/Defects4J_experiment/Defects4J_patches/*
+src/Defects4J_experiment/slurm_jobs/*
+src/NPR_experiment/Defects4J_project/*
+src/NPR_experiment/Defects4J_patches/*
+src/NPR_experiment/slurm_jobs/*
+src/NPR_experiment/tmp_folders/*
+results/Defects4J_Test/Defects4J_correct/*
+resutls/Defects4J_Test/output/*
+results/NPR_tune/logs/*	
+results/NPR_tune/models/*
+results/NPR_test/*
+results/NPR_model_fairseq/*
+results/NPR_model/*
+*.pt
+*.out

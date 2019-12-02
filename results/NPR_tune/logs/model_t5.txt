@@ -1,0 +1,132 @@
+[2019-11-28 01:17:10,039 INFO]  * src vocab size = 1004
+[2019-11-28 01:17:10,131 INFO]  * tgt vocab size = 1004
+[2019-11-28 01:17:10,131 INFO] Building model...
+[2019-11-28 01:17:15,034 INFO] NMTModel(
+  (encoder): CNNEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(1004, 256, padding_idx=1)
+        )
+      )
+    )
+    (linear): Linear(in_features=256, out_features=500, bias=True)
+    (cnn): StackedCNN(
+      (layers): ModuleList(
+        (0): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (1): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (2): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (3): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (4): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (5): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (6): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+      )
+    )
+  )
+  (decoder): CNNDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(1004, 256, padding_idx=1)
+        )
+      )
+    )
+    (linear): Linear(in_features=256, out_features=500, bias=True)
+    (conv_layers): ModuleList(
+      (0): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (1): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (2): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (3): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (4): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (5): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (6): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+    )
+    (attn_layers): ModuleList(
+      (0): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (1): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (2): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (3): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (4): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (5): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (6): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+    )
+  )
+  (generator): Sequential(
+    (0): Linear(in_features=500, out_features=1004, bias=True)
+    (1): Cast()
+    (2): LogSoftmax()
+  )
+)
+[2019-11-28 01:17:15,036 INFO] encoder: 10899524
+[2019-11-28 01:17:15,036 INFO] decoder: 13156028
+[2019-11-28 01:17:15,036 INFO] * number of parameters: 24055552
+[2019-11-28 01:17:15,204 INFO] Starting training on GPU: [0]
+[2019-11-28 01:17:15,204 INFO] Start training loop and validate every 10000 steps...
+[2019-11-28 01:17:15,205 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p5.train.0.pt
+[2019-11-28 01:17:24,595 INFO] number of examples: 33655
+/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/torchtext/data/field.py:359: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  var = torch.tensor(arr, dtype=self.dtype, device=device)
+[2019-11-28 01:18:42,273 INFO] Step 50/20000; acc:  15.11; ppl: 102.08; xent: 4.63; lr: 0.50740; 8767/332 tok/s;     87 sec
+[2019-11-28 01:19:43,619 INFO] Step 100/20000; acc:  16.36; ppl: 53.61; xent: 3.98; lr: 0.50740; 10641/459 tok/s;    148 sec
+[2019-11-28 01:20:45,243 INFO] Step 150/20000; acc:  26.52; ppl: 29.23; xent: 3.38; lr: 0.50740; 11271/478 tok/s;    210 sec
+[2019-11-28 01:21:53,087 INFO] Step 200/20000; acc:  32.23; ppl: 20.80; xent: 3.04; lr: 0.50740; 10094/426 tok/s;    278 sec
+[2019-11-28 01:22:57,517 INFO] Step 250/20000; acc:  34.55; ppl: 17.73; xent: 2.88; lr: 0.50740; 11565/467 tok/s;    342 sec
+[2019-11-28 01:24:06,191 INFO] Step 300/20000; acc:  34.92; ppl: 16.81; xent: 2.82; lr: 0.50740; 11311/439 tok/s;    411 sec
+[2019-11-28 01:25:20,734 INFO] Step 350/20000; acc:  38.19; ppl: 14.57; xent: 2.68; lr: 0.50740; 9348/396 tok/s;    486 sec
+[2019-11-28 01:26:28,512 INFO] Step 400/20000; acc:  40.30; ppl: 13.39; xent: 2.59; lr: 0.50740; 10870/413 tok/s;    553 sec

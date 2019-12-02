@@ -1,0 +1,159 @@
+[2019-11-28 01:17:17,175 INFO]  * src vocab size = 1004
+[2019-11-28 01:17:17,202 INFO]  * tgt vocab size = 1004
+[2019-11-28 01:17:17,202 INFO] Building model...
+[2019-11-28 01:17:22,030 INFO] NMTModel(
+  (encoder): CNNEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(1004, 256, padding_idx=1)
+        )
+      )
+    )
+    (linear): Linear(in_features=256, out_features=500, bias=True)
+    (cnn): StackedCNN(
+      (layers): ModuleList(
+        (0): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (1): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (2): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (3): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (4): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (5): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+        (6): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.22665518436479926)
+        )
+      )
+    )
+  )
+  (decoder): CNNDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(1004, 256, padding_idx=1)
+        )
+      )
+    )
+    (linear): Linear(in_features=256, out_features=500, bias=True)
+    (conv_layers): ModuleList(
+      (0): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (1): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (2): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (3): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (4): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (5): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+      (6): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.22665518436479926)
+      )
+    )
+    (attn_layers): ModuleList(
+      (0): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (1): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (2): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (3): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (4): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (5): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (6): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+    )
+  )
+  (generator): Sequential(
+    (0): Linear(in_features=500, out_features=1004, bias=True)
+    (1): Cast()
+    (2): LogSoftmax()
+  )
+)
+[2019-11-28 01:17:22,031 INFO] encoder: 10899524
+[2019-11-28 01:17:22,031 INFO] decoder: 13156028
+[2019-11-28 01:17:22,031 INFO] * number of parameters: 24055552 
+[2019-11-28 01:17:22,217 INFO] Starting training on GPU: [0]
+[2019-11-28 01:17:22,217 INFO] Start training loop and validate every 10000 steps...
+[2019-11-28 01:17:22,217 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p3.train.0.pt
+[2019-11-28 01:17:38,289 INFO] number of examples: 33568
+/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/torchtext/data/field.py:359: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  var = torch.tensor(arr, dtype=self.dtype, device=device)
+[2019-11-28 01:19:00,978 INFO] Step 50/20000; acc:  15.52; ppl: 108.82; xent: 4.69; lr: 0.50740; 7289/295 tok/s;     99 sec
+[2019-11-28 01:20:07,055 INFO] Step 100/20000; acc:  15.91; ppl: 51.76; xent: 3.95; lr: 0.50740; 8263/454 tok/s;    165 sec
+[2019-11-28 01:21:28,372 INFO] Step 150/20000; acc:  25.37; ppl: 29.29; xent: 3.38; lr: 0.50740; 9441/379 tok/s;    246 sec
+[2019-11-28 01:22:47,533 INFO] Step 200/20000; acc:  31.66; ppl: 21.22; xent: 3.05; lr: 0.50740; 9139/377 tok/s;    325 sec
+[2019-11-28 01:24:01,318 INFO] Step 250/20000; acc:  34.17; ppl: 18.53; xent: 2.92; lr: 0.50740; 8972/407 tok/s;    399 sec
+Traceback (most recent call last):
+  File "train.py", line 6, in <module>
+    main()
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/OpenNMT-py/onmt/bin/train.py", line 200, in main
+    train(opt)
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/OpenNMT-py/onmt/bin/train.py", line 86, in train
+    single_main(opt, 0)
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/OpenNMT-py/onmt/train_single.py", line 143, in main
+    valid_steps=opt.valid_steps)
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/OpenNMT-py/onmt/trainer.py", line 242, in train
+    report_stats)
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/OpenNMT-py/onmt/trainer.py", line 360, in _gradient_accumulation
+    outputs, attns = self.model(src, tgt, src_lengths, bptt=bptt)
+  File "/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/OpenNMT-py/onmt/models/model.py", line 42, in forward
+    enc_state, memory_bank, lengths = self.encoder(src, lengths)
+  File "/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/OpenNMT-py/onmt/encoders/cnn_encoder.py", line 49, in forward
+    out = self.cnn(emb_remap)
+  File "/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/OpenNMT-py/onmt/utils/cnn_factory.py", line 52, in forward
+    x = x + conv(x)
+  File "/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/mnt/nfs/work1/brun/mmotwani/sequencer/src/lib/OpenNMT-py/onmt/utils/cnn_factory.py", line 33, in forward
+    out = out * torch.sigmoid(gate)
+RuntimeError: CUDA out of memory. Tried to allocate 62.00 MiB (GPU 0; 11.93 GiB total capacity; 1.94 GiB already allocated; 61.81 MiB free; 101.99 MiB cached)

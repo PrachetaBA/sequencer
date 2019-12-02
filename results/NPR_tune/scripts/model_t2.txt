@@ -1,0 +1,518 @@
+[2019-11-28 02:44:36,592 INFO]  * src vocab size = 3004
+[2019-11-28 02:44:36,619 INFO]  * tgt vocab size = 3004
+[2019-11-28 02:44:36,619 INFO] Building model...
+[2019-11-28 02:44:41,696 INFO] NMTModel(
+  (encoder): CNNEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(3004, 256, padding_idx=1)
+        )
+      )
+    )
+    (linear): Linear(in_features=256, out_features=500, bias=True)
+    (cnn): StackedCNN(
+      (layers): ModuleList(
+        (0): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.9191011985917619)
+        )
+        (1): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.9191011985917619)
+        )
+        (2): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.9191011985917619)
+        )
+      )
+    )
+  )
+  (decoder): CNNDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(3004, 256, padding_idx=1)
+        )
+      )
+    )
+    (linear): Linear(in_features=256, out_features=500, bias=True)
+    (conv_layers): ModuleList(
+      (0): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.9191011985917619)
+      )
+      (1): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.9191011985917619)
+      )
+      (2): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.9191011985917619)
+      )
+    )
+    (attn_layers): ModuleList(
+      (0): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (1): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (2): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+    )
+  )
+  (generator): Sequential(
+    (0): Linear(in_features=500, out_features=3004, bias=True)
+    (1): Cast()
+    (2): LogSoftmax()
+  )
+)
+[2019-11-28 02:44:41,697 INFO] encoder: 5403524
+[2019-11-28 02:44:41,697 INFO] decoder: 7660028
+[2019-11-28 02:44:41,698 INFO] * number of parameters: 13063552
+[2019-11-28 02:44:41,749 INFO] Starting training on GPU: [0]
+[2019-11-28 02:44:41,750 INFO] Start training loop and validate every 10000 steps...
+[2019-11-28 02:44:41,750 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.train.0.pt
+[2019-11-28 02:44:53,244 INFO] number of examples: 33469
+/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/torchtext/data/field.py:359: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  var = torch.tensor(arr, dtype=self.dtype, device=device)
+[2019-11-28 02:45:46,328 INFO] Step 50/20000; acc:  22.92; ppl: 75.09; xent: 4.32; lr: 0.36998; 5874/238 tok/s;     65 sec
+[2019-11-28 02:46:38,739 INFO] Step 100/20000; acc:  31.27; ppl: 35.88; xent: 3.58; lr: 0.36998; 7253/275 tok/s;    117 sec
+[2019-11-28 02:47:34,656 INFO] Step 150/20000; acc:  31.07; ppl: 29.26; xent: 3.38; lr: 0.36998; 7170/272 tok/s;    173 sec
+[2019-11-28 02:48:27,407 INFO] Step 200/20000; acc:  33.28; ppl: 25.73; xent: 3.25; lr: 0.36998; 7070/301 tok/s;    226 sec
+[2019-11-28 02:49:15,244 INFO] Step 250/20000; acc:  35.74; ppl: 21.93; xent: 3.09; lr: 0.36998; 6712/297 tok/s;    273 sec
+[2019-11-28 02:50:05,749 INFO] Step 300/20000; acc:  38.68; ppl: 19.57; xent: 2.97; lr: 0.36998; 7105/273 tok/s;    324 sec
+[2019-11-28 02:51:02,499 INFO] Step 350/20000; acc:  39.67; ppl: 16.98; xent: 2.83; lr: 0.36998; 7205/264 tok/s;    381 sec
+[2019-11-28 02:51:54,903 INFO] Step 400/20000; acc:  40.62; ppl: 17.14; xent: 2.84; lr: 0.36998; 7097/276 tok/s;    433 sec
+[2019-11-28 02:52:46,326 INFO] Step 450/20000; acc:  40.18; ppl: 16.42; xent: 2.80; lr: 0.36998; 7079/307 tok/s;    485 sec
+[2019-11-28 02:53:30,038 INFO] Step 500/20000; acc:  42.71; ppl: 15.11; xent: 2.72; lr: 0.36998; 6803/326 tok/s;    528 sec
+[2019-11-28 02:54:20,286 INFO] Step 550/20000; acc:  43.88; ppl: 14.62; xent: 2.68; lr: 0.36998; 7156/268 tok/s;    579 sec
+[2019-11-28 02:55:16,250 INFO] Step 600/20000; acc:  43.33; ppl: 14.62; xent: 2.68; lr: 0.36998; 7348/259 tok/s;    634 sec
+[2019-11-28 02:55:59,084 INFO] Step 650/20000; acc:  44.68; ppl: 13.80; xent: 2.62; lr: 0.36998; 6596/320 tok/s;    677 sec
+[2019-11-28 02:56:51,017 INFO] Step 700/20000; acc:  44.41; ppl: 14.23; xent: 2.66; lr: 0.36998; 7173/279 tok/s;    729 sec
+[2019-11-28 02:57:44,342 INFO] Step 750/20000; acc:  43.95; ppl: 13.62; xent: 2.61; lr: 0.36998; 7362/278 tok/s;    783 sec
+[2019-11-28 02:58:30,495 INFO] Step 800/20000; acc:  44.90; ppl: 12.62; xent: 2.54; lr: 0.36998; 6843/338 tok/s;    829 sec
+[2019-11-28 02:59:20,019 INFO] Step 850/20000; acc:  46.25; ppl: 12.62; xent: 2.54; lr: 0.36998; 7268/276 tok/s;    878 sec
+[2019-11-28 03:00:08,411 INFO] Step 900/20000; acc:  45.91; ppl: 12.53; xent: 2.53; lr: 0.36998; 7159/279 tok/s;    927 sec
+[2019-11-28 03:00:55,852 INFO] Step 950/20000; acc:  46.94; ppl: 12.67; xent: 2.54; lr: 0.36998; 7248/278 tok/s;    974 sec
+[2019-11-28 03:01:41,961 INFO] Step 1000/20000; acc:  46.48; ppl: 12.28; xent: 2.51; lr: 0.36998; 7401/312 tok/s;   1020 sec
+[2019-11-28 03:02:35,221 INFO] Step 1050/20000; acc:  46.08; ppl: 12.30; xent: 2.51; lr: 0.36998; 7132/272 tok/s;   1073 sec
+[2019-11-28 03:03:27,098 INFO] Step 1100/20000; acc:  47.25; ppl: 12.01; xent: 2.49; lr: 0.36998; 7479/297 tok/s;   1125 sec
+[2019-11-28 03:04:17,589 INFO] Step 1150/20000; acc:  47.34; ppl: 11.02; xent: 2.40; lr: 0.36998; 6710/305 tok/s;   1176 sec
+[2019-11-28 03:05:03,511 INFO] Step 1200/20000; acc:  50.18; ppl: 10.23; xent: 2.33; lr: 0.36998; 6707/295 tok/s;   1222 sec
+[2019-11-28 03:05:55,970 INFO] Step 1250/20000; acc:  49.58; ppl: 10.24; xent: 2.33; lr: 0.36998; 6878/290 tok/s;   1274 sec
+[2019-11-28 03:06:45,976 INFO] Step 1300/20000; acc:  49.35; ppl: 10.32; xent: 2.33; lr: 0.36998; 7075/292 tok/s;   1324 sec
+[2019-11-28 03:07:39,670 INFO] Step 1350/20000; acc:  49.60; ppl: 10.10; xent: 2.31; lr: 0.36998; 7345/286 tok/s;   1378 sec
+[2019-11-28 03:08:28,026 INFO] Step 1400/20000; acc:  50.08; ppl:  9.88; xent: 2.29; lr: 0.36998; 6923/290 tok/s;   1426 sec
+[2019-11-28 03:09:21,421 INFO] Step 1450/20000; acc:  49.57; ppl: 10.11; xent: 2.31; lr: 0.36998; 7285/289 tok/s;   1480 sec
+[2019-11-28 03:10:07,910 INFO] Step 1500/20000; acc:  49.26; ppl:  9.72; xent: 2.27; lr: 0.36998; 7059/328 tok/s;   1526 sec
+[2019-11-28 03:10:57,118 INFO] Step 1550/20000; acc:  51.60; ppl:  9.15; xent: 2.21; lr: 0.36998; 7109/285 tok/s;   1575 sec
+[2019-11-28 03:11:49,013 INFO] Step 1600/20000; acc:  51.05; ppl:  9.01; xent: 2.20; lr: 0.36998; 7118/305 tok/s;   1627 sec
+[2019-11-28 03:12:36,172 INFO] Step 1650/20000; acc:  51.48; ppl:  9.12; xent: 2.21; lr: 0.36998; 7182/307 tok/s;   1674 sec
+[2019-11-28 03:13:32,157 INFO] Step 1700/20000; acc:  51.16; ppl:  9.03; xent: 2.20; lr: 0.36998; 6976/276 tok/s;   1730 sec
+[2019-11-28 03:14:16,633 INFO] Step 1750/20000; acc:  52.65; ppl:  8.38; xent: 2.13; lr: 0.36998; 6821/300 tok/s;   1775 sec
+[2019-11-28 03:15:10,093 INFO] Step 1800/20000; acc:  52.10; ppl:  8.66; xent: 2.16; lr: 0.36998; 7257/267 tok/s;   1828 sec
+[2019-11-28 03:15:59,707 INFO] Step 1850/20000; acc:  52.65; ppl:  8.45; xent: 2.13; lr: 0.36998; 6760/263 tok/s;   1878 sec
+[2019-11-28 03:16:52,321 INFO] Step 1900/20000; acc:  53.26; ppl:  8.49; xent: 2.14; lr: 0.36998; 7053/270 tok/s;   1931 sec
+[2019-11-28 03:17:41,143 INFO] Step 1950/20000; acc:  52.45; ppl:  8.41; xent: 2.13; lr: 0.36998; 6964/297 tok/s;   1979 sec
+[2019-11-28 03:18:30,528 INFO] Step 2000/20000; acc:  52.31; ppl:  8.28; xent: 2.11; lr: 0.36998; 7165/288 tok/s;   2029 sec
+[2019-11-28 03:19:24,695 INFO] Step 2050/20000; acc:  52.68; ppl:  8.20; xent: 2.10; lr: 0.36998; 7417/271 tok/s;   2083 sec
+[2019-11-28 03:20:03,653 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.train.0.pt
+[2019-11-28 03:20:15,281 INFO] number of examples: 33469
+[2019-11-28 03:20:21,543 INFO] Step 2100/20000; acc:  53.63; ppl:  7.75; xent: 2.05; lr: 0.36998; 5744/255 tok/s;   2140 sec
+[2019-11-28 03:21:07,628 INFO] Step 2150/20000; acc:  53.35; ppl:  7.69; xent: 2.04; lr: 0.36998; 8230/343 tok/s;   2186 sec
+[2019-11-28 03:21:59,427 INFO] Step 2200/20000; acc:  53.79; ppl:  7.71; xent: 2.04; lr: 0.36998; 7796/276 tok/s;   2238 sec
+[2019-11-28 03:22:53,529 INFO] Step 2250/20000; acc:  52.65; ppl:  8.14; xent: 2.10; lr: 0.36998; 7199/282 tok/s;   2292 sec
+[2019-11-28 03:23:44,197 INFO] Step 2300/20000; acc:  53.03; ppl:  7.84; xent: 2.06; lr: 0.36998; 7116/314 tok/s;   2342 sec
+[2019-11-28 03:24:30,782 INFO] Step 2350/20000; acc:  54.61; ppl:  7.43; xent: 2.01; lr: 0.36998; 6999/297 tok/s;   2389 sec
+[2019-11-28 03:25:21,299 INFO] Step 2400/20000; acc:  54.19; ppl:  7.37; xent: 2.00; lr: 0.36998; 7322/283 tok/s;   2440 sec
+[2019-11-28 03:26:15,379 INFO] Step 2450/20000; acc:  55.99; ppl:  6.76; xent: 1.91; lr: 0.36998; 7516/273 tok/s;   2494 sec
+[2019-11-28 03:27:04,200 INFO] Step 2500/20000; acc:  55.28; ppl:  7.01; xent: 1.95; lr: 0.36998; 7135/292 tok/s;   2542 sec
+[2019-11-28 03:27:07,633 INFO] Saving checkpoint /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_t2_step_2500.pt
+[2019-11-28 03:28:12,169 INFO] Step 2550/20000; acc:  54.69; ppl:  7.10; xent: 1.96; lr: 0.36998; 5354/233 tok/s;   2610 sec
+[2019-11-28 03:28:57,644 INFO] Step 2600/20000; acc:  56.01; ppl:  6.84; xent: 1.92; lr: 0.36998; 7408/313 tok/s;   2656 sec
+[2019-11-28 03:29:47,375 INFO] Step 2650/20000; acc:  57.18; ppl:  6.55; xent: 1.88; lr: 0.36998; 6877/274 tok/s;   2706 sec
+[2019-11-28 03:30:42,690 INFO] Step 2700/20000; acc:  56.26; ppl:  6.63; xent: 1.89; lr: 0.36998; 7396/265 tok/s;   2761 sec
+[2019-11-28 03:31:28,638 INFO] Step 2750/20000; acc:  57.10; ppl:  6.56; xent: 1.88; lr: 0.36998; 6783/309 tok/s;   2807 sec
+[2019-11-28 03:32:17,586 INFO] Step 2800/20000; acc:  57.02; ppl:  6.48; xent: 1.87; lr: 0.36998; 6982/291 tok/s;   2856 sec
+[2019-11-28 03:33:11,609 INFO] Step 2850/20000; acc:  55.62; ppl:  6.58; xent: 1.88; lr: 0.36998; 7224/268 tok/s;   2910 sec
+[2019-11-28 03:33:57,414 INFO] Step 2900/20000; acc:  57.03; ppl:  6.25; xent: 1.83; lr: 0.36998; 6840/352 tok/s;   2956 sec
+[2019-11-28 03:34:46,025 INFO] Step 2950/20000; acc:  59.00; ppl:  6.09; xent: 1.81; lr: 0.36998; 7155/256 tok/s;   3004 sec
+[2019-11-28 03:35:40,751 INFO] Step 3000/20000; acc:  56.56; ppl:  6.40; xent: 1.86; lr: 0.36998; 7054/260 tok/s;   3059 sec
+[2019-11-28 03:36:24,133 INFO] Step 3050/20000; acc:  58.40; ppl:  6.16; xent: 1.82; lr: 0.36998; 6961/307 tok/s;   3102 sec
+[2019-11-28 03:37:18,509 INFO] Step 3100/20000; acc:  57.06; ppl:  6.10; xent: 1.81; lr: 0.36998; 7159/272 tok/s;   3157 sec
+[2019-11-28 03:38:06,020 INFO] Step 3150/20000; acc:  57.74; ppl:  6.01; xent: 1.79; lr: 0.36998; 7033/295 tok/s;   3204 sec
+[2019-11-28 03:39:01,117 INFO] Step 3200/20000; acc:  55.94; ppl:  6.49; xent: 1.87; lr: 0.36998; 7474/285 tok/s;   3259 sec
+[2019-11-28 03:39:49,535 INFO] Step 3250/20000; acc:  57.18; ppl:  5.91; xent: 1.78; lr: 0.36998; 7159/311 tok/s;   3308 sec
+[2019-11-28 03:40:35,411 INFO] Step 3300/20000; acc:  58.87; ppl:  5.77; xent: 1.75; lr: 0.36998; 6818/305 tok/s;   3354 sec
+[2019-11-28 03:41:27,430 INFO] Step 3350/20000; acc:  57.67; ppl:  5.94; xent: 1.78; lr: 0.36998; 6983/286 tok/s;   3406 sec
+[2019-11-28 03:42:14,859 INFO] Step 3400/20000; acc:  57.85; ppl:  6.07; xent: 1.80; lr: 0.36998; 6897/303 tok/s;   3453 sec
+[2019-11-28 03:43:08,826 INFO] Step 3450/20000; acc:  57.66; ppl:  5.92; xent: 1.78; lr: 0.36998; 7466/284 tok/s;   3507 sec
+[2019-11-28 03:43:57,732 INFO] Step 3500/20000; acc:  58.52; ppl:  5.54; xent: 1.71; lr: 0.36998; 7259/287 tok/s;   3556 sec
+[2019-11-28 03:44:47,399 INFO] Step 3550/20000; acc:  57.70; ppl:  5.86; xent: 1.77; lr: 0.36998; 7025/309 tok/s;   3606 sec
+[2019-11-28 03:45:35,125 INFO] Step 3600/20000; acc:  56.99; ppl:  5.97; xent: 1.79; lr: 0.36998; 7105/323 tok/s;   3653 sec
+[2019-11-28 03:46:29,410 INFO] Step 3650/20000; acc:  58.39; ppl:  5.76; xent: 1.75; lr: 0.36998; 7172/277 tok/s;   3708 sec
+[2019-11-28 03:47:17,435 INFO] Step 3700/20000; acc:  58.77; ppl:  5.48; xent: 1.70; lr: 0.36998; 7024/310 tok/s;   3756 sec
+[2019-11-28 03:48:08,273 INFO] Step 3750/20000; acc:  58.68; ppl:  5.66; xent: 1.73; lr: 0.36998; 7031/286 tok/s;   3807 sec
+[2019-11-28 03:49:03,135 INFO] Step 3800/20000; acc:  57.55; ppl:  5.76; xent: 1.75; lr: 0.36998; 7139/280 tok/s;   3861 sec
+[2019-11-28 03:49:47,620 INFO] Step 3850/20000; acc:  59.67; ppl:  5.29; xent: 1.67; lr: 0.36998; 6847/307 tok/s;   3906 sec
+[2019-11-28 03:50:40,243 INFO] Step 3900/20000; acc:  59.21; ppl:  5.42; xent: 1.69; lr: 0.36998; 7129/267 tok/s;   3958 sec
+[2019-11-28 03:51:29,169 INFO] Step 3950/20000; acc:  59.91; ppl:  5.38; xent: 1.68; lr: 0.36998; 7158/263 tok/s;   4007 sec
+[2019-11-28 03:52:20,235 INFO] Step 4000/20000; acc:  59.42; ppl:  5.44; xent: 1.69; lr: 0.36998; 6908/281 tok/s;   4058 sec
+[2019-11-28 03:53:09,960 INFO] Step 4050/20000; acc:  58.63; ppl:  5.38; xent: 1.68; lr: 0.36998; 6944/295 tok/s;   4108 sec
+[2019-11-28 03:54:01,330 INFO] Step 4100/20000; acc:  58.95; ppl:  5.48; xent: 1.70; lr: 0.36998; 6778/278 tok/s;   4160 sec
+[2019-11-28 03:54:54,626 INFO] Step 4150/20000; acc:  60.08; ppl:  5.26; xent: 1.66; lr: 0.36998; 7617/265 tok/s;   4213 sec
+[2019-11-28 03:55:26,562 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.train.0.pt
+[2019-11-28 03:55:38,823 INFO] number of examples: 33469
+[2019-11-28 03:55:55,410 INFO] Step 4200/20000; acc:  59.18; ppl:  5.35; xent: 1.68; lr: 0.36998; 5349/250 tok/s;   4274 sec
+[2019-11-28 03:56:38,637 INFO] Step 4250/20000; acc:  59.69; ppl:  5.08; xent: 1.63; lr: 0.36998; 8557/353 tok/s;   4317 sec
+[2019-11-28 03:57:30,055 INFO] Step 4300/20000; acc:  58.35; ppl:  5.49; xent: 1.70; lr: 0.36998; 7793/283 tok/s;   4368 sec
+[2019-11-28 03:58:22,736 INFO] Step 4350/20000; acc:  58.61; ppl:  5.47; xent: 1.70; lr: 0.36998; 7678/299 tok/s;   4421 sec
+[2019-11-28 03:59:14,000 INFO] Step 4400/20000; acc:  58.67; ppl:  5.43; xent: 1.69; lr: 0.36998; 7003/305 tok/s;   4472 sec
+[2019-11-28 04:00:02,235 INFO] Step 4450/20000; acc:  61.79; ppl:  4.81; xent: 1.57; lr: 0.36998; 6858/273 tok/s;   4520 sec
+[2019-11-28 04:00:55,243 INFO] Step 4500/20000; acc:  58.88; ppl:  5.20; xent: 1.65; lr: 0.36998; 7000/282 tok/s;   4573 sec
+[2019-11-28 04:01:51,600 INFO] Step 4550/20000; acc:  60.57; ppl:  4.90; xent: 1.59; lr: 0.36998; 7097/246 tok/s;   4630 sec
+[2019-11-28 04:02:42,575 INFO] Step 4600/20000; acc:  59.98; ppl:  5.08; xent: 1.62; lr: 0.36998; 6965/297 tok/s;   4681 sec
+[2019-11-28 04:03:34,083 INFO] Step 4650/20000; acc:  59.90; ppl:  5.09; xent: 1.63; lr: 0.36998; 6889/310 tok/s;   4732 sec
+[2019-11-28 04:04:23,676 INFO] Step 4700/20000; acc:  60.75; ppl:  4.95; xent: 1.60; lr: 0.36998; 6792/277 tok/s;   4782 sec
+[2019-11-28 04:05:15,608 INFO] Step 4750/20000; acc:  61.58; ppl:  4.87; xent: 1.58; lr: 0.36998; 6716/269 tok/s;   4834 sec
+[2019-11-28 04:06:10,792 INFO] Step 4800/20000; acc:  60.64; ppl:  4.95; xent: 1.60; lr: 0.36998; 7017/259 tok/s;   4889 sec
+[2019-11-28 04:06:58,474 INFO] Step 4850/20000; acc:  61.74; ppl:  4.87; xent: 1.58; lr: 0.36998; 6711/295 tok/s;   4937 sec
+[2019-11-28 04:07:47,687 INFO] Step 4900/20000; acc:  61.30; ppl:  4.84; xent: 1.58; lr: 0.36998; 7164/294 tok/s;   4986 sec
+[2019-11-28 04:08:41,095 INFO] Step 4950/20000; acc:  60.63; ppl:  5.06; xent: 1.62; lr: 0.36998; 7065/274 tok/s;   5039 sec
+[2019-11-28 04:09:30,262 INFO] Step 5000/20000; acc:  60.47; ppl:  4.76; xent: 1.56; lr: 0.36998; 6761/328 tok/s;   5089 sec
+[2019-11-28 04:09:33,617 INFO] Saving checkpoint /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_t2_step_5000.pt
+[2019-11-28 04:10:35,166 INFO] Step 5050/20000; acc:  62.84; ppl:  4.73; xent: 1.55; lr: 0.36998; 5530/187 tok/s;   5153 sec
+[2019-11-28 04:11:16,142 INFO] Step 5100/20000; acc:  61.71; ppl:  4.66; xent: 1.54; lr: 0.36998; 8453/337 tok/s;   5194 sec
+[2019-11-28 04:12:03,099 INFO] Step 5150/20000; acc:  62.62; ppl:  4.58; xent: 1.52; lr: 0.36998; 6731/294 tok/s;   5241 sec
+[2019-11-28 04:12:57,290 INFO] Step 5200/20000; acc:  60.94; ppl:  4.82; xent: 1.57; lr: 0.36998; 7048/269 tok/s;   5296 sec
+[2019-11-28 04:13:49,383 INFO] Step 5250/20000; acc:  60.79; ppl:  4.75; xent: 1.56; lr: 0.36998; 6823/275 tok/s;   5348 sec
+[2019-11-28 04:14:45,693 INFO] Step 5300/20000; acc:  59.91; ppl:  4.93; xent: 1.59; lr: 0.36998; 7209/271 tok/s;   5404 sec
+[2019-11-28 04:15:34,864 INFO] Step 5350/20000; acc:  61.27; ppl:  4.67; xent: 1.54; lr: 0.36998; 6824/303 tok/s;   5453 sec
+[2019-11-28 04:16:20,014 INFO] Step 5400/20000; acc:  62.67; ppl:  4.44; xent: 1.49; lr: 0.36998; 6431/328 tok/s;   5498 sec
+[2019-11-28 04:17:16,197 INFO] Step 5450/20000; acc:  61.40; ppl:  4.78; xent: 1.56; lr: 0.36998; 6772/257 tok/s;   5554 sec
+[2019-11-28 04:18:06,867 INFO] Step 5500/20000; acc:  60.75; ppl:  4.84; xent: 1.58; lr: 0.36998; 6892/286 tok/s;   5605 sec
+[2019-11-28 04:19:01,541 INFO] Step 5550/20000; acc:  60.48; ppl:  4.78; xent: 1.56; lr: 0.36998; 7092/283 tok/s;   5660 sec
+[2019-11-28 04:19:54,231 INFO] Step 5600/20000; acc:  63.06; ppl:  4.36; xent: 1.47; lr: 0.36998; 6927/272 tok/s;   5712 sec
+[2019-11-28 04:20:44,618 INFO] Step 5650/20000; acc:  60.12; ppl:  4.81; xent: 1.57; lr: 0.36998; 7031/307 tok/s;   5763 sec
+[2019-11-28 04:21:37,140 INFO] Step 5700/20000; acc:  61.65; ppl:  4.65; xent: 1.54; lr: 0.36998; 6761/280 tok/s;   5815 sec
+[2019-11-28 04:22:29,645 INFO] Step 5750/20000; acc:  61.40; ppl:  4.61; xent: 1.53; lr: 0.36998; 6908/294 tok/s;   5868 sec
+[2019-11-28 04:23:17,997 INFO] Step 5800/20000; acc:  61.90; ppl:  4.47; xent: 1.50; lr: 0.36998; 6643/308 tok/s;   5916 sec
+[2019-11-28 04:24:13,662 INFO] Step 5850/20000; acc:  61.55; ppl:  4.70; xent: 1.55; lr: 0.36998; 7015/256 tok/s;   5972 sec
+[2019-11-28 04:25:06,470 INFO] Step 5900/20000; acc:  61.58; ppl:  4.55; xent: 1.52; lr: 0.36998; 6750/286 tok/s;   6025 sec
+[2019-11-28 04:25:55,616 INFO] Step 5950/20000; acc:  62.14; ppl:  4.42; xent: 1.49; lr: 0.36998; 6679/292 tok/s;   6074 sec
+[2019-11-28 04:26:47,563 INFO] Step 6000/20000; acc:  62.87; ppl:  4.42; xent: 1.49; lr: 0.36998; 6907/262 tok/s;   6126 sec
+[2019-11-28 04:27:39,239 INFO] Step 6050/20000; acc:  63.99; ppl:  4.36; xent: 1.47; lr: 0.36998; 6990/246 tok/s;   6177 sec
+[2019-11-28 04:28:30,054 INFO] Step 6100/20000; acc:  62.60; ppl:  4.43; xent: 1.49; lr: 0.36998; 7073/282 tok/s;   6228 sec
+[2019-11-28 04:29:20,752 INFO] Step 6150/20000; acc:  60.83; ppl:  4.64; xent: 1.54; lr: 0.36998; 6971/307 tok/s;   6279 sec
+[2019-11-28 04:30:06,283 INFO] Step 6200/20000; acc:  62.81; ppl:  4.38; xent: 1.48; lr: 0.36998; 6727/299 tok/s;   6325 sec
+[2019-11-28 04:31:04,219 INFO] Step 6250/20000; acc:  62.45; ppl:  4.42; xent: 1.49; lr: 0.36998; 7348/246 tok/s;   6382 sec
+[2019-11-28 04:31:30,179 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.train.0.pt
+[2019-11-28 04:31:42,921 INFO] number of examples: 33469
+[2019-11-28 04:32:06,488 INFO] Step 6300/20000; acc:  62.18; ppl:  4.52; xent: 1.51; lr: 0.36998; 5548/242 tok/s;   6445 sec
+[2019-11-28 04:32:52,939 INFO] Step 6350/20000; acc:  62.76; ppl:  4.25; xent: 1.45; lr: 0.36998; 7571/329 tok/s;   6491 sec
+[2019-11-28 04:33:44,665 INFO] Step 6400/20000; acc:  61.56; ppl:  4.64; xent: 1.54; lr: 0.36998; 7901/287 tok/s;   6543 sec
+[2019-11-28 04:34:40,926 INFO] Step 6450/20000; acc:  61.29; ppl:  4.62; xent: 1.53; lr: 0.36998; 7082/271 tok/s;   6599 sec
+[2019-11-28 04:35:31,428 INFO] Step 6500/20000; acc:  61.97; ppl:  4.50; xent: 1.50; lr: 0.36998; 6940/308 tok/s;   6650 sec
+[2019-11-28 04:36:21,985 INFO] Step 6550/20000; acc:  64.04; ppl:  4.15; xent: 1.42; lr: 0.36998; 6524/259 tok/s;   6700 sec
+[2019-11-28 04:37:15,382 INFO] Step 6600/20000; acc:  61.92; ppl:  4.39; xent: 1.48; lr: 0.36998; 7094/286 tok/s;   6754 sec
+[2019-11-28 04:38:09,260 INFO] Step 6650/20000; acc:  63.17; ppl:  4.28; xent: 1.45; lr: 0.36998; 7138/263 tok/s;   6808 sec
+[2019-11-28 04:39:02,545 INFO] Step 6700/20000; acc:  62.35; ppl:  4.35; xent: 1.47; lr: 0.36998; 6980/286 tok/s;   6861 sec
+[2019-11-28 04:39:54,230 INFO] Step 6750/20000; acc:  63.25; ppl:  4.22; xent: 1.44; lr: 0.36998; 6786/294 tok/s;   6912 sec
+[2019-11-28 04:40:42,262 INFO] Step 6800/20000; acc:  62.45; ppl:  4.33; xent: 1.47; lr: 0.36998; 6816/288 tok/s;   6961 sec
+[2019-11-28 04:41:36,171 INFO] Step 6850/20000; acc:  62.74; ppl:  4.40; xent: 1.48; lr: 0.36998; 7081/257 tok/s;   7014 sec
+[2019-11-28 04:42:25,078 INFO] Step 6900/20000; acc:  62.67; ppl:  4.31; xent: 1.46; lr: 0.36998; 6970/297 tok/s;   7063 sec
+[2019-11-28 04:43:15,162 INFO] Step 6950/20000; acc:  64.01; ppl:  4.19; xent: 1.43; lr: 0.36998; 6977/275 tok/s;   7113 sec
+[2019-11-28 04:44:05,893 INFO] Step 7000/20000; acc:  62.60; ppl:  4.30; xent: 1.46; lr: 0.36998; 7042/290 tok/s;   7164 sec
+[2019-11-28 04:44:58,660 INFO] Step 7050/20000; acc:  61.97; ppl:  4.45; xent: 1.49; lr: 0.36998; 7249/286 tok/s;   7217 sec
+[2019-11-28 04:45:47,379 INFO] Step 7100/20000; acc:  62.57; ppl:  4.17; xent: 1.43; lr: 0.36998; 6559/320 tok/s;   7266 sec
+[2019-11-28 04:46:36,028 INFO] Step 7150/20000; acc:  64.44; ppl:  4.06; xent: 1.40; lr: 0.36998; 7093/249 tok/s;   7314 sec
+[2019-11-28 04:47:27,571 INFO] Step 7200/20000; acc:  63.57; ppl:  4.12; xent: 1.42; lr: 0.36998; 6910/265 tok/s;   7366 sec
+[2019-11-28 04:48:13,591 INFO] Step 7250/20000; acc:  63.20; ppl:  4.18; xent: 1.43; lr: 0.36998; 6934/302 tok/s;   7412 sec
+[2019-11-28 04:49:07,723 INFO] Step 7300/20000; acc:  63.07; ppl:  4.22; xent: 1.44; lr: 0.36998; 6959/271 tok/s;   7466 sec
+[2019-11-28 04:49:57,957 INFO] Step 7350/20000; acc:  62.62; ppl:  4.16; xent: 1.43; lr: 0.36998; 7163/292 tok/s;   7516 sec
+[2019-11-28 04:50:54,747 INFO] Step 7400/20000; acc:  61.80; ppl:  4.39; xent: 1.48; lr: 0.36998; 7103/275 tok/s;   7573 sec
+[2019-11-28 04:51:43,448 INFO] Step 7450/20000; acc:  63.60; ppl:  4.08; xent: 1.40; lr: 0.36998; 6658/296 tok/s;   7622 sec
+[2019-11-28 04:52:26,310 INFO] Step 7500/20000; acc:  63.31; ppl:  4.10; xent: 1.41; lr: 0.36998; 7018/353 tok/s;   7665 sec
+[2019-11-28 04:52:29,340 INFO] Saving checkpoint /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_t2_step_7500.pt
+[2019-11-28 04:53:46,649 INFO] Step 7550/20000; acc:  63.65; ppl:  4.18; xent: 1.43; lr: 0.36998; 4734/172 tok/s;   7745 sec
+[2019-11-28 04:54:40,206 INFO] Step 7600/20000; acc:  61.94; ppl:  4.38; xent: 1.48; lr: 0.36998; 6931/288 tok/s;   7798 sec
+[2019-11-28 04:55:29,704 INFO] Step 7650/20000; acc:  63.78; ppl:  4.06; xent: 1.40; lr: 0.36998; 7097/294 tok/s;   7848 sec
+[2019-11-28 04:56:22,921 INFO] Step 7700/20000; acc:  63.71; ppl:  4.00; xent: 1.39; lr: 0.36998; 7205/272 tok/s;   7901 sec
+[2019-11-28 04:57:11,057 INFO] Step 7750/20000; acc:  62.89; ppl:  4.14; xent: 1.42; lr: 0.36998; 6798/328 tok/s;   7949 sec
+[2019-11-28 04:58:04,331 INFO] Step 7800/20000; acc:  63.90; ppl:  4.15; xent: 1.42; lr: 0.36998; 6897/267 tok/s;   8003 sec
+[2019-11-28 04:58:55,093 INFO] Step 7850/20000; acc:  63.57; ppl:  4.06; xent: 1.40; lr: 0.36998; 7381/302 tok/s;   8053 sec
+[2019-11-28 04:59:42,853 INFO] Step 7900/20000; acc:  63.59; ppl:  4.02; xent: 1.39; lr: 0.36998; 6830/324 tok/s;   8101 sec
+[2019-11-28 05:00:40,526 INFO] Step 7950/20000; acc:  63.57; ppl:  4.17; xent: 1.43; lr: 0.36998; 7284/246 tok/s;   8159 sec
+[2019-11-28 05:01:28,594 INFO] Step 8000/20000; acc:  63.77; ppl:  3.96; xent: 1.38; lr: 0.36998; 6601/315 tok/s;   8207 sec
+[2019-11-28 05:02:19,871 INFO] Step 8050/20000; acc:  64.05; ppl:  3.97; xent: 1.38; lr: 0.36998; 6803/266 tok/s;   8258 sec
+[2019-11-28 05:03:11,110 INFO] Step 8100/20000; acc:  64.37; ppl:  4.01; xent: 1.39; lr: 0.36998; 6968/259 tok/s;   8309 sec
+[2019-11-28 05:04:04,572 INFO] Step 8150/20000; acc:  64.28; ppl:  4.05; xent: 1.40; lr: 0.36998; 7135/266 tok/s;   8363 sec
+[2019-11-28 05:04:53,586 INFO] Step 8200/20000; acc:  64.66; ppl:  3.93; xent: 1.37; lr: 0.36998; 6859/290 tok/s;   8412 sec
+[2019-11-28 05:05:43,218 INFO] Step 8250/20000; acc:  63.25; ppl:  4.13; xent: 1.42; lr: 0.36998; 7009/304 tok/s;   8461 sec
+[2019-11-28 05:06:30,745 INFO] Step 8300/20000; acc:  64.09; ppl:  3.99; xent: 1.38; lr: 0.36998; 6864/288 tok/s;   8509 sec
+[2019-11-28 05:07:23,819 INFO] Step 8350/20000; acc:  63.89; ppl:  4.03; xent: 1.39; lr: 0.36998; 7253/269 tok/s;   8562 sec
+[2019-11-28 05:07:43,929 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.train.0.pt
+[2019-11-28 05:07:56,327 INFO] number of examples: 33469
+[2019-11-28 05:08:28,582 INFO] Step 8400/20000; acc:  63.41; ppl:  4.12; xent: 1.42; lr: 0.36998; 5802/235 tok/s;   8627 sec
+[2019-11-28 05:09:17,288 INFO] Step 8450/20000; acc:  64.43; ppl:  3.86; xent: 1.35; lr: 0.36998; 7249/304 tok/s;   8676 sec
+[2019-11-28 05:10:10,234 INFO] Step 8500/20000; acc:  62.85; ppl:  4.17; xent: 1.43; lr: 0.36998; 7385/288 tok/s;   8728 sec
+[2019-11-28 05:11:06,417 INFO] Step 8550/20000; acc:  62.61; ppl:  4.16; xent: 1.43; lr: 0.36998; 6908/285 tok/s;   8785 sec
+[2019-11-28 05:12:00,581 INFO] Step 8600/20000; acc:  62.88; ppl:  4.18; xent: 1.43; lr: 0.36998; 6975/269 tok/s;   8839 sec
+[2019-11-28 05:12:49,033 INFO] Step 8650/20000; acc:  65.78; ppl:  3.72; xent: 1.31; lr: 0.36998; 6688/266 tok/s;   8887 sec
+[2019-11-28 05:13:43,193 INFO] Step 8700/20000; acc:  63.58; ppl:  4.00; xent: 1.39; lr: 0.36998; 7066/291 tok/s;   8941 sec
+[2019-11-28 05:14:38,337 INFO] Step 8750/20000; acc:  65.05; ppl:  3.88; xent: 1.36; lr: 0.36998; 7029/254 tok/s;   8997 sec
+[2019-11-28 05:15:29,908 INFO] Step 8800/20000; acc:  64.31; ppl:  3.88; xent: 1.35; lr: 0.36998; 6803/301 tok/s;   9048 sec
+[2019-11-28 05:16:22,596 INFO] Step 8850/20000; acc:  64.20; ppl:  3.98; xent: 1.38; lr: 0.36998; 6815/279 tok/s;   9101 sec
+[2019-11-28 05:17:10,535 INFO] Step 8900/20000; acc:  66.21; ppl:  3.77; xent: 1.33; lr: 0.36998; 6662/295 tok/s;   9149 sec
+[2019-11-28 05:18:05,556 INFO] Step 8950/20000; acc:  64.10; ppl:  4.14; xent: 1.42; lr: 0.36998; 7289/247 tok/s;   9204 sec
+[2019-11-28 05:18:53,220 INFO] Step 9000/20000; acc:  65.73; ppl:  3.77; xent: 1.33; lr: 0.36998; 6475/302 tok/s;   9251 sec
+[2019-11-28 05:19:45,041 INFO] Step 9050/20000; acc:  65.52; ppl:  3.83; xent: 1.34; lr: 0.36998; 7040/268 tok/s;   9303 sec
+[2019-11-28 05:20:37,475 INFO] Step 9100/20000; acc:  63.71; ppl:  3.99; xent: 1.38; lr: 0.36998; 6887/282 tok/s;   9356 sec
+[2019-11-28 05:21:28,907 INFO] Step 9150/20000; acc:  64.25; ppl:  3.97; xent: 1.38; lr: 0.36998; 7028/296 tok/s;   9407 sec
+[2019-11-28 05:22:19,351 INFO] Step 9200/20000; acc:  64.00; ppl:  3.92; xent: 1.37; lr: 0.36998; 6895/295 tok/s;   9458 sec
+[2019-11-28 05:23:09,171 INFO] Step 9250/20000; acc:  65.62; ppl:  3.71; xent: 1.31; lr: 0.36998; 7096/250 tok/s;   9507 sec
+[2019-11-28 05:24:00,487 INFO] Step 9300/20000; acc:  65.36; ppl:  3.83; xent: 1.34; lr: 0.36998; 6811/278 tok/s;   9559 sec
+[2019-11-28 05:24:46,677 INFO] Step 9350/20000; acc:  65.05; ppl:  3.78; xent: 1.33; lr: 0.36998; 6812/312 tok/s;   9605 sec
+[2019-11-28 05:25:40,596 INFO] Step 9400/20000; acc:  64.76; ppl:  3.80; xent: 1.33; lr: 0.36998; 7212/258 tok/s;   9659 sec
+[2019-11-28 05:26:34,150 INFO] Step 9450/20000; acc:  63.83; ppl:  3.87; xent: 1.35; lr: 0.36998; 6985/282 tok/s;   9712 sec
+[2019-11-28 05:27:26,497 INFO] Step 9500/20000; acc:  62.85; ppl:  4.03; xent: 1.39; lr: 0.36998; 7088/299 tok/s;   9765 sec
+[2019-11-28 05:28:13,477 INFO] Step 9550/20000; acc:  65.65; ppl:  3.77; xent: 1.33; lr: 0.36998; 6567/291 tok/s;   9812 sec
+[2019-11-28 05:29:02,111 INFO] Step 9600/20000; acc:  64.86; ppl:  3.74; xent: 1.32; lr: 0.36998; 6691/315 tok/s;   9860 sec
+[2019-11-28 05:29:56,075 INFO] Step 9650/20000; acc:  64.45; ppl:  3.96; xent: 1.38; lr: 0.36998; 7000/258 tok/s;   9914 sec
+[2019-11-28 05:30:49,505 INFO] Step 9700/20000; acc:  63.40; ppl:  3.96; xent: 1.38; lr: 0.36998; 6962/287 tok/s;   9968 sec
+[2019-11-28 05:31:39,642 INFO] Step 9750/20000; acc:  64.94; ppl:  3.77; xent: 1.33; lr: 0.36998; 6904/293 tok/s;  10018 sec
+[2019-11-28 05:32:33,843 INFO] Step 9800/20000; acc:  64.30; ppl:  3.77; xent: 1.33; lr: 0.36998; 7049/271 tok/s;  10072 sec
+[2019-11-28 05:33:23,781 INFO] Step 9850/20000; acc:  64.52; ppl:  3.71; xent: 1.31; lr: 0.36998; 6612/319 tok/s;  10122 sec
+[2019-11-28 05:34:06,558 INFO] Step 9900/20000; acc:  65.20; ppl:  3.81; xent: 1.34; lr: 0.36998; 8639/325 tok/s;  10165 sec
+[2019-11-28 05:34:50,278 INFO] Step 9950/20000; acc:  64.31; ppl:  3.81; xent: 1.34; lr: 0.36998; 8473/356 tok/s;  10209 sec
+[2019-11-28 05:35:26,120 INFO] Step 10000/20000; acc:  64.73; ppl:  3.83; xent: 1.34; lr: 0.36998; 9842/423 tok/s;  10244 sec
+[2019-11-28 05:35:26,859 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.valid.0.pt
+[2019-11-28 05:35:31,883 INFO] number of examples: 1780
+[2019-11-28 05:36:12,341 INFO] Validation perplexity: 3.56611
+[2019-11-28 05:36:12,351 INFO] Validation accuracy: 66.5556
+[2019-11-28 05:36:12,351 INFO] Model is improving ppl: inf --> 3.56611.
+[2019-11-28 05:36:12,351 INFO] Model is improving acc: -inf --> 66.5556.
+[2019-11-28 05:36:15,572 INFO] Saving checkpoint /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_t2_step_10000.pt
+[2019-11-28 05:37:17,683 INFO] Step 10050/20000; acc:  65.18; ppl:  3.76; xent: 1.32; lr: 0.36998; 3469/132 tok/s;  10356 sec
+[2019-11-28 05:37:58,089 INFO] Step 10100/20000; acc:  65.54; ppl:  3.77; xent: 1.33; lr: 0.36998; 8298/366 tok/s;  10396 sec
+[2019-11-28 05:38:40,496 INFO] Step 10150/20000; acc:  65.55; ppl:  3.68; xent: 1.30; lr: 0.36998; 8381/322 tok/s;  10439 sec
+[2019-11-28 05:39:20,278 INFO] Step 10200/20000; acc:  66.39; ppl:  3.65; xent: 1.30; lr: 0.36998; 8532/324 tok/s;  10479 sec
+[2019-11-28 05:40:00,893 INFO] Step 10250/20000; acc:  66.27; ppl:  3.64; xent: 1.29; lr: 0.36998; 9038/342 tok/s;  10519 sec
+[2019-11-28 05:40:43,077 INFO] Step 10300/20000; acc:  65.48; ppl:  3.70; xent: 1.31; lr: 0.36998; 8123/342 tok/s;  10561 sec
+[2019-11-28 05:41:24,973 INFO] Step 10350/20000; acc:  63.61; ppl:  3.88; xent: 1.35; lr: 0.36998; 8309/363 tok/s;  10603 sec
+[2019-11-28 05:42:04,777 INFO] Step 10400/20000; acc:  65.70; ppl:  3.66; xent: 1.30; lr: 0.36998; 8669/347 tok/s;  10643 sec
+[2019-11-28 05:42:46,403 INFO] Step 10450/20000; acc:  64.70; ppl:  3.82; xent: 1.34; lr: 0.36998; 9593/363 tok/s;  10685 sec
+[2019-11-28 05:42:52,002 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.train.0.pt
+[2019-11-28 05:43:04,005 INFO] number of examples: 33469
+[2019-11-28 05:43:40,395 INFO] Step 10500/20000; acc:  65.59; ppl:  3.68; xent: 1.30; lr: 0.36998; 6718/276 tok/s;  10739 sec
+[2019-11-28 05:44:20,467 INFO] Step 10550/20000; acc:  65.35; ppl:  3.66; xent: 1.30; lr: 0.36998; 9176/364 tok/s;  10779 sec
+[2019-11-28 05:45:04,561 INFO] Step 10600/20000; acc:  63.10; ppl:  4.02; xent: 1.39; lr: 0.36998; 9269/351 tok/s;  10823 sec
+[2019-11-28 05:45:45,194 INFO] Step 10650/20000; acc:  64.45; ppl:  3.77; xent: 1.33; lr: 0.36998; 8486/382 tok/s;  10863 sec
+[2019-11-28 05:46:27,453 INFO] Step 10700/20000; acc:  64.70; ppl:  3.89; xent: 1.36; lr: 0.36998; 8409/342 tok/s;  10906 sec
+[2019-11-28 05:47:07,599 INFO] Step 10750/20000; acc:  66.41; ppl:  3.47; xent: 1.24; lr: 0.36998; 8363/337 tok/s;  10946 sec
+[2019-11-28 05:47:54,310 INFO] Step 10800/20000; acc:  64.48; ppl:  3.77; xent: 1.33; lr: 0.36998; 8638/335 tok/s;  10993 sec
+[2019-11-28 05:48:37,338 INFO] Step 10850/20000; acc:  66.07; ppl:  3.61; xent: 1.28; lr: 0.36998; 8810/316 tok/s;  11036 sec
+[2019-11-28 05:49:20,256 INFO] Step 10900/20000; acc:  63.96; ppl:  3.77; xent: 1.33; lr: 0.36998; 8301/374 tok/s;  11079 sec
+[2019-11-28 05:50:01,519 INFO] Step 10950/20000; acc:  65.50; ppl:  3.65; xent: 1.29; lr: 0.36998; 8456/356 tok/s;  11120 sec
+[2019-11-28 05:50:42,578 INFO] Step 11000/20000; acc:  66.36; ppl:  3.65; xent: 1.29; lr: 0.36998; 8158/334 tok/s;  11161 sec
+[2019-11-28 05:51:24,731 INFO] Step 11050/20000; acc:  65.09; ppl:  3.76; xent: 1.33; lr: 0.36998; 9115/327 tok/s;  11203 sec
+[2019-11-28 05:52:03,854 INFO] Step 11100/20000; acc:  67.23; ppl:  3.47; xent: 1.24; lr: 0.36998; 7988/358 tok/s;  11242 sec
+[2019-11-28 05:52:48,699 INFO] Step 11150/20000; acc:  65.16; ppl:  3.75; xent: 1.32; lr: 0.36998; 8659/315 tok/s;  11287 sec
+[2019-11-28 05:53:30,096 INFO] Step 11200/20000; acc:  65.67; ppl:  3.67; xent: 1.30; lr: 0.36998; 8405/353 tok/s;  11328 sec
+[2019-11-28 05:54:09,915 INFO] Step 11250/20000; acc:  65.26; ppl:  3.72; xent: 1.31; lr: 0.36998; 8483/394 tok/s;  11368 sec
+[2019-11-28 05:54:52,485 INFO] Step 11300/20000; acc:  65.78; ppl:  3.63; xent: 1.29; lr: 0.36998; 8215/333 tok/s;  11411 sec
+[2019-11-28 05:55:35,408 INFO] Step 11350/20000; acc:  66.46; ppl:  3.57; xent: 1.27; lr: 0.36998; 8398/302 tok/s;  11454 sec
+[2019-11-28 05:56:16,962 INFO] Step 11400/20000; acc:  66.85; ppl:  3.53; xent: 1.26; lr: 0.36998; 8618/324 tok/s;  11495 sec
+[2019-11-28 05:56:53,115 INFO] Step 11450/20000; acc:  66.25; ppl:  3.54; xent: 1.26; lr: 0.36998; 8328/405 tok/s;  11531 sec
+[2019-11-28 05:57:38,418 INFO] Step 11500/20000; acc:  65.60; ppl:  3.66; xent: 1.30; lr: 0.36998; 8957/314 tok/s;  11577 sec
+[2019-11-28 05:58:23,698 INFO] Step 11550/20000; acc:  64.94; ppl:  3.66; xent: 1.30; lr: 0.36998; 8451/340 tok/s;  11622 sec
+[2019-11-28 05:59:05,585 INFO] Step 11600/20000; acc:  65.18; ppl:  3.57; xent: 1.27; lr: 0.36998; 8152/377 tok/s;  11664 sec
+[2019-11-28 05:59:43,725 INFO] Step 11650/20000; acc:  66.87; ppl:  3.55; xent: 1.27; lr: 0.36998; 8365/355 tok/s;  11702 sec
+[2019-11-28 06:00:21,272 INFO] Step 11700/20000; acc:  65.84; ppl:  3.62; xent: 1.29; lr: 0.36998; 8866/394 tok/s;  11740 sec
+[2019-11-28 06:01:06,546 INFO] Step 11750/20000; acc:  64.97; ppl:  3.72; xent: 1.31; lr: 0.36998; 8435/321 tok/s;  11785 sec
+[2019-11-28 06:01:48,883 INFO] Step 11800/20000; acc:  64.98; ppl:  3.67; xent: 1.30; lr: 0.36998; 8686/360 tok/s;  11827 sec
+[2019-11-28 06:02:28,904 INFO] Step 11850/20000; acc:  65.96; ppl:  3.56; xent: 1.27; lr: 0.36998; 8417/367 tok/s;  11867 sec
+[2019-11-28 06:03:12,520 INFO] Step 11900/20000; acc:  65.96; ppl:  3.54; xent: 1.26; lr: 0.36998; 9192/333 tok/s;  11911 sec
+[2019-11-28 06:03:53,645 INFO] Step 11950/20000; acc:  66.00; ppl:  3.52; xent: 1.26; lr: 0.36998; 7899/377 tok/s;  11952 sec
+[2019-11-28 06:04:35,259 INFO] Step 12000/20000; acc:  66.10; ppl:  3.58; xent: 1.28; lr: 0.36998; 8524/335 tok/s;  11994 sec
+[2019-11-28 06:05:19,374 INFO] Step 12050/20000; acc:  65.23; ppl:  3.61; xent: 1.28; lr: 0.36998; 8472/362 tok/s;  12038 sec
+[2019-11-28 06:06:02,099 INFO] Step 12100/20000; acc:  65.79; ppl:  3.62; xent: 1.29; lr: 0.36998; 8203/348 tok/s;  12080 sec
+[2019-11-28 06:06:47,715 INFO] Step 12150/20000; acc:  65.81; ppl:  3.60; xent: 1.28; lr: 0.36998; 8440/331 tok/s;  12126 sec
+[2019-11-28 06:07:24,893 INFO] Step 12200/20000; acc:  66.13; ppl:  3.50; xent: 1.25; lr: 0.36998; 8567/383 tok/s;  12163 sec
+[2019-11-28 06:08:09,659 INFO] Step 12250/20000; acc:  66.39; ppl:  3.53; xent: 1.26; lr: 0.36998; 8542/302 tok/s;  12208 sec
+[2019-11-28 06:08:48,780 INFO] Step 12300/20000; acc:  66.86; ppl:  3.51; xent: 1.25; lr: 0.36998; 8191/345 tok/s;  12247 sec
+[2019-11-28 06:09:34,763 INFO] Step 12350/20000; acc:  66.83; ppl:  3.47; xent: 1.24; lr: 0.36998; 8511/297 tok/s;  12293 sec
+[2019-11-28 06:10:12,716 INFO] Step 12400/20000; acc:  65.13; ppl:  3.61; xent: 1.28; lr: 0.36998; 8672/380 tok/s;  12331 sec
+[2019-11-28 06:10:51,026 INFO] Step 12450/20000; acc:  64.43; ppl:  3.72; xent: 1.31; lr: 0.36998; 9160/393 tok/s;  12369 sec
+[2019-11-28 06:11:28,153 INFO] Step 12500/20000; acc:  65.73; ppl:  3.60; xent: 1.28; lr: 0.36998; 9591/372 tok/s;  12406 sec
+[2019-11-28 06:11:31,230 INFO] Saving checkpoint /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_t2_step_12500.pt
+[2019-11-28 06:12:25,096 INFO] Step 12550/20000; acc:  65.64; ppl:  3.61; xent: 1.28; lr: 0.36998; 6365/266 tok/s;  12463 sec
+[2019-11-28 06:12:27,214 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.train.0.pt
+[2019-11-28 06:12:40,273 INFO] number of examples: 33469
+[2019-11-28 06:13:16,865 INFO] Step 12600/20000; acc:  66.22; ppl:  3.50; xent: 1.25; lr: 0.36998; 7494/295 tok/s;  12515 sec
+[2019-11-28 06:13:59,885 INFO] Step 12650/20000; acc:  65.66; ppl:  3.60; xent: 1.28; lr: 0.36998; 8847/334 tok/s;  12558 sec
+[2019-11-28 06:14:46,102 INFO] Step 12700/20000; acc:  64.15; ppl:  3.84; xent: 1.35; lr: 0.36998; 8802/330 tok/s;  12604 sec
+[2019-11-28 06:15:24,072 INFO] Step 12750/20000; acc:  64.78; ppl:  3.65; xent: 1.29; lr: 0.36998; 9622/421 tok/s;  12642 sec
+[2019-11-28 06:16:01,849 INFO] Step 12800/20000; acc:  66.47; ppl:  3.56; xent: 1.27; lr: 0.36998; 8609/375 tok/s;  12680 sec
+[2019-11-28 06:16:45,058 INFO] Step 12850/20000; acc:  66.87; ppl:  3.37; xent: 1.21; lr: 0.36998; 8320/320 tok/s;  12723 sec
+[2019-11-28 06:17:29,012 INFO] Step 12900/20000; acc:  66.14; ppl:  3.54; xent: 1.26; lr: 0.36998; 9070/340 tok/s;  12767 sec
+[2019-11-28 06:18:12,219 INFO] Step 12950/20000; acc:  66.59; ppl:  3.48; xent: 1.25; lr: 0.36998; 8826/336 tok/s;  12810 sec
+[2019-11-28 06:18:54,731 INFO] Step 13000/20000; acc:  65.53; ppl:  3.57; xent: 1.27; lr: 0.36998; 8392/368 tok/s;  12853 sec
+[2019-11-28 06:19:31,217 INFO] Step 13050/20000; acc:  66.52; ppl:  3.49; xent: 1.25; lr: 0.36998; 8552/392 tok/s;  12889 sec
+[2019-11-28 06:20:14,305 INFO] Step 13100/20000; acc:  67.37; ppl:  3.44; xent: 1.23; lr: 0.36998; 8424/318 tok/s;  12933 sec
+[2019-11-28 06:21:01,198 INFO] Step 13150/20000; acc:  65.56; ppl:  3.63; xent: 1.29; lr: 0.36998; 8593/305 tok/s;  12979 sec
+[2019-11-28 06:21:36,203 INFO] Step 13200/20000; acc:  68.49; ppl:  3.23; xent: 1.17; lr: 0.36998; 7944/401 tok/s;  13014 sec
+[2019-11-28 06:22:19,638 INFO] Step 13250/20000; acc:  66.23; ppl:  3.55; xent: 1.27; lr: 0.36998; 8538/324 tok/s;  13058 sec
+[2019-11-28 06:23:04,345 INFO] Step 13300/20000; acc:  65.98; ppl:  3.57; xent: 1.27; lr: 0.36998; 8767/325 tok/s;  13103 sec
+[2019-11-28 06:23:45,125 INFO] Step 13350/20000; acc:  65.49; ppl:  3.52; xent: 1.26; lr: 0.36998; 8093/393 tok/s;  13143 sec
+[2019-11-28 06:24:22,847 INFO] Step 13400/20000; acc:  67.18; ppl:  3.42; xent: 1.23; lr: 0.36998; 9066/358 tok/s;  13181 sec
+[2019-11-28 06:25:04,191 INFO] Step 13450/20000; acc:  66.27; ppl:  3.55; xent: 1.27; lr: 0.36998; 8819/326 tok/s;  13222 sec
+[2019-11-28 06:25:44,447 INFO] Step 13500/20000; acc:  67.66; ppl:  3.39; xent: 1.22; lr: 0.36998; 8487/332 tok/s;  13263 sec
+[2019-11-28 06:26:23,486 INFO] Step 13550/20000; acc:  66.41; ppl:  3.48; xent: 1.25; lr: 0.36998; 8666/372 tok/s;  13302 sec
+[2019-11-28 06:27:05,406 INFO] Step 13600/20000; acc:  66.59; ppl:  3.50; xent: 1.25; lr: 0.36998; 8928/341 tok/s;  13344 sec
+[2019-11-28 06:27:49,369 INFO] Step 13650/20000; acc:  65.49; ppl:  3.58; xent: 1.28; lr: 0.36998; 8981/349 tok/s;  13388 sec
+[2019-11-28 06:28:30,218 INFO] Step 13700/20000; acc:  66.19; ppl:  3.45; xent: 1.24; lr: 0.36998; 7945/374 tok/s;  13428 sec
+[2019-11-28 06:29:09,435 INFO] Step 13750/20000; acc:  67.72; ppl:  3.36; xent: 1.21; lr: 0.36998; 7967/354 tok/s;  13468 sec
+[2019-11-28 06:29:53,026 INFO] Step 13800/20000; acc:  65.97; ppl:  3.59; xent: 1.28; lr: 0.36998; 8559/344 tok/s;  13511 sec
+[2019-11-28 06:30:33,885 INFO] Step 13850/20000; acc:  65.67; ppl:  3.51; xent: 1.25; lr: 0.36998; 8556/362 tok/s;  13552 sec
+[2019-11-28 06:31:17,467 INFO] Step 13900/20000; acc:  65.51; ppl:  3.57; xent: 1.27; lr: 0.36998; 8778/349 tok/s;  13596 sec
+[2019-11-28 06:31:58,205 INFO] Step 13950/20000; acc:  68.14; ppl:  3.23; xent: 1.17; lr: 0.36998; 7971/342 tok/s;  13636 sec
+[2019-11-28 06:32:45,154 INFO] Step 14000/20000; acc:  65.71; ppl:  3.50; xent: 1.25; lr: 0.36998; 8677/334 tok/s;  13683 sec
+[2019-11-28 06:33:24,899 INFO] Step 14050/20000; acc:  66.31; ppl:  3.46; xent: 1.24; lr: 0.36998; 8158/378 tok/s;  13723 sec
+[2019-11-28 06:34:07,257 INFO] Step 14100/20000; acc:  67.26; ppl:  3.40; xent: 1.22; lr: 0.36998; 8333/325 tok/s;  13766 sec
+[2019-11-28 06:34:51,379 INFO] Step 14150/20000; acc:  65.90; ppl:  3.44; xent: 1.24; lr: 0.36998; 8525/371 tok/s;  13810 sec
+[2019-11-28 06:35:32,157 INFO] Step 14200/20000; acc:  67.06; ppl:  3.40; xent: 1.22; lr: 0.36998; 8281/352 tok/s;  13850 sec
+[2019-11-28 06:36:18,318 INFO] Step 14250/20000; acc:  65.44; ppl:  3.55; xent: 1.27; lr: 0.36998; 8256/334 tok/s;  13897 sec
+[2019-11-28 06:36:56,801 INFO] Step 14300/20000; acc:  68.25; ppl:  3.27; xent: 1.18; lr: 0.36998; 8213/348 tok/s;  13935 sec
+[2019-11-28 06:37:41,112 INFO] Step 14350/20000; acc:  66.65; ppl:  3.43; xent: 1.23; lr: 0.36998; 8703/322 tok/s;  13979 sec
+[2019-11-28 06:38:18,907 INFO] Step 14400/20000; acc:  66.90; ppl:  3.40; xent: 1.22; lr: 0.36998; 8695/345 tok/s;  14017 sec
+[2019-11-28 06:39:02,082 INFO] Step 14450/20000; acc:  67.73; ppl:  3.34; xent: 1.21; lr: 0.36998; 8776/325 tok/s;  14060 sec
+[2019-11-28 06:39:42,993 INFO] Step 14500/20000; acc:  66.44; ppl:  3.45; xent: 1.24; lr: 0.36998; 8250/357 tok/s;  14101 sec
+[2019-11-28 06:40:25,687 INFO] Step 14550/20000; acc:  66.03; ppl:  3.52; xent: 1.26; lr: 0.36998; 8373/337 tok/s;  14144 sec
+[2019-11-28 06:41:08,931 INFO] Step 14600/20000; acc:  66.28; ppl:  3.48; xent: 1.25; lr: 0.36998; 8849/334 tok/s;  14187 sec
+[2019-11-28 06:41:44,207 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.train.0.pt
+[2019-11-28 06:41:56,218 INFO] number of examples: 33469
+[2019-11-28 06:42:00,598 INFO] Step 14650/20000; acc:  66.90; ppl:  3.42; xent: 1.23; lr: 0.36998; 6565/282 tok/s;  14239 sec
+[2019-11-28 06:42:40,201 INFO] Step 14700/20000; acc:  66.86; ppl:  3.35; xent: 1.21; lr: 0.36998; 9730/398 tok/s;  14278 sec
+[2019-11-28 06:43:25,055 INFO] Step 14750/20000; acc:  66.33; ppl:  3.49; xent: 1.25; lr: 0.36998; 8926/317 tok/s;  14323 sec
+[2019-11-28 06:44:08,482 INFO] Step 14800/20000; acc:  65.57; ppl:  3.57; xent: 1.27; lr: 0.36998; 8926/351 tok/s;  14367 sec
+[2019-11-28 06:44:51,154 INFO] Step 14850/20000; acc:  65.82; ppl:  3.51; xent: 1.26; lr: 0.36998; 8508/369 tok/s;  14409 sec
+[2019-11-28 06:45:30,825 INFO] Step 14900/20000; acc:  66.78; ppl:  3.38; xent: 1.22; lr: 0.36998; 8213/353 tok/s;  14449 sec
+[2019-11-28 06:46:07,048 INFO] Step 14950/20000; acc:  67.07; ppl:  3.34; xent: 1.20; lr: 0.36998; 10020/395 tok/s;  14485 sec
+[2019-11-28 06:46:51,480 INFO] Step 15000/20000; acc:  66.82; ppl:  3.38; xent: 1.22; lr: 0.36998; 9175/333 tok/s;  14530 sec
+[2019-11-28 06:46:54,526 INFO] Saving checkpoint /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_t2_step_15000.pt
+[2019-11-28 06:47:53,909 INFO] Step 15050/20000; acc:  66.45; ppl:  3.42; xent: 1.23; lr: 0.36998; 5764/235 tok/s;  14592 sec
+[2019-11-28 06:48:35,894 INFO] Step 15100/20000; acc:  66.90; ppl:  3.38; xent: 1.22; lr: 0.36998; 8513/370 tok/s;  14634 sec
+[2019-11-28 06:49:06,821 INFO] Step 15150/20000; acc:  66.51; ppl:  3.42; xent: 1.23; lr: 0.36998; 10219/458 tok/s;  14665 sec
+[2019-11-28 06:49:49,806 INFO] Step 15200/20000; acc:  67.59; ppl:  3.33; xent: 1.20; lr: 0.36998; 8736/323 tok/s;  14708 sec
+[2019-11-28 06:50:36,792 INFO] Step 15250/20000; acc:  66.28; ppl:  3.46; xent: 1.24; lr: 0.36998; 8640/312 tok/s;  14755 sec
+[2019-11-28 06:51:13,809 INFO] Step 15300/20000; acc:  68.24; ppl:  3.30; xent: 1.19; lr: 0.36998; 8118/379 tok/s;  14792 sec
+[2019-11-28 06:51:54,628 INFO] Step 15350/20000; acc:  67.52; ppl:  3.25; xent: 1.18; lr: 0.36998; 8401/353 tok/s;  14833 sec
+[2019-11-28 06:52:39,651 INFO] Step 15400/20000; acc:  65.49; ppl:  3.56; xent: 1.27; lr: 0.36998; 8949/324 tok/s;  14878 sec
+[2019-11-28 06:53:18,668 INFO] Step 15450/20000; acc:  66.90; ppl:  3.32; xent: 1.20; lr: 0.36998; 8043/412 tok/s;  14917 sec
+[2019-11-28 06:53:59,536 INFO] Step 15500/20000; acc:  68.31; ppl:  3.29; xent: 1.19; lr: 0.36998; 8499/309 tok/s;  14958 sec
+[2019-11-28 06:54:43,262 INFO] Step 15550/20000; acc:  67.67; ppl:  3.36; xent: 1.21; lr: 0.36998; 8594/326 tok/s;  15002 sec
+[2019-11-28 06:55:20,285 INFO] Step 15600/20000; acc:  68.26; ppl:  3.24; xent: 1.18; lr: 0.36998; 8390/357 tok/s;  15039 sec
+[2019-11-28 06:56:03,235 INFO] Step 15650/20000; acc:  67.33; ppl:  3.36; xent: 1.21; lr: 0.36998; 8521/334 tok/s;  15081 sec
+[2019-11-28 06:56:44,647 INFO] Step 15700/20000; acc:  66.71; ppl:  3.39; xent: 1.22; lr: 0.36998; 8491/344 tok/s;  15123 sec
+[2019-11-28 06:57:30,295 INFO] Step 15750/20000; acc:  65.40; ppl:  3.46; xent: 1.24; lr: 0.36998; 8880/340 tok/s;  15169 sec
+[2019-11-28 06:58:11,827 INFO] Step 15800/20000; acc:  65.93; ppl:  3.41; xent: 1.23; lr: 0.36998; 8506/370 tok/s;  15210 sec
+[2019-11-28 06:58:50,207 INFO] Step 15850/20000; acc:  68.15; ppl:  3.28; xent: 1.19; lr: 0.36998; 8211/359 tok/s;  15248 sec
+[2019-11-28 06:59:31,958 INFO] Step 15900/20000; acc:  66.83; ppl:  3.45; xent: 1.24; lr: 0.36998; 8727/363 tok/s;  15290 sec
+[2019-11-28 07:00:12,554 INFO] Step 15950/20000; acc:  66.27; ppl:  3.43; xent: 1.23; lr: 0.36998; 8054/351 tok/s;  15331 sec
+[2019-11-28 07:00:58,591 INFO] Step 16000/20000; acc:  65.83; ppl:  3.48; xent: 1.25; lr: 0.36998; 8904/334 tok/s;  15377 sec
+[2019-11-28 07:01:37,835 INFO] Step 16050/20000; acc:  68.93; ppl:  3.09; xent: 1.13; lr: 0.36998; 8421/354 tok/s;  15416 sec
+[2019-11-28 07:02:20,364 INFO] Step 16100/20000; acc:  66.59; ppl:  3.35; xent: 1.21; lr: 0.36998; 8733/362 tok/s;  15459 sec
+[2019-11-28 07:03:00,677 INFO] Step 16150/20000; acc:  66.19; ppl:  3.39; xent: 1.22; lr: 0.36998; 8218/382 tok/s;  15499 sec
+[2019-11-28 07:03:44,426 INFO] Step 16200/20000; acc:  66.52; ppl:  3.42; xent: 1.23; lr: 0.36998; 8462/339 tok/s;  15543 sec
+[2019-11-28 07:04:27,095 INFO] Step 16250/20000; acc:  66.89; ppl:  3.30; xent: 1.19; lr: 0.36998; 8310/356 tok/s;  15585 sec
+[2019-11-28 07:05:09,296 INFO] Step 16300/20000; acc:  67.69; ppl:  3.30; xent: 1.19; lr: 0.36998; 8401/336 tok/s;  15628 sec
+[2019-11-28 07:05:55,631 INFO] Step 16350/20000; acc:  66.51; ppl:  3.41; xent: 1.23; lr: 0.36998; 8725/336 tok/s;  15674 sec
+[2019-11-28 07:06:32,251 INFO] Step 16400/20000; acc:  67.85; ppl:  3.23; xent: 1.17; lr: 0.36998; 7961/369 tok/s;  15711 sec
+[2019-11-28 07:07:16,631 INFO] Step 16450/20000; acc:  67.40; ppl:  3.34; xent: 1.21; lr: 0.36998; 8668/318 tok/s;  15755 sec
+[2019-11-28 07:07:57,707 INFO] Step 16500/20000; acc:  68.02; ppl:  3.25; xent: 1.18; lr: 0.36998; 8213/313 tok/s;  15796 sec
+[2019-11-28 07:08:38,919 INFO] Step 16550/20000; acc:  67.64; ppl:  3.21; xent: 1.17; lr: 0.36998; 8651/351 tok/s;  15837 sec
+[2019-11-28 07:09:21,852 INFO] Step 16600/20000; acc:  66.95; ppl:  3.39; xent: 1.22; lr: 0.36998; 8143/336 tok/s;  15880 sec
+[2019-11-28 07:10:02,859 INFO] Step 16650/20000; acc:  67.02; ppl:  3.35; xent: 1.21; lr: 0.36998; 8527/352 tok/s;  15921 sec
+[2019-11-28 07:10:49,799 INFO] Step 16700/20000; acc:  66.80; ppl:  3.34; xent: 1.20; lr: 0.36998; 8471/302 tok/s;  15968 sec
+[2019-11-28 07:11:18,660 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.train.0.pt
+[2019-11-28 07:11:27,729 INFO] number of examples: 33469
+[2019-11-28 07:11:39,144 INFO] Step 16750/20000; acc:  66.81; ppl:  3.36; xent: 1.21; lr: 0.36998; 6599/308 tok/s;  16017 sec
+[2019-11-28 07:12:18,418 INFO] Step 16800/20000; acc:  67.31; ppl:  3.26; xent: 1.18; lr: 0.36998; 9534/390 tok/s;  16057 sec
+[2019-11-28 07:13:01,601 INFO] Step 16850/20000; acc:  65.94; ppl:  3.44; xent: 1.24; lr: 0.36998; 9195/337 tok/s;  16100 sec
+[2019-11-28 07:13:48,008 INFO] Step 16900/20000; acc:  65.83; ppl:  3.50; xent: 1.25; lr: 0.36998; 8649/329 tok/s;  16146 sec
+[2019-11-28 07:14:31,970 INFO] Step 16950/20000; acc:  65.32; ppl:  3.51; xent: 1.25; lr: 0.36998; 8472/365 tok/s;  16190 sec
+[2019-11-28 07:15:07,847 INFO] Step 17000/20000; acc:  69.14; ppl:  3.11; xent: 1.14; lr: 0.36998; 8826/367 tok/s;  16226 sec
+[2019-11-28 07:15:51,116 INFO] Step 17050/20000; acc:  66.54; ppl:  3.39; xent: 1.22; lr: 0.36998; 8918/341 tok/s;  16269 sec
+[2019-11-28 07:16:33,925 INFO] Step 17100/20000; acc:  67.58; ppl:  3.25; xent: 1.18; lr: 0.36998; 8979/332 tok/s;  16312 sec
+[2019-11-28 07:17:15,122 INFO] Step 17150/20000; acc:  66.90; ppl:  3.36; xent: 1.21; lr: 0.36998; 8391/363 tok/s;  16353 sec
+[2019-11-28 07:17:58,538 INFO] Step 17200/20000; acc:  66.07; ppl:  3.38; xent: 1.22; lr: 0.36998; 8508/365 tok/s;  16397 sec
+[2019-11-28 07:18:39,311 INFO] Step 17250/20000; acc:  67.23; ppl:  3.30; xent: 1.19; lr: 0.36998; 8377/343 tok/s;  16438 sec
+[2019-11-28 07:19:20,521 INFO] Step 17300/20000; acc:  67.83; ppl:  3.24; xent: 1.18; lr: 0.36998; 8610/340 tok/s;  16479 sec
+[2019-11-28 07:20:03,397 INFO] Step 17350/20000; acc:  67.45; ppl:  3.33; xent: 1.20; lr: 0.36998; 8994/333 tok/s;  16522 sec
+[2019-11-28 07:20:43,552 INFO] Step 17400/20000; acc:  68.14; ppl:  3.28; xent: 1.19; lr: 0.36998; 8058/350 tok/s;  16562 sec
+[2019-11-28 07:21:22,092 INFO] Step 17450/20000; acc:  67.73; ppl:  3.26; xent: 1.18; lr: 0.36998; 9019/372 tok/s;  16600 sec
+[2019-11-28 07:22:05,366 INFO] Step 17500/20000; acc:  66.12; ppl:  3.48; xent: 1.25; lr: 0.36998; 8690/345 tok/s;  16644 sec
+[2019-11-28 07:22:08,251 INFO] Saving checkpoint /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_t2_step_17500.pt
+[2019-11-28 07:23:08,480 INFO] Step 17550/20000; acc:  67.10; ppl:  3.31; xent: 1.20; lr: 0.36998; 5262/253 tok/s;  16707 sec
+[2019-11-28 07:23:49,982 INFO] Step 17600/20000; acc:  68.76; ppl:  3.21; xent: 1.17; lr: 0.36998; 8629/298 tok/s;  16748 sec
+[2019-11-28 07:24:29,792 INFO] Step 17650/20000; acc:  68.68; ppl:  3.18; xent: 1.16; lr: 0.36998; 8796/341 tok/s;  16788 sec
+[2019-11-28 07:25:03,254 INFO] Step 17700/20000; acc:  67.87; ppl:  3.24; xent: 1.18; lr: 0.36998; 9330/416 tok/s;  16822 sec
+[2019-11-28 07:25:39,760 INFO] Step 17750/20000; acc:  67.75; ppl:  3.29; xent: 1.19; lr: 0.36998; 11063/412 tok/s;  16858 sec
+[2019-11-28 07:26:20,908 INFO] Step 17800/20000; acc:  67.33; ppl:  3.28; xent: 1.19; lr: 0.36998; 8156/343 tok/s;  16899 sec
+[2019-11-28 07:27:07,423 INFO] Step 17850/20000; acc:  65.70; ppl:  3.43; xent: 1.23; lr: 0.36998; 8977/334 tok/s;  16946 sec
+[2019-11-28 07:27:46,699 INFO] Step 17900/20000; acc:  66.77; ppl:  3.34; xent: 1.21; lr: 0.36998; 8657/380 tok/s;  16985 sec
+[2019-11-28 07:28:23,547 INFO] Step 17950/20000; acc:  67.37; ppl:  3.16; xent: 1.15; lr: 0.36998; 8013/395 tok/s;  17022 sec
+[2019-11-28 07:29:06,226 INFO] Step 18000/20000; acc:  67.19; ppl:  3.37; xent: 1.21; lr: 0.36998; 8743/340 tok/s;  17064 sec
+[2019-11-28 07:29:48,042 INFO] Step 18050/20000; acc:  67.31; ppl:  3.28; xent: 1.19; lr: 0.36998; 8367/344 tok/s;  17106 sec
+[2019-11-28 07:30:31,327 INFO] Step 18100/20000; acc:  66.03; ppl:  3.42; xent: 1.23; lr: 0.36998; 8591/358 tok/s;  17150 sec
+[2019-11-28 07:31:13,443 INFO] Step 18150/20000; acc:  68.91; ppl:  3.10; xent: 1.13; lr: 0.36998; 8551/333 tok/s;  17192 sec
+[2019-11-28 07:31:57,600 INFO] Step 18200/20000; acc:  66.25; ppl:  3.33; xent: 1.20; lr: 0.36998; 8476/362 tok/s;  17236 sec
+[2019-11-28 07:32:40,049 INFO] Step 18250/20000; acc:  67.64; ppl:  3.21; xent: 1.17; lr: 0.36998; 8047/340 tok/s;  17278 sec
+[2019-11-28 07:33:24,300 INFO] Step 18300/20000; acc:  67.76; ppl:  3.27; xent: 1.19; lr: 0.36998; 8654/344 tok/s;  17323 sec
+[2019-11-28 07:34:04,391 INFO] Step 18350/20000; acc:  66.80; ppl:  3.27; xent: 1.18; lr: 0.36998; 7971/380 tok/s;  17363 sec
+[2019-11-28 07:34:47,915 INFO] Step 18400/20000; acc:  68.15; ppl:  3.24; xent: 1.17; lr: 0.36998; 8608/325 tok/s;  17406 sec
+[2019-11-28 07:35:32,777 INFO] Step 18450/20000; acc:  66.34; ppl:  3.33; xent: 1.20; lr: 0.36998; 8241/341 tok/s;  17451 sec
+[2019-11-28 07:36:10,845 INFO] Step 18500/20000; acc:  67.88; ppl:  3.20; xent: 1.16; lr: 0.36998; 8582/372 tok/s;  17489 sec
+[2019-11-28 07:36:54,161 INFO] Step 18550/20000; acc:  67.73; ppl:  3.22; xent: 1.17; lr: 0.36998; 8395/316 tok/s;  17532 sec
+[2019-11-28 07:37:35,961 INFO] Step 18600/20000; acc:  68.72; ppl:  3.14; xent: 1.15; lr: 0.36998; 8295/303 tok/s;  17574 sec
+[2019-11-28 07:38:17,514 INFO] Step 18650/20000; acc:  68.10; ppl:  3.21; xent: 1.17; lr: 0.36998; 8693/347 tok/s;  17616 sec
+[2019-11-28 07:38:59,959 INFO] Step 18700/20000; acc:  66.53; ppl:  3.37; xent: 1.21; lr: 0.36998; 8264/362 tok/s;  17658 sec
+[2019-11-28 07:39:39,291 INFO] Step 18750/20000; acc:  67.90; ppl:  3.27; xent: 1.18; lr: 0.36998; 8240/354 tok/s;  17698 sec
+[2019-11-28 07:40:25,551 INFO] Step 18800/20000; acc:  68.06; ppl:  3.23; xent: 1.17; lr: 0.36998; 8933/302 tok/s;  17744 sec
+[2019-11-28 07:40:48,318 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.train.0.pt
+[2019-11-28 07:40:59,738 INFO] number of examples: 33469
+[2019-11-28 07:41:16,869 INFO] Step 18850/20000; acc:  67.75; ppl:  3.25; xent: 1.18; lr: 0.36998; 6632/293 tok/s;  17795 sec
+[2019-11-28 07:41:56,921 INFO] Step 18900/20000; acc:  67.91; ppl:  3.18; xent: 1.16; lr: 0.36998; 8934/389 tok/s;  17835 sec
+[2019-11-28 07:42:42,166 INFO] Step 18950/20000; acc:  66.60; ppl:  3.38; xent: 1.22; lr: 0.36998; 8859/326 tok/s;  17880 sec
+[2019-11-28 07:43:27,467 INFO] Step 19000/20000; acc:  65.56; ppl:  3.50; xent: 1.25; lr: 0.36998; 8904/336 tok/s;  17926 sec
+[2019-11-28 07:44:09,670 INFO] Step 19050/20000; acc:  66.40; ppl:  3.40; xent: 1.22; lr: 0.36998; 8637/361 tok/s;  17968 sec
+[2019-11-28 07:44:47,701 INFO] Step 19100/20000; acc:  69.66; ppl:  3.03; xent: 1.11; lr: 0.36998; 8311/354 tok/s;  18006 sec
+[2019-11-28 07:45:29,173 INFO] Step 19150/20000; acc:  67.18; ppl:  3.25; xent: 1.18; lr: 0.36998; 9181/369 tok/s;  18047 sec
+[2019-11-28 07:46:14,305 INFO] Step 19200/20000; acc:  68.50; ppl:  3.15; xent: 1.15; lr: 0.36998; 8740/311 tok/s;  18093 sec
+[2019-11-28 07:46:58,170 INFO] Step 19250/20000; acc:  67.40; ppl:  3.29; xent: 1.19; lr: 0.36998; 8292/342 tok/s;  18136 sec
+[2019-11-28 07:47:36,104 INFO] Step 19300/20000; acc:  67.18; ppl:  3.23; xent: 1.17; lr: 0.36998; 9133/409 tok/s;  18174 sec
+[2019-11-28 07:48:16,683 INFO] Step 19350/20000; acc:  68.38; ppl:  3.16; xent: 1.15; lr: 0.36998; 8314/336 tok/s;  18215 sec
+[2019-11-28 07:49:01,470 INFO] Step 19400/20000; acc:  67.39; ppl:  3.24; xent: 1.17; lr: 0.36998; 8449/315 tok/s;  18260 sec
+[2019-11-28 07:49:42,482 INFO] Step 19450/20000; acc:  68.12; ppl:  3.18; xent: 1.16; lr: 0.36998; 8384/353 tok/s;  18301 sec
+[2019-11-28 07:50:23,027 INFO] Step 19500/20000; acc:  68.62; ppl:  3.17; xent: 1.15; lr: 0.36998; 8557/340 tok/s;  18341 sec
+[2019-11-28 07:51:04,189 INFO] Step 19550/20000; acc:  67.47; ppl:  3.19; xent: 1.16; lr: 0.36998; 8339/356 tok/s;  18382 sec
+[2019-11-28 07:51:47,842 INFO] Step 19600/20000; acc:  66.82; ppl:  3.31; xent: 1.20; lr: 0.36998; 8619/342 tok/s;  18426 sec
+[2019-11-28 07:52:29,309 INFO] Step 19650/20000; acc:  67.41; ppl:  3.27; xent: 1.18; lr: 0.36998; 8332/384 tok/s;  18468 sec
+[2019-11-28 07:53:07,998 INFO] Step 19700/20000; acc:  68.85; ppl:  3.12; xent: 1.14; lr: 0.36998; 8776/310 tok/s;  18506 sec
+[2019-11-28 07:53:50,017 INFO] Step 19750/20000; acc:  68.61; ppl:  3.08; xent: 1.12; lr: 0.36998; 8453/327 tok/s;  18548 sec
+[2019-11-28 07:54:27,326 INFO] Step 19800/20000; acc:  68.25; ppl:  3.17; xent: 1.16; lr: 0.36998; 8422/374 tok/s;  18586 sec
+[2019-11-28 07:55:12,169 INFO] Step 19850/20000; acc:  67.79; ppl:  3.26; xent: 1.18; lr: 0.36998; 8690/324 tok/s;  18630 sec
+[2019-11-28 07:55:53,638 INFO] Step 19900/20000; acc:  67.04; ppl:  3.25; xent: 1.18; lr: 0.36998; 8591/351 tok/s;  18672 sec
+[2019-11-28 07:56:37,989 INFO] Step 19950/20000; acc:  66.19; ppl:  3.35; xent: 1.21; lr: 0.36998; 8858/351 tok/s;  18716 sec
+[2019-11-28 07:57:14,965 INFO] Step 20000/20000; acc:  67.70; ppl:  3.21; xent: 1.17; lr: 0.36998; 9061/398 tok/s;  18753 sec
+[2019-11-28 07:57:15,397 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_p2.valid.0.pt
+[2019-11-28 07:57:17,714 INFO] number of examples: 1780
+[2019-11-28 07:57:49,767 INFO] Validation perplexity: 3.20505
+[2019-11-28 07:57:49,773 INFO] Validation accuracy: 68.0963
+[2019-11-28 07:57:49,773 INFO] Model is improving ppl: 3.56611 --> 3.20505.
+[2019-11-28 07:57:49,773 INFO] Model is improving acc: 66.5556 --> 68.0963.
+[2019-11-28 07:57:52,642 INFO] Saving checkpoint /home/mmotwani/myworkdir/sequencer/results/NPR_tune/models/model_t2_step_20000.pt

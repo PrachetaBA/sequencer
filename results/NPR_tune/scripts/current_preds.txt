@@ -1,0 +1,66 @@
+Model no:  100
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.21281943375546622
+Model no:  101
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.22160733279794287
+Model no:  125
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.2506806423738283
+Model no:  130
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.16712603960714634
+Model no:  131
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.11618856416351894
+Model no:  133
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.23007478179309296
+Model no:  137
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.2506027349907354
+Model no:  167
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.17303816966416727
+Model no:  2
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.3027861244425306
+Model no:  39
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.20872500640469907
+Model no:  4
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.2494223073473469
+Model no:  5003
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.22700423982178566
+Model no:  5004
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.2380905198792513
+Model no:  5005
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.2441571212816926
+Model no:  5
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.23518860411126535
+Model no:  63
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.2088269498122732
+Model no:  6
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.23145269375399533
+Model no:  7
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.24936068019421526
+Model no:  95
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.230907261357141
+Model no:  97
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.23348721918903173
+Model no:  98
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.22156773749914754
+Model no:  99
+Max global accuracy:  1.0
+Mean among the 3000 predictions:  0.23473588729608924

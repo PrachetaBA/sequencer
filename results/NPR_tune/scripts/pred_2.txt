@@ -1,0 +1,2 @@
+cam . position . mul ( 30 ) ;
+new com . badlogic . gdx . backends . lwjgl . LwjglApplication ( new Metagun ( ) , "Metagun" , 320 , 240 ) ;

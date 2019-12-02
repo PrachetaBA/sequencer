@@ -21,9 +21,11 @@ echo
 
 BUG_PROJECT=${DEFECTS4J_DIR}/$1_$2_$4
 if [ -d $BUG_PROJECT ]; then
+   echo "Deleting current existing $BUG_PROJECT"
    rm -rf $BUG_PROJECT
 fi
 
+echo "Creating $BUG_PROJECT"
 mkdir -p $BUG_PROJECT
 echo "Checking out $1_$2 to ${BUG_PROJECT}"
 defects4j checkout -p $1 -v ${2}b -w $BUG_PROJECT &>/dev/null

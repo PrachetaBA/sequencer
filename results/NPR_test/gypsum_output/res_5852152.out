@@ -1,0 +1,144 @@
+Print the data path /home/mmotwani/myworkdir/sequencer/results/NPR_test
+../../src/lib/OpenNMT-py/
+[2019-11-25 15:38:13,392 INFO]  * src vocab size = 1004
+[2019-11-25 15:38:13,396 INFO]  * tgt vocab size = 1004
+[2019-11-25 15:38:13,396 INFO] Building model...
+[2019-11-25 15:38:25,377 INFO] NMTModel(
+  (encoder): CNNEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(1004, 256, padding_idx=1)
+        )
+      )
+    )
+    (linear): Linear(in_features=256, out_features=500, bias=True)
+    (cnn): StackedCNN(
+      (layers): ModuleList(
+        (0): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.3)
+        )
+        (1): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.3)
+        )
+        (2): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.3)
+        )
+        (3): GatedConv(
+          (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+          (dropout): Dropout(p=0.3)
+        )
+      )
+    )
+  )
+  (decoder): CNNDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(1004, 256, padding_idx=1)
+        )
+      )
+    )
+    (linear): Linear(in_features=256, out_features=500, bias=True)
+    (conv_layers): ModuleList(
+      (0): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.3)
+      )
+      (1): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.3)
+      )
+      (2): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.3)
+      )
+      (3): GatedConv(
+        (conv): WeightNormConv2d(500, 1000, kernel_size=(3, 1), stride=(1, 1))
+        (dropout): Dropout(p=0.3)
+      )
+    )
+    (attn_layers): ModuleList(
+      (0): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (1): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (2): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+      (3): ConvMultiStepAttention(
+        (linear_in): Linear(in_features=500, out_features=500, bias=True)
+      )
+    )
+  )
+  (generator): Sequential(
+    (0): Linear(in_features=500, out_features=1004, bias=True)
+    (1): Cast()
+    (2): LogSoftmax()
+  )
+)
+[2019-11-25 15:38:25,395 INFO] encoder: 6393524
+[2019-11-25 15:38:25,395 INFO] decoder: 7898528
+[2019-11-25 15:38:25,395 INFO] * number of parameters: 14292052
+[2019-11-25 15:38:25,424 INFO] Starting training on GPU: [0]
+[2019-11-25 15:38:25,424 INFO] Start training loop and validate every 10000 steps...
+[2019-11-25 15:38:25,424 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:38:25,483 INFO] number of examples: 99
+/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/torchtext/data/field.py:359: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  var = torch.tensor(arr, dtype=self.dtype, device=device)
+[2019-11-25 15:38:34,534 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:38:34,591 INFO] number of examples: 99
+[2019-11-25 15:38:41,331 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:38:41,372 INFO] number of examples: 99
+[2019-11-25 15:38:48,066 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:38:48,121 INFO] number of examples: 99
+[2019-11-25 15:38:55,631 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:38:55,674 INFO] number of examples: 99
+[2019-11-25 15:39:03,339 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:39:03,386 INFO] number of examples: 99
+[2019-11-25 15:39:10,912 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:39:10,976 INFO] number of examples: 99
+[2019-11-25 15:39:17,682 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:39:17,722 INFO] number of examples: 99
+[2019-11-25 15:39:24,880 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:39:24,950 INFO] number of examples: 99
+[2019-11-25 15:39:32,586 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:39:32,621 INFO] number of examples: 99
+[2019-11-25 15:39:39,611 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:39:39,680 INFO] number of examples: 99
+[2019-11-25 15:39:47,779 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:39:47,835 INFO] number of examples: 99
+[2019-11-25 15:39:55,348 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:39:55,386 INFO] number of examples: 99
+[2019-11-25 15:39:58,821 INFO] Step 50/  100; acc:  16.07; ppl: 762.13; xent: 6.64; lr: 1.00000; 6328/240 tok/s;     93 sec
+[2019-11-25 15:40:02,863 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:40:02,904 INFO] number of examples: 99
+[2019-11-25 15:40:09,790 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:40:09,830 INFO] number of examples: 99
+[2019-11-25 15:40:16,511 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:40:16,564 INFO] number of examples: 99
+[2019-11-25 15:40:23,677 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:40:24,073 INFO] number of examples: 99
+[2019-11-25 15:40:31,734 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:40:32,409 INFO] number of examples: 99
+[2019-11-25 15:40:40,063 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:40:40,103 INFO] number of examples: 99
+[2019-11-25 15:40:47,312 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:40:47,348 INFO] number of examples: 99
+[2019-11-25 15:40:54,426 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:40:54,462 INFO] number of examples: 99
+[2019-11-25 15:41:01,978 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:41:02,042 INFO] number of examples: 99
+[2019-11-25 15:41:09,171 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:41:09,241 INFO] number of examples: 99
+[2019-11-25 15:41:16,211 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:41:16,249 INFO] number of examples: 99
+[2019-11-25 15:41:24,334 INFO] Loading dataset from /home/mmotwani/myworkdir/sequencer/results/NPR_test/final.train.0.pt
+[2019-11-25 15:41:24,369 INFO] number of examples: 99
+[2019-11-25 15:41:31,268 INFO] Step 100/  100; acc:  22.95; ppl: 192.43; xent: 5.26; lr: 1.00000; 6751/250 tok/s;    186 sec
+[2019-11-25 15:41:31,336 INFO] Saving checkpoint /home/mmotwani/myworkdir/sequencer/results/NPR_test/model_1_step_100.pt

@@ -1,0 +1,3 @@
+[2019-11-26 10:44:25,418 INFO] Translating shard 0.
+/home/mmotwani/anaconda3/envs/npr-py36/lib/python3.6/site-packages/torchtext/data/field.py:359: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  var = torch.tensor(arr, dtype=self.dtype, device=device)
